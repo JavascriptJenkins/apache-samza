@@ -1,0 +1,2 @@
+2018-04-07 18:43:02.398 [main] STARTUP_LOGGER [INFO] Started JmxServer registry port=53991 server port=53992 url=service:jmx:rmi://localhost:53992/jndi/rmi://localhost:53991/jmxrmi
+2018-04-07 18:43:02.399 [main] STARTUP_LOGGER [INFO] If you are tunneling, you might want to try JmxServer registry port=53991 server port=53992 url=service:jmx:rmi://Genreboys-MacBook-Pro.local:53992/jndi/rmi://Genreboys-MacBook-Pro.local:53991/jmxrmi

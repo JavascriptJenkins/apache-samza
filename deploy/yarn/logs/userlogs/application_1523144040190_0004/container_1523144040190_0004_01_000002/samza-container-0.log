@@ -1,0 +1,1619 @@
+2018-04-07 18:50:23.386 [main] LocalContainerRunner [INFO] Got container ID: 0
+2018-04-07 18:50:23.388 [main] LocalContainerRunner [INFO] Got coordinator URL: http://Genreboys-MacBook-Pro.local:54700/
+2018-04-07 18:50:23.530 [main] SamzaContainer$ [INFO] Fetching configuration from: http://Genreboys-MacBook-Pro.local:54700/
+2018-04-07 18:50:28.881 [main] VerifiableProperties [INFO] Verifying properties
+2018-04-07 18:50:28.888 [main] VerifiableProperties [INFO] Property auto.offset.reset is overridden to largest
+2018-04-07 18:50:28.888 [main] VerifiableProperties [INFO] Property client.id is overridden to samza_admin-wikipedia_stats-1
+2018-04-07 18:50:28.889 [main] VerifiableProperties [INFO] Property group.id is overridden to undefined-samza-consumer-group-8b1d34d2-7c2d-4c1e-b4d6-e10a4faca567
+2018-04-07 18:50:28.889 [main] VerifiableProperties [INFO] Property zookeeper.connect is overridden to localhost:2181/
+2018-04-07 18:50:28.902 [main] KafkaSystemFactory [INFO] Creating topic meta information for topic: wikipedia-stats-changelog with replication factor: 1
+2018-04-07 18:50:28.906 [main] TaskFactoryUtil [INFO] Got task class name: samza.examples.wikipedia.task.WikipediaStatsStreamTask
+2018-04-07 18:50:33.919 [main] SamzaContainer$ [INFO] Setting up Samza container: samza-container-0
+2018-04-07 18:50:33.920 [main] SamzaContainer$ [INFO] Samza container PID: 4972@Genreboys-MacBook-Pro.local
+2018-04-07 18:50:33.921 [main] SamzaContainer$ [INFO] Using configuration: {systems.kafka.samza.factory=org.apache.samza.system.kafka.KafkaSystemFactory, serializers.registry.string.class=org.apache.samza.serializers.StringSerdeFactory, stores.wikipedia-stats.changelog=kafka.wikipedia-stats-changelog, serializers.registry.integer.class=org.apache.samza.serializers.IntegerSerdeFactory, stores.wikipedia-stats.changelog.replication.factor=1, stores.wikipedia-stats.write.batch.size=0, systems.kafka.consumer.auto.offset.reset=largest, systems.kafka.samza.msg.serde=json, metrics.reporters=snapshot,jmx, job.coordinator.replication.factor=1, stores.wikipedia-stats.object.cache.size=0, job.name=wikipedia-stats, systems.kafka.producer.bootstrap.servers=localhost:9092, metrics.reporter.snapshot.class=org.apache.samza.metrics.reporter.MetricsSnapshotReporterFactory, systems.kafka.consumer.zookeeper.connect=localhost:2181/, stores.wikipedia-stats.msg.serde=integer, job.coordinator.system=kafka, stores.wikipedia-stats.factory=org.apache.samza.storage.kv.RocksDbKeyValueStorageEngineFactory, task.inputs=kafka.wikipedia-edits, task.window.ms=10000, job.factory.class=org.apache.samza.job.yarn.YarnJobFactory, yarn.package.path=file:///Users/genreboy/IdeaProjects/samza-hello-samza/target/hello-samza-0.14.0-dist.tar.gz, task.class=samza.examples.wikipedia.task.WikipediaStatsStreamTask, metrics.reporter.jmx.class=org.apache.samza.metrics.reporter.JmxReporterFactory, stores.wikipedia-stats.key.serde=string, serializers.registry.json.class=org.apache.samza.serializers.JsonSerdeFactory, metrics.reporter.snapshot.stream=kafka.metrics}
+2018-04-07 18:50:33.922 [main] SamzaContainer$ [INFO] Using container model: ContainerModel [processorId=0, tasks={Partition 0=TaskModel [taskName=Partition 0, systemStreamPartitions=[SystemStreamPartition [kafka, wikipedia-edits, 0]], changeLogPartition=Partition [partition=0]]}]
+2018-04-07 18:50:33.949 [main] SamzaContainer$ [INFO] Got system names: Buffer(kafka)
+2018-04-07 18:50:33.954 [main] SamzaContainer$ [INFO] Got serde streams: Set()
+2018-04-07 18:50:33.956 [main] VerifiableProperties [INFO] Verifying properties
+2018-04-07 18:50:33.957 [main] VerifiableProperties [INFO] Property auto.offset.reset is overridden to largest
+2018-04-07 18:50:33.957 [main] VerifiableProperties [INFO] Property client.id is overridden to samza_admin-wikipedia_stats-1
+2018-04-07 18:50:33.957 [main] VerifiableProperties [INFO] Property group.id is overridden to undefined-samza-consumer-group-e57c99ef-4cf4-463b-b255-aeddb388802f
+2018-04-07 18:50:33.957 [main] VerifiableProperties [INFO] Property zookeeper.connect is overridden to localhost:2181/
+2018-04-07 18:50:33.958 [main] KafkaSystemFactory [INFO] Creating topic meta information for topic: wikipedia-stats-changelog with replication factor: 1
+2018-04-07 18:50:33.960 [main] SamzaContainer$ [INFO] Got system factories: Set(kafka)
+2018-04-07 18:50:33.992 [main] VerifiableProperties [INFO] Verifying properties
+2018-04-07 18:50:33.992 [main] VerifiableProperties [INFO] Property client.id is overridden to samza_admin-wikipedia_stats-1
+2018-04-07 18:50:33.992 [main] VerifiableProperties [INFO] Property metadata.broker.list is overridden to localhost:9092
+2018-04-07 18:50:33.992 [main] VerifiableProperties [INFO] Property request.timeout.ms is overridden to 30000
+2018-04-07 18:50:34.022 [main] ClientUtils$ [INFO] Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 0 for 1 topic(s) Set(wikipedia-edits)
+2018-04-07 18:50:34.039 [main] SyncProducer [INFO] Connected to localhost:9092 for producing
+2018-04-07 18:50:34.059 [main] SyncProducer [INFO] Disconnecting from localhost:9092
+2018-04-07 18:50:34.119 [main] SamzaContainer$ [INFO] Got input stream metadata: Map(SystemStream [system=kafka, stream=wikipedia-edits] -> SystemStreamMetadata [streamName=wikipedia-edits, partitionMetadata={Partition [partition=0]=SystemStreamPartitionMetadata [oldestOffset=0, newestOffset=201, upcomingOffset=202]}])
+2018-04-07 18:50:34.121 [main] VerifiableProperties [INFO] Verifying properties
+2018-04-07 18:50:34.122 [main] VerifiableProperties [INFO] Property auto.offset.reset is overridden to largest
+2018-04-07 18:50:34.122 [main] VerifiableProperties [INFO] Property client.id is overridden to samza_consumer-wikipedia_stats-1
+2018-04-07 18:50:34.122 [main] VerifiableProperties [INFO] Property group.id is overridden to undefined-samza-consumer-group-315827d4-859e-433f-b0d5-3e0578ae7fa2
+2018-04-07 18:50:34.122 [main] VerifiableProperties [INFO] Property zookeeper.connect is overridden to localhost:2181/
+2018-04-07 18:50:34.129 [main] VerifiableProperties [INFO] Verifying properties
+2018-04-07 18:50:34.129 [main] VerifiableProperties [INFO] Property auto.offset.reset is overridden to largest
+2018-04-07 18:50:34.129 [main] VerifiableProperties [INFO] Property client.id is overridden to samza_admin-wikipedia_stats-1
+2018-04-07 18:50:34.129 [main] VerifiableProperties [INFO] Property group.id is overridden to undefined-samza-consumer-group-f45ead83-77cf-4491-9381-03a523f0dfb6
+2018-04-07 18:50:34.130 [main] VerifiableProperties [INFO] Property zookeeper.connect is overridden to localhost:2181/
+2018-04-07 18:50:34.130 [main] KafkaSystemFactory [INFO] Creating topic meta information for topic: wikipedia-stats-changelog with replication factor: 1
+2018-04-07 18:50:34.135 [main] SamzaContainer$ [INFO] Got system consumers: Set(kafka)
+2018-04-07 18:50:34.137 [main] KafkaSystemFactory$ [WARN] System name 'kafka' is being used as a changelog. Disabling compression since Kafka does not support compression for log compacted topics.
+2018-04-07 18:50:34.142 [main] SamzaContainer$ [INFO] Got system producers: Set(kafka)
+2018-04-07 18:50:34.157 [main] SamzaContainer$ [INFO] Got serdes from factories: Set(string, json, integer)
+2018-04-07 18:50:34.160 [main] SamzaContainer$ [INFO] Got serdes from serialized instances: Set()
+2018-04-07 18:50:34.171 [main] SamzaContainer$ [INFO] Got change log system streams: Map(wikipedia-stats -> SystemStream [system=kafka, stream=wikipedia-stats-changelog])
+2018-04-07 18:50:34.172 [main] SamzaContainer$ [INFO] Got intermediate streams: List()
+2018-04-07 18:50:34.174 [main] SamzaContainer$ [INFO] Setting up JVM metrics.
+2018-04-07 18:50:34.175 [main] SamzaContainer$ [INFO] Setting up message chooser.
+2018-04-07 18:50:34.193 [main] DefaultChooser [INFO] Building default chooser with: useBatching=false, useBootstrapping=false, usePriority=false
+2018-04-07 18:50:34.193 [main] SamzaContainer$ [INFO] Setting up metrics reporters.
+2018-04-07 18:50:34.196 [main] MetricsSnapshotReporterFactory [INFO] Creating new metrics snapshot reporter.
+2018-04-07 18:50:34.198 [main] MetricsSnapshotReporterFactory [WARN] Unable to find implementation version in jar's meta info. Defaulting to 0.0.1.
+2018-04-07 18:50:34.199 [main] MetricsSnapshotReporterFactory [INFO] Got system stream SystemStream [system=kafka, stream=metrics].
+2018-04-07 18:50:34.200 [main] MetricsSnapshotReporterFactory [INFO] Got system factory org.apache.samza.system.kafka.KafkaSystemFactory@39655d3e.
+2018-04-07 18:50:34.200 [main] KafkaSystemFactory$ [WARN] System name 'kafka' is being used as a changelog. Disabling compression since Kafka does not support compression for log compacted topics.
+2018-04-07 18:50:34.200 [main] MetricsSnapshotReporterFactory [INFO] Got producer org.apache.samza.system.kafka.KafkaSystemProducer@7dda48d9.
+2018-04-07 18:50:34.202 [main] MetricsSnapshotReporterFactory [INFO] Got serde org.apache.samza.serializers.JsonSerde@2a62b5bc.
+2018-04-07 18:50:34.202 [main] MetricsSnapshotReporterFactory [INFO] Setting polling interval to 60
+2018-04-07 18:50:39.206 [main] MetricsSnapshotReporter [INFO] got metrics snapshot reporter properties [job name: wikipedia-stats, job id: 1, containerName: samza-container-0, version: 0.0.1, samzaVersion: 0.14.0, host: Genreboys-MacBook-Pro.local, pollingInterval 60]
+2018-04-07 18:50:39.207 [main] MetricsSnapshotReporter [INFO] Registering MetricsSnapshotReporterFactory with producer.
+2018-04-07 18:50:39.208 [main] JmxReporterFactory [INFO] Creating JMX reporter with  name jmx.
+2018-04-07 18:50:39.216 [main] SamzaContainer$ [INFO] Got metrics reporters: Set(jmx, snapshot)
+2018-04-07 18:50:39.217 [main] SamzaContainer$ [INFO] Got security manager: null
+2018-04-07 18:50:39.219 [main] SamzaContainer$ [INFO] Got checkpoint manager: null
+2018-04-07 18:50:39.221 [main] SamzaContainer$ [INFO] Got checkpointListeners : Map()
+2018-04-07 18:50:39.224 [main] OffsetManager$ [INFO] No default offset for SystemStream [system=kafka, stream=wikipedia-edits] defined. Using upcoming.
+2018-04-07 18:50:39.230 [main] SamzaContainer$ [INFO] Got offset manager: org.apache.samza.checkpoint.OffsetManager@4b1d6571
+2018-04-07 18:50:39.243 [main] SamzaContainer$ [INFO] Got storage engines: Set(wikipedia-stats)
+2018-04-07 18:50:39.243 [main] SamzaContainer$ [INFO] Got single thread mode: false
+2018-04-07 18:50:39.244 [main] SamzaContainer$ [INFO] Got thread pool size: 0
+2018-04-07 18:50:39.244 [main] TaskFactoryUtil [INFO] Converting StreamTask to AsyncStreamTaskAdapter when running StreamTask with multiple threads
+2018-04-07 18:50:39.245 [main] SamzaContainer$ [INFO] Got default storage engine base directory: /private/tmp/hadoop-genreboy/nm-local-dir/usercache/genreboy/appcache/application_1523144040190_0004/container_1523144040190_0004_01_000002/state
+2018-04-07 18:50:39.251 [main] VerifiableProperties [INFO] Verifying properties
+2018-04-07 18:50:39.251 [main] VerifiableProperties [INFO] Property auto.offset.reset is overridden to largest
+2018-04-07 18:50:39.251 [main] VerifiableProperties [INFO] Property client.id is overridden to samza_consumer-wikipedia_stats-1
+2018-04-07 18:50:39.251 [main] VerifiableProperties [INFO] Property group.id is overridden to undefined-samza-consumer-group-9da8559d-34c5-4c48-bead-fe1549725b3a
+2018-04-07 18:50:39.251 [main] VerifiableProperties [INFO] Property zookeeper.connect is overridden to localhost:2181/
+2018-04-07 18:50:39.252 [main] VerifiableProperties [INFO] Verifying properties
+2018-04-07 18:50:39.252 [main] VerifiableProperties [INFO] Property auto.offset.reset is overridden to largest
+2018-04-07 18:50:39.252 [main] VerifiableProperties [INFO] Property client.id is overridden to samza_admin-wikipedia_stats-1
+2018-04-07 18:50:39.253 [main] VerifiableProperties [INFO] Property group.id is overridden to undefined-samza-consumer-group-2ba90e3b-b104-4544-a0e8-39d90f411dbb
+2018-04-07 18:50:39.253 [main] VerifiableProperties [INFO] Property zookeeper.connect is overridden to localhost:2181/
+2018-04-07 18:50:39.253 [main] KafkaSystemFactory [INFO] Creating topic meta information for topic: wikipedia-stats-changelog with replication factor: 1
+2018-04-07 18:50:39.254 [main] SamzaContainer$ [INFO] Got store consumers: Map(wikipedia-stats -> org.apache.samza.system.kafka.KafkaSystemConsumer@55322aab)
+2018-04-07 18:50:39.255 [main] SamzaContainer$ [WARN] No override was provided for logged store base directory. This disables local state re-use on application restart. If you want to enable this feature, set LOGGED_STORE_BASE_DIR as an environment variable in all machines running the Samza container
+2018-04-07 18:50:39.256 [main] SamzaContainer$ [INFO] Got base directory for logged data stores: /private/tmp/hadoop-genreboy/nm-local-dir/usercache/genreboy/appcache/application_1523144040190_0004/container_1523144040190_0004_01_000002/state
+2018-04-07 18:50:39.586 [main] SamzaContainer$ [INFO] Got task stores: Map(wikipedia-stats -> org.apache.samza.storage.kv.KeyValueStorageEngine@ebaa6cb)
+2018-04-07 18:50:39.590 [main] SamzaContainer$ [INFO] Retrieved SystemStreamPartitions Set(SystemStreamPartition [kafka, wikipedia-edits, 0]) for Partition 0
+2018-04-07 18:50:39.601 [main] RunLoopFactory [INFO] Got window milliseconds: 10000.
+2018-04-07 18:50:39.601 [main] RunLoopFactory [INFO] Got commit milliseconds: 60000.
+2018-04-07 18:50:39.601 [main] RunLoopFactory [INFO] Got taskMaxConcurrency: 1.
+2018-04-07 18:50:39.601 [main] RunLoopFactory [INFO] Got asyncCommitEnabled: false.
+2018-04-07 18:50:39.601 [main] RunLoopFactory [INFO] Got callbackTimeout: -1.
+2018-04-07 18:50:39.601 [main] RunLoopFactory [INFO] Run loop in asynchronous mode.
+2018-04-07 18:50:39.614 [main] NoThrottlingDiskQuotaPolicy [INFO] Using a no throttling disk quota policy
+2018-04-07 18:50:39.616 [main] SamzaContainer$ [INFO] Disk quotas disabled because polling interval is not set (container.disk.poll.interval.ms)
+2018-04-07 18:50:39.617 [main] SamzaContainer$ [INFO] Samza container setup complete.
+2018-04-07 18:50:39.618 [main] LocalContainerRunner [INFO] Got execution environment container id: container_1523144040190_0004_01_000002
+2018-04-07 18:50:39.620 [main] ContainerHeartbeatMonitor [INFO] Starting ContainerHeartbeatMonitor
+2018-04-07 18:50:39.620 [main] SamzaContainer [INFO] Starting container.
+2018-04-07 18:50:44.625 [main] JmxServer [INFO] According to Util.getLocalHost.getHostName we are Genreboys-MacBook-Pro.local
+2018-04-07 18:50:44.701 [main] JmxServer [INFO] Started JmxServer registry port=54916 server port=54917 url=service:jmx:rmi://localhost:54917/jndi/rmi://localhost:54916/jmxrmi
+2018-04-07 18:50:44.702 [main] JmxServer [INFO] If you are tunneling, you might want to try JmxServer registry port=54916 server port=54917 url=service:jmx:rmi://Genreboys-MacBook-Pro.local:54917/jndi/rmi://Genreboys-MacBook-Pro.local:54916/jmxrmi
+2018-04-07 18:50:44.703 [main] SamzaContainer [INFO] Registering task instances with metrics.
+2018-04-07 18:50:44.704 [main] MetricsSnapshotReporter [INFO] Registering TaskName-Partition 0 with producer.
+2018-04-07 18:50:44.705 [main] SamzaContainer [INFO] Starting JVM metrics.
+2018-04-07 18:50:44.705 [main] SamzaContainer [INFO] Starting metrics reporters.
+2018-04-07 18:50:44.721 [main] MetricsSnapshotReporter [INFO] Registering samza-container-0 with producer.
+2018-04-07 18:50:44.721 [main] MetricsSnapshotReporter [INFO] Starting producer.
+2018-04-07 18:50:44.735 [main] ProducerConfig [INFO] ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	block.on.buffer.full = false
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.id = samza_producer-wikipedia_stats-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 10
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 1
+	max.request.size = 1048576
+	metadata.fetch.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	timeout.ms = 30000
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2018-04-07 18:50:44.739 [main] ProducerConfig [INFO] ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	block.on.buffer.full = false
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.id = samza_producer-wikipedia_stats-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 10
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 1
+	max.request.size = 1048576
+	metadata.fetch.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	timeout.ms = 30000
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2018-04-07 18:50:44.761 [main] AppInfoParser [INFO] Kafka version : 0.10.1.1
+2018-04-07 18:50:44.761 [main] AppInfoParser [INFO] Kafka commitId : f10ef2720b03b247
+2018-04-07 18:50:44.762 [main] MetricsSnapshotReporter [INFO] Starting reporter timer.
+2018-04-07 18:50:44.762 [main] SamzaContainer [INFO] Registering task instances with offsets.
+2018-04-07 18:50:44.764 [main] SamzaContainer [INFO] Starting offset manager.
+2018-04-07 18:50:44.771 [main] OffsetManager [INFO] Successfully loaded last processed offsets: {}
+2018-04-07 18:50:44.772 [main] OffsetManager [INFO] Successfully loaded starting offsets: Map(Partition 0 -> Map(SystemStreamPartition [kafka, wikipedia-edits, 0] -> 202))
+2018-04-07 18:50:44.772 [main] SamzaContainer [INFO] Starting task instance stores.
+2018-04-07 18:50:44.774 [main] TaskStorageManager [INFO] Got default storage partition directory as /private/tmp/hadoop-genreboy/nm-local-dir/usercache/genreboy/appcache/application_1523144040190_0004/container_1523144040190_0004_01_000002/state/wikipedia-stats/Partition_0
+2018-04-07 18:50:44.775 [main] TaskStorageManager [INFO] Got logged storage partition directory as /private/tmp/hadoop-genreboy/nm-local-dir/usercache/genreboy/appcache/application_1523144040190_0004/container_1523144040190_0004_01_000002/state/wikipedia-stats/Partition_0
+2018-04-07 18:50:44.776 [main] TaskStorageManager [INFO] Deleting logged storage partition directory /private/tmp/hadoop-genreboy/nm-local-dir/usercache/genreboy/appcache/application_1523144040190_0004/container_1523144040190_0004_01_000002/state/wikipedia-stats/Partition_0.
+2018-04-07 18:50:44.778 [main] TaskStorageManager [INFO] Using logged storage partition directory: /private/tmp/hadoop-genreboy/nm-local-dir/usercache/genreboy/appcache/application_1523144040190_0004/container_1523144040190_0004_01_000002/state/wikipedia-stats/Partition_0 for store: wikipedia-stats.
+2018-04-07 18:50:44.779 [main] TaskStorageManager [INFO] Validating change log streams: Map(wikipedia-stats -> SystemStream [system=kafka, stream=wikipedia-stats-changelog])
+2018-04-07 18:50:44.781 [main] KafkaSystemAdmin [INFO] Validating topic wikipedia-stats-changelog.
+2018-04-07 18:50:44.782 [main] VerifiableProperties [INFO] Verifying properties
+2018-04-07 18:50:44.782 [main] VerifiableProperties [INFO] Property client.id is overridden to samza_admin-wikipedia_stats-1
+2018-04-07 18:50:44.782 [main] VerifiableProperties [INFO] Property metadata.broker.list is overridden to localhost:9092
+2018-04-07 18:50:44.782 [main] VerifiableProperties [INFO] Property request.timeout.ms is overridden to 30000
+2018-04-07 18:50:44.783 [main] ClientUtils$ [INFO] Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 0 for 1 topic(s) Set(wikipedia-stats-changelog)
+2018-04-07 18:50:44.783 [main] SyncProducer [INFO] Connected to localhost:9092 for producing
+2018-04-07 18:50:44.784 [main] SyncProducer [INFO] Disconnecting from localhost:9092
+2018-04-07 18:50:44.784 [main] KafkaSystemAdmin [INFO] Successfully validated topic wikipedia-stats-changelog.
+2018-04-07 18:50:44.787 [main] TaskStorageManager [INFO] Got change log stream metadata: Map(SystemStream [system=kafka, stream=wikipedia-stats-changelog] -> SystemStreamMetadata [streamName=wikipedia-stats-changelog, partitionMetadata={Partition [partition=0]=SystemStreamPartitionMetadata [oldestOffset=0, newestOffset=5, upcomingOffset=6]}])
+2018-04-07 18:50:44.788 [main] TaskStorageManager [INFO] Assigning oldest change log offsets for taskName Partition 0: Map(SystemStream [system=kafka, stream=wikipedia-stats-changelog] -> 0)
+2018-04-07 18:50:44.790 [main] TaskStorageManager [INFO] Registering change log consumer with offset 0 for SystemStreamPartition [kafka, wikipedia-stats-changelog, 0].
+2018-04-07 18:50:44.799 [main] KafkaSystemConsumer [INFO] Refreshing brokers for: Map([wikipedia-stats-changelog,0] -> 0)
+2018-04-07 18:50:44.804 [main] BrokerProxy [INFO] Creating new SimpleConsumer for host 192.168.0.27:9092 for system kafka
+2018-04-07 18:50:44.808 [main] GetOffset [INFO] Validating offset 0 for topic and partition [wikipedia-stats-changelog,0]
+2018-04-07 18:50:44.830 [main] GetOffset [INFO] Able to successfully read from offset 0 for topic and partition [wikipedia-stats-changelog,0]. Using it to instantiate consumer.
+2018-04-07 18:50:44.831 [main] BrokerProxy [INFO] Starting BrokerProxy for 192.168.0.27:9092
+2018-04-07 18:50:45.866 [main] BrokerProxy [INFO] Shutting down BrokerProxy for 192.168.0.27:9092
+2018-04-07 18:50:45.867 [main] BrokerProxy [INFO] closing simple consumer...
+2018-04-07 18:50:45.872 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] BrokerProxy [INFO] Shutting down due to interrupt.
+2018-04-07 18:50:45.873 [main] SamzaContainer [INFO] Starting host statistics monitor
+2018-04-07 18:50:45.874 [main] SamzaContainer [INFO] Registering task instances with producers.
+2018-04-07 18:50:45.876 [main] SamzaContainer [INFO] Starting producer multiplexer.
+2018-04-07 18:50:45.877 [main] ProducerConfig [INFO] ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	block.on.buffer.full = false
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.id = samza_producer-wikipedia_stats-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 10
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 1
+	max.request.size = 1048576
+	metadata.fetch.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	timeout.ms = 30000
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2018-04-07 18:50:45.878 [main] ProducerConfig [INFO] ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	block.on.buffer.full = false
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.id = samza_producer-wikipedia_stats-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 10
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 1
+	max.request.size = 1048576
+	metadata.fetch.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	timeout.ms = 30000
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2018-04-07 18:50:45.880 [main] AppInfoParser [INFO] Kafka version : 0.10.1.1
+2018-04-07 18:50:45.880 [main] AppInfoParser [INFO] Kafka commitId : f10ef2720b03b247
+2018-04-07 18:50:45.880 [main] AppInfoParser [WARN] Error registering AppInfo mbean
+javax.management.InstanceAlreadyExistsException: kafka.producer:type=app-info,id=samza_producer-wikipedia_stats-1
+	at com.sun.jmx.mbeanserver.Repository.addMBean(Repository.java:437)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerWithRepository(DefaultMBeanServerInterceptor.java:1898)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerDynamicMBean(DefaultMBeanServerInterceptor.java:966)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:900)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:324)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:522)
+	at org.apache.kafka.common.utils.AppInfoParser.registerAppInfo(AppInfoParser.java:58)
+	at org.apache.kafka.clients.producer.KafkaProducer.<init>(KafkaProducer.java:331)
+	at org.apache.kafka.clients.producer.KafkaProducer.<init>(KafkaProducer.java:163)
+	at org.apache.samza.system.kafka.KafkaSystemFactory$$anonfun$3.apply(KafkaSystemFactory.scala:90)
+	at org.apache.samza.system.kafka.KafkaSystemFactory$$anonfun$3.apply(KafkaSystemFactory.scala:90)
+	at org.apache.samza.system.kafka.KafkaSystemProducer.start(KafkaSystemProducer.scala:53)
+	at org.apache.samza.system.SystemProducers$$anonfun$start$2.apply(SystemProducers.scala:41)
+	at org.apache.samza.system.SystemProducers$$anonfun$start$2.apply(SystemProducers.scala:41)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1336)
+	at scala.collection.MapLike$DefaultValuesIterable.foreach(MapLike.scala:206)
+	at org.apache.samza.system.SystemProducers.start(SystemProducers.scala:41)
+	at org.apache.samza.container.SamzaContainer.startProducers(SamzaContainer.scala:914)
+	at org.apache.samza.container.SamzaContainer.run(SamzaContainer.scala:716)
+	at org.apache.samza.runtime.LocalContainerRunner.run(LocalContainerRunner.java:102)
+	at org.apache.samza.runtime.LocalContainerRunner.main(LocalContainerRunner.java:147)
+2018-04-07 18:50:45.882 [main] SamzaContainer [INFO] Initializing stream tasks.
+2018-04-07 18:50:45.883 [main] SamzaContainer [INFO] Registering task instances with consumers.
+2018-04-07 18:50:45.886 [main] SamzaContainer [INFO] Starting consumer multiplexer.
+2018-04-07 18:50:45.888 [main] KafkaSystemConsumer [INFO] Refreshing brokers for: Map([wikipedia-edits,0] -> 202)
+2018-04-07 18:50:45.888 [main] VerifiableProperties [INFO] Verifying properties
+2018-04-07 18:50:45.888 [main] VerifiableProperties [INFO] Property client.id is overridden to samza_consumer-wikipedia_stats-1
+2018-04-07 18:50:45.888 [main] VerifiableProperties [INFO] Property metadata.broker.list is overridden to localhost:9092
+2018-04-07 18:50:45.889 [main] VerifiableProperties [INFO] Property request.timeout.ms is overridden to 30000
+2018-04-07 18:50:45.889 [main] ClientUtils$ [INFO] Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 0 for 1 topic(s) Set(wikipedia-edits)
+2018-04-07 18:50:45.890 [main] SyncProducer [INFO] Connected to localhost:9092 for producing
+2018-04-07 18:50:45.891 [main] SyncProducer [INFO] Disconnecting from localhost:9092
+2018-04-07 18:50:45.891 [main] BrokerProxy [INFO] Creating new SimpleConsumer for host 192.168.0.27:9092 for system kafka
+2018-04-07 18:50:45.892 [main] GetOffset [INFO] Validating offset 202 for topic and partition [wikipedia-edits,0]
+2018-04-07 18:50:45.900 [main] GetOffset [INFO] Able to successfully read from offset 202 for topic and partition [wikipedia-edits,0]. Using it to instantiate consumer.
+2018-04-07 18:50:45.900 [main] BrokerProxy [INFO] Starting BrokerProxy for 192.168.0.27:9092
+2018-04-07 18:50:45.905 [main] SamzaContainer [INFO] Entering run loop.
+2018-04-07 18:50:45.905 [main] LocalContainerRunner [INFO] Container Started
+2018-04-07 18:50:45.910 [main] TaskInstance [INFO] SystemStreamPartition [kafka, wikipedia-edits, 0] is catched up.
+2018-04-08 14:07:54.444 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] DefaultFetchSimpleConsumer [INFO] Reconnect due to error:
+java.net.SocketTimeoutException
+	at sun.nio.ch.SocketAdaptor$SocketInputStream.read(SocketAdaptor.java:211)
+	at sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:103)
+	at java.nio.channels.Channels$ReadableByteChannelImpl.read(Channels.java:385)
+	at org.apache.kafka.common.network.NetworkReceive.readFromReadableChannel(NetworkReceive.java:81)
+	at kafka.network.BlockingChannel.readCompletely(BlockingChannel.scala:129)
+	at kafka.network.BlockingChannel.receive(BlockingChannel.scala:120)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:86)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply$mcV$sp(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer.fetch(SimpleConsumer.scala:130)
+	at org.apache.samza.system.kafka.DefaultFetchSimpleConsumer.fetch(DefaultFetchSimpleConsumer.scala:48)
+	at org.apache.samza.system.kafka.DefaultFetchSimpleConsumer.defaultFetch(DefaultFetchSimpleConsumer.scala:41)
+	at org.apache.samza.system.kafka.BrokerProxy.org$apache$samza$system$kafka$BrokerProxy$$fetchMessages(BrokerProxy.scala:180)
+	at org.apache.samza.system.kafka.BrokerProxy$$anon$1$$anonfun$run$1.apply(BrokerProxy.scala:148)
+	at org.apache.samza.system.kafka.BrokerProxy$$anon$1$$anonfun$run$1.apply(BrokerProxy.scala:135)
+	at org.apache.samza.util.ExponentialSleepStrategy.run(ExponentialSleepStrategy.scala:83)
+	at org.apache.samza.system.kafka.BrokerProxy$$anon$1.run(BrokerProxy.scala:134)
+	at java.lang.Thread.run(Thread.java:748)
+2018-04-08 14:07:54.651 [main] SimpleConsumer [INFO] Reconnect due to error:
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:85)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer.getOffsetsBefore(SimpleConsumer.scala:149)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin.org$apache$samza$system$kafka$KafkaSystemAdmin$$getOffsets(KafkaSystemAdmin.scala:390)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin$$anonfun$getNewestOffset$2.apply(KafkaSystemAdmin.scala:300)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin$$anonfun$getNewestOffset$2.apply(KafkaSystemAdmin.scala:284)
+	at org.apache.samza.util.ExponentialSleepStrategy.run(ExponentialSleepStrategy.scala:83)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin.getNewestOffset(KafkaSystemAdmin.scala:283)
+	at org.apache.samza.storage.TaskStorageManager$$anonfun$flushChangelogOffsetFiles$4.apply(TaskStorageManager.scala:346)
+	at org.apache.samza.storage.TaskStorageManager$$anonfun$flushChangelogOffsetFiles$4.apply(TaskStorageManager.scala:336)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.MapLike$FilteredKeys$$anonfun$foreach$1.apply(MapLike.scala:231)
+	at scala.collection.MapLike$FilteredKeys$$anonfun$foreach$1.apply(MapLike.scala:231)
+	at scala.collection.MapLike$MappedValues$$anonfun$foreach$3.apply(MapLike.scala:245)
+	at scala.collection.MapLike$MappedValues$$anonfun$foreach$3.apply(MapLike.scala:245)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.immutable.Map$Map1.foreach(Map.scala:116)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at scala.collection.MapLike$MappedValues.foreach(MapLike.scala:245)
+	at scala.collection.MapLike$FilteredKeys.foreach(MapLike.scala:231)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at org.apache.samza.storage.TaskStorageManager.flushChangelogOffsetFiles(TaskStorageManager.scala:336)
+	at org.apache.samza.storage.TaskStorageManager.flush(TaskStorageManager.scala:311)
+	at org.apache.samza.container.TaskInstance.commit(TaskInstance.scala:200)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker$5.run(AsyncRunLoop.java:494)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.commit(AsyncRunLoop.java:513)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.run(AsyncRunLoop.java:379)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.access$300(AsyncRunLoop.java:314)
+	at org.apache.samza.task.AsyncRunLoop.runTasks(AsyncRunLoop.java:228)
+	at org.apache.samza.task.AsyncRunLoop.run(AsyncRunLoop.java:157)
+	at org.apache.samza.container.SamzaContainer.run(SamzaContainer.scala:728)
+	at org.apache.samza.runtime.LocalContainerRunner.run(LocalContainerRunner.java:102)
+	at org.apache.samza.runtime.LocalContainerRunner.main(LocalContainerRunner.java:147)
+2018-04-08 14:07:55.279 [main] KafkaSystemAdmin [WARN] Exception while trying to get offset for SystemStreamPartition [kafka, wikipedia-stats-changelog, 0]: java.nio.channels.ClosedChannelException. Retrying.
+2018-04-08 14:07:55.290 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] BrokerProxy [WARN] Restarting consumer due to java.nio.channels.ClosedChannelException. Releasing ownership of all partitions, and restarting consumer. Turn on debugging to get a full stack trace.
+2018-04-08 14:07:55.604 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] KafkaSystemConsumer [INFO] Abdicating for [wikipedia-edits,0]
+2018-04-08 14:07:55.612 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] KafkaSystemConsumer [INFO] Refreshing brokers for: Map([wikipedia-edits,0] -> 21446)
+2018-04-08 14:07:55.615 [main] VerifiableProperties [INFO] Verifying properties
+2018-04-08 14:07:55.616 [main] VerifiableProperties [INFO] Property client.id is overridden to samza_admin-wikipedia_stats-1
+2018-04-08 14:07:55.617 [main] VerifiableProperties [INFO] Property metadata.broker.list is overridden to localhost:9092
+2018-04-08 14:07:55.617 [main] VerifiableProperties [INFO] Property request.timeout.ms is overridden to 30000
+2018-04-08 14:07:55.620 [main] ClientUtils$ [INFO] Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 0 for 1 topic(s) Set(wikipedia-stats-changelog)
+2018-04-08 14:07:55.628 [main] SyncProducer [INFO] Connected to localhost:9092 for producing
+2018-04-08 14:07:55.644 [main] SyncProducer [INFO] Disconnecting from localhost:9092
+2018-04-08 14:07:55.647 [main] SimpleConsumer [INFO] Reconnect due to error:
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:85)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer.getOffsetsBefore(SimpleConsumer.scala:149)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin.org$apache$samza$system$kafka$KafkaSystemAdmin$$getOffsets(KafkaSystemAdmin.scala:390)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin$$anonfun$getNewestOffset$2.apply(KafkaSystemAdmin.scala:300)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin$$anonfun$getNewestOffset$2.apply(KafkaSystemAdmin.scala:284)
+	at org.apache.samza.util.ExponentialSleepStrategy.run(ExponentialSleepStrategy.scala:83)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin.getNewestOffset(KafkaSystemAdmin.scala:283)
+	at org.apache.samza.storage.TaskStorageManager$$anonfun$flushChangelogOffsetFiles$4.apply(TaskStorageManager.scala:346)
+	at org.apache.samza.storage.TaskStorageManager$$anonfun$flushChangelogOffsetFiles$4.apply(TaskStorageManager.scala:336)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.MapLike$FilteredKeys$$anonfun$foreach$1.apply(MapLike.scala:231)
+	at scala.collection.MapLike$FilteredKeys$$anonfun$foreach$1.apply(MapLike.scala:231)
+	at scala.collection.MapLike$MappedValues$$anonfun$foreach$3.apply(MapLike.scala:245)
+	at scala.collection.MapLike$MappedValues$$anonfun$foreach$3.apply(MapLike.scala:245)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.immutable.Map$Map1.foreach(Map.scala:116)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at scala.collection.MapLike$MappedValues.foreach(MapLike.scala:245)
+	at scala.collection.MapLike$FilteredKeys.foreach(MapLike.scala:231)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at org.apache.samza.storage.TaskStorageManager.flushChangelogOffsetFiles(TaskStorageManager.scala:336)
+	at org.apache.samza.storage.TaskStorageManager.flush(TaskStorageManager.scala:311)
+	at org.apache.samza.container.TaskInstance.commit(TaskInstance.scala:200)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker$5.run(AsyncRunLoop.java:494)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.commit(AsyncRunLoop.java:513)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.run(AsyncRunLoop.java:379)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.access$300(AsyncRunLoop.java:314)
+	at org.apache.samza.task.AsyncRunLoop.runTasks(AsyncRunLoop.java:228)
+	at org.apache.samza.task.AsyncRunLoop.run(AsyncRunLoop.java:157)
+	at org.apache.samza.container.SamzaContainer.run(SamzaContainer.scala:728)
+	at org.apache.samza.runtime.LocalContainerRunner.run(LocalContainerRunner.java:102)
+	at org.apache.samza.runtime.LocalContainerRunner.main(LocalContainerRunner.java:147)
+2018-04-08 14:07:55.648 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] VerifiableProperties [INFO] Verifying properties
+2018-04-08 14:07:55.697 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] VerifiableProperties [INFO] Property client.id is overridden to samza_consumer-wikipedia_stats-1
+2018-04-08 14:07:55.697 [main] KafkaSystemAdmin [WARN] Exception while trying to get offset for SystemStreamPartition [kafka, wikipedia-stats-changelog, 0]: java.nio.channels.ClosedChannelException. Retrying.
+2018-04-08 14:07:55.697 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] VerifiableProperties [INFO] Property metadata.broker.list is overridden to localhost:9092
+2018-04-08 14:07:55.698 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] VerifiableProperties [INFO] Property request.timeout.ms is overridden to 30000
+2018-04-08 14:07:55.699 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] ClientUtils$ [INFO] Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 1 for 1 topic(s) Set(wikipedia-edits)
+2018-04-08 14:07:55.817 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] SyncProducer [INFO] Connected to localhost:9092 for producing
+2018-04-08 14:07:55.851 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] SyncProducer [INFO] Disconnecting from localhost:9092
+2018-04-08 14:07:55.865 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] GetOffset [INFO] Validating offset 21446 for topic and partition [wikipedia-edits,0]
+2018-04-08 14:07:55.867 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] DefaultFetchSimpleConsumer [INFO] Reconnect due to error:
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:85)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply$mcV$sp(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer.fetch(SimpleConsumer.scala:130)
+	at org.apache.samza.system.kafka.DefaultFetchSimpleConsumer.fetch(DefaultFetchSimpleConsumer.scala:48)
+	at org.apache.samza.system.kafka.DefaultFetchSimpleConsumer.defaultFetch(DefaultFetchSimpleConsumer.scala:41)
+	at org.apache.samza.system.kafka.GetOffset.isValidOffset(GetOffset.scala:60)
+	at org.apache.samza.system.kafka.BrokerProxy.addTopicPartition(BrokerProxy.scala:100)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anonfun$refreshBrokers$2.refresh$1(KafkaSystemConsumer.scala:211)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anonfun$refreshBrokers$2.apply(KafkaSystemConsumer.scala:224)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anonfun$refreshBrokers$2.apply(KafkaSystemConsumer.scala:190)
+	at org.apache.samza.util.ExponentialSleepStrategy.run(ExponentialSleepStrategy.scala:83)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer.refreshBrokers(KafkaSystemConsumer.scala:189)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anon$1.abdicate(KafkaSystemConsumer.scala:291)
+	at org.apache.samza.system.kafka.BrokerProxy.abdicate(BrokerProxy.scala:208)
+	at org.apache.samza.system.kafka.BrokerProxy$$anonfun$abdicateAll$1.apply(BrokerProxy.scala:219)
+	at org.apache.samza.system.kafka.BrokerProxy$$anonfun$abdicateAll$1.apply(BrokerProxy.scala:219)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1336)
+	at scala.collection.MapLike$DefaultKeySet.foreach(MapLike.scala:174)
+	at org.apache.samza.system.kafka.BrokerProxy.abdicateAll(BrokerProxy.scala:219)
+	at org.apache.samza.system.kafka.BrokerProxy$$anon$1$$anonfun$run$2.apply(BrokerProxy.scala:161)
+	at org.apache.samza.system.kafka.BrokerProxy$$anon$1$$anonfun$run$2.apply(BrokerProxy.scala:158)
+	at org.apache.samza.util.ExponentialSleepStrategy.run(ExponentialSleepStrategy.scala:82)
+	at org.apache.samza.system.kafka.BrokerProxy$$anon$1.run(BrokerProxy.scala:134)
+	at java.lang.Thread.run(Thread.java:748)
+2018-04-08 14:07:55.873 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] KafkaSystemConsumer [WARN] While refreshing brokers for [wikipedia-edits,0]: java.nio.channels.ClosedChannelException. Retrying.
+2018-04-08 14:07:55.900 [main] VerifiableProperties [INFO] Verifying properties
+2018-04-08 14:07:55.901 [main] VerifiableProperties [INFO] Property client.id is overridden to samza_admin-wikipedia_stats-1
+2018-04-08 14:07:55.902 [main] VerifiableProperties [INFO] Property metadata.broker.list is overridden to localhost:9092
+2018-04-08 14:07:55.902 [main] VerifiableProperties [INFO] Property request.timeout.ms is overridden to 30000
+2018-04-08 14:07:55.904 [main] ClientUtils$ [INFO] Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 0 for 1 topic(s) Set(wikipedia-stats-changelog)
+2018-04-08 14:07:55.906 [main] SyncProducer [INFO] Connected to localhost:9092 for producing
+2018-04-08 14:07:55.908 [main] SyncProducer [INFO] Disconnecting from localhost:9092
+2018-04-08 14:07:55.910 [main] SimpleConsumer [INFO] Reconnect due to error:
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:85)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer.getOffsetsBefore(SimpleConsumer.scala:149)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin.org$apache$samza$system$kafka$KafkaSystemAdmin$$getOffsets(KafkaSystemAdmin.scala:390)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin$$anonfun$getNewestOffset$2.apply(KafkaSystemAdmin.scala:300)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin$$anonfun$getNewestOffset$2.apply(KafkaSystemAdmin.scala:284)
+	at org.apache.samza.util.ExponentialSleepStrategy.run(ExponentialSleepStrategy.scala:83)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin.getNewestOffset(KafkaSystemAdmin.scala:283)
+	at org.apache.samza.storage.TaskStorageManager$$anonfun$flushChangelogOffsetFiles$4.apply(TaskStorageManager.scala:346)
+	at org.apache.samza.storage.TaskStorageManager$$anonfun$flushChangelogOffsetFiles$4.apply(TaskStorageManager.scala:336)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.MapLike$FilteredKeys$$anonfun$foreach$1.apply(MapLike.scala:231)
+	at scala.collection.MapLike$FilteredKeys$$anonfun$foreach$1.apply(MapLike.scala:231)
+	at scala.collection.MapLike$MappedValues$$anonfun$foreach$3.apply(MapLike.scala:245)
+	at scala.collection.MapLike$MappedValues$$anonfun$foreach$3.apply(MapLike.scala:245)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.immutable.Map$Map1.foreach(Map.scala:116)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at scala.collection.MapLike$MappedValues.foreach(MapLike.scala:245)
+	at scala.collection.MapLike$FilteredKeys.foreach(MapLike.scala:231)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at org.apache.samza.storage.TaskStorageManager.flushChangelogOffsetFiles(TaskStorageManager.scala:336)
+	at org.apache.samza.storage.TaskStorageManager.flush(TaskStorageManager.scala:311)
+	at org.apache.samza.container.TaskInstance.commit(TaskInstance.scala:200)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker$5.run(AsyncRunLoop.java:494)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.commit(AsyncRunLoop.java:513)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.run(AsyncRunLoop.java:379)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.access$300(AsyncRunLoop.java:314)
+	at org.apache.samza.task.AsyncRunLoop.runTasks(AsyncRunLoop.java:228)
+	at org.apache.samza.task.AsyncRunLoop.run(AsyncRunLoop.java:157)
+	at org.apache.samza.container.SamzaContainer.run(SamzaContainer.scala:728)
+	at org.apache.samza.runtime.LocalContainerRunner.run(LocalContainerRunner.java:102)
+	at org.apache.samza.runtime.LocalContainerRunner.main(LocalContainerRunner.java:147)
+2018-04-08 14:07:55.912 [main] KafkaSystemAdmin [WARN] Exception while trying to get offset for SystemStreamPartition [kafka, wikipedia-stats-changelog, 0]: java.nio.channels.ClosedChannelException. Retrying.
+2018-04-08 14:07:55.980 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] GetOffset [INFO] Validating offset 21446 for topic and partition [wikipedia-edits,0]
+2018-04-08 14:07:55.981 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] DefaultFetchSimpleConsumer [INFO] Reconnect due to error:
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:85)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply$mcV$sp(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer.fetch(SimpleConsumer.scala:130)
+	at org.apache.samza.system.kafka.DefaultFetchSimpleConsumer.fetch(DefaultFetchSimpleConsumer.scala:48)
+	at org.apache.samza.system.kafka.DefaultFetchSimpleConsumer.defaultFetch(DefaultFetchSimpleConsumer.scala:41)
+	at org.apache.samza.system.kafka.GetOffset.isValidOffset(GetOffset.scala:60)
+	at org.apache.samza.system.kafka.BrokerProxy.addTopicPartition(BrokerProxy.scala:100)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anonfun$refreshBrokers$2.refresh$1(KafkaSystemConsumer.scala:211)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anonfun$refreshBrokers$2.apply(KafkaSystemConsumer.scala:224)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anonfun$refreshBrokers$2.apply(KafkaSystemConsumer.scala:190)
+	at org.apache.samza.util.ExponentialSleepStrategy.run(ExponentialSleepStrategy.scala:83)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer.refreshBrokers(KafkaSystemConsumer.scala:189)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anon$1.abdicate(KafkaSystemConsumer.scala:291)
+	at org.apache.samza.system.kafka.BrokerProxy.abdicate(BrokerProxy.scala:208)
+	at org.apache.samza.system.kafka.BrokerProxy$$anonfun$abdicateAll$1.apply(BrokerProxy.scala:219)
+	at org.apache.samza.system.kafka.BrokerProxy$$anonfun$abdicateAll$1.apply(BrokerProxy.scala:219)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1336)
+	at scala.collection.MapLike$DefaultKeySet.foreach(MapLike.scala:174)
+	at org.apache.samza.system.kafka.BrokerProxy.abdicateAll(BrokerProxy.scala:219)
+	at org.apache.samza.system.kafka.BrokerProxy$$anon$1$$anonfun$run$2.apply(BrokerProxy.scala:161)
+	at org.apache.samza.system.kafka.BrokerProxy$$anon$1$$anonfun$run$2.apply(BrokerProxy.scala:158)
+	at org.apache.samza.util.ExponentialSleepStrategy.run(ExponentialSleepStrategy.scala:82)
+	at org.apache.samza.system.kafka.BrokerProxy$$anon$1.run(BrokerProxy.scala:134)
+	at java.lang.Thread.run(Thread.java:748)
+2018-04-08 14:07:55.991 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] KafkaSystemConsumer [WARN] While refreshing brokers for [wikipedia-edits,0]: java.nio.channels.ClosedChannelException. Retrying.
+2018-04-08 14:07:56.192 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] GetOffset [INFO] Validating offset 21446 for topic and partition [wikipedia-edits,0]
+2018-04-08 14:07:56.193 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] DefaultFetchSimpleConsumer [INFO] Reconnect due to error:
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:85)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply$mcV$sp(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer.fetch(SimpleConsumer.scala:130)
+	at org.apache.samza.system.kafka.DefaultFetchSimpleConsumer.fetch(DefaultFetchSimpleConsumer.scala:48)
+	at org.apache.samza.system.kafka.DefaultFetchSimpleConsumer.defaultFetch(DefaultFetchSimpleConsumer.scala:41)
+	at org.apache.samza.system.kafka.GetOffset.isValidOffset(GetOffset.scala:60)
+	at org.apache.samza.system.kafka.BrokerProxy.addTopicPartition(BrokerProxy.scala:100)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anonfun$refreshBrokers$2.refresh$1(KafkaSystemConsumer.scala:211)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anonfun$refreshBrokers$2.apply(KafkaSystemConsumer.scala:224)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anonfun$refreshBrokers$2.apply(KafkaSystemConsumer.scala:190)
+	at org.apache.samza.util.ExponentialSleepStrategy.run(ExponentialSleepStrategy.scala:83)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer.refreshBrokers(KafkaSystemConsumer.scala:189)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anon$1.abdicate(KafkaSystemConsumer.scala:291)
+	at org.apache.samza.system.kafka.BrokerProxy.abdicate(BrokerProxy.scala:208)
+	at org.apache.samza.system.kafka.BrokerProxy$$anonfun$abdicateAll$1.apply(BrokerProxy.scala:219)
+	at org.apache.samza.system.kafka.BrokerProxy$$anonfun$abdicateAll$1.apply(BrokerProxy.scala:219)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1336)
+	at scala.collection.MapLike$DefaultKeySet.foreach(MapLike.scala:174)
+	at org.apache.samza.system.kafka.BrokerProxy.abdicateAll(BrokerProxy.scala:219)
+	at org.apache.samza.system.kafka.BrokerProxy$$anon$1$$anonfun$run$2.apply(BrokerProxy.scala:161)
+	at org.apache.samza.system.kafka.BrokerProxy$$anon$1$$anonfun$run$2.apply(BrokerProxy.scala:158)
+	at org.apache.samza.util.ExponentialSleepStrategy.run(ExponentialSleepStrategy.scala:82)
+	at org.apache.samza.system.kafka.BrokerProxy$$anon$1.run(BrokerProxy.scala:134)
+	at java.lang.Thread.run(Thread.java:748)
+2018-04-08 14:07:56.196 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] KafkaSystemConsumer [WARN] While refreshing brokers for [wikipedia-edits,0]: java.nio.channels.ClosedChannelException. Retrying.
+2018-04-08 14:07:56.321 [main] VerifiableProperties [INFO] Verifying properties
+2018-04-08 14:07:56.322 [main] VerifiableProperties [INFO] Property client.id is overridden to samza_admin-wikipedia_stats-1
+2018-04-08 14:07:56.322 [main] VerifiableProperties [INFO] Property metadata.broker.list is overridden to localhost:9092
+2018-04-08 14:07:56.323 [main] VerifiableProperties [INFO] Property request.timeout.ms is overridden to 30000
+2018-04-08 14:07:56.323 [main] ClientUtils$ [INFO] Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 0 for 1 topic(s) Set(wikipedia-stats-changelog)
+2018-04-08 14:07:56.325 [main] SyncProducer [INFO] Connected to localhost:9092 for producing
+2018-04-08 14:07:56.326 [main] SyncProducer [INFO] Disconnecting from localhost:9092
+2018-04-08 14:07:56.328 [main] SimpleConsumer [INFO] Reconnect due to error:
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:85)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer.getOffsetsBefore(SimpleConsumer.scala:149)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin.org$apache$samza$system$kafka$KafkaSystemAdmin$$getOffsets(KafkaSystemAdmin.scala:390)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin$$anonfun$getNewestOffset$2.apply(KafkaSystemAdmin.scala:300)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin$$anonfun$getNewestOffset$2.apply(KafkaSystemAdmin.scala:284)
+	at org.apache.samza.util.ExponentialSleepStrategy.run(ExponentialSleepStrategy.scala:83)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin.getNewestOffset(KafkaSystemAdmin.scala:283)
+	at org.apache.samza.storage.TaskStorageManager$$anonfun$flushChangelogOffsetFiles$4.apply(TaskStorageManager.scala:346)
+	at org.apache.samza.storage.TaskStorageManager$$anonfun$flushChangelogOffsetFiles$4.apply(TaskStorageManager.scala:336)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.MapLike$FilteredKeys$$anonfun$foreach$1.apply(MapLike.scala:231)
+	at scala.collection.MapLike$FilteredKeys$$anonfun$foreach$1.apply(MapLike.scala:231)
+	at scala.collection.MapLike$MappedValues$$anonfun$foreach$3.apply(MapLike.scala:245)
+	at scala.collection.MapLike$MappedValues$$anonfun$foreach$3.apply(MapLike.scala:245)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.immutable.Map$Map1.foreach(Map.scala:116)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at scala.collection.MapLike$MappedValues.foreach(MapLike.scala:245)
+	at scala.collection.MapLike$FilteredKeys.foreach(MapLike.scala:231)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at org.apache.samza.storage.TaskStorageManager.flushChangelogOffsetFiles(TaskStorageManager.scala:336)
+	at org.apache.samza.storage.TaskStorageManager.flush(TaskStorageManager.scala:311)
+	at org.apache.samza.container.TaskInstance.commit(TaskInstance.scala:200)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker$5.run(AsyncRunLoop.java:494)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.commit(AsyncRunLoop.java:513)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.run(AsyncRunLoop.java:379)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.access$300(AsyncRunLoop.java:314)
+	at org.apache.samza.task.AsyncRunLoop.runTasks(AsyncRunLoop.java:228)
+	at org.apache.samza.task.AsyncRunLoop.run(AsyncRunLoop.java:157)
+	at org.apache.samza.container.SamzaContainer.run(SamzaContainer.scala:728)
+	at org.apache.samza.runtime.LocalContainerRunner.run(LocalContainerRunner.java:102)
+	at org.apache.samza.runtime.LocalContainerRunner.main(LocalContainerRunner.java:147)
+2018-04-08 14:07:56.336 [main] KafkaSystemAdmin [WARN] Exception while trying to get offset for SystemStreamPartition [kafka, wikipedia-stats-changelog, 0]
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:98)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer.getOffsetsBefore(SimpleConsumer.scala:149)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin.org$apache$samza$system$kafka$KafkaSystemAdmin$$getOffsets(KafkaSystemAdmin.scala:390)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin$$anonfun$getNewestOffset$2.apply(KafkaSystemAdmin.scala:300)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin$$anonfun$getNewestOffset$2.apply(KafkaSystemAdmin.scala:284)
+	at org.apache.samza.util.ExponentialSleepStrategy.run(ExponentialSleepStrategy.scala:83)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin.getNewestOffset(KafkaSystemAdmin.scala:283)
+	at org.apache.samza.storage.TaskStorageManager$$anonfun$flushChangelogOffsetFiles$4.apply(TaskStorageManager.scala:346)
+	at org.apache.samza.storage.TaskStorageManager$$anonfun$flushChangelogOffsetFiles$4.apply(TaskStorageManager.scala:336)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.MapLike$FilteredKeys$$anonfun$foreach$1.apply(MapLike.scala:231)
+	at scala.collection.MapLike$FilteredKeys$$anonfun$foreach$1.apply(MapLike.scala:231)
+	at scala.collection.MapLike$MappedValues$$anonfun$foreach$3.apply(MapLike.scala:245)
+	at scala.collection.MapLike$MappedValues$$anonfun$foreach$3.apply(MapLike.scala:245)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.immutable.Map$Map1.foreach(Map.scala:116)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at scala.collection.MapLike$MappedValues.foreach(MapLike.scala:245)
+	at scala.collection.MapLike$FilteredKeys.foreach(MapLike.scala:231)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at org.apache.samza.storage.TaskStorageManager.flushChangelogOffsetFiles(TaskStorageManager.scala:336)
+	at org.apache.samza.storage.TaskStorageManager.flush(TaskStorageManager.scala:311)
+	at org.apache.samza.container.TaskInstance.commit(TaskInstance.scala:200)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker$5.run(AsyncRunLoop.java:494)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.commit(AsyncRunLoop.java:513)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.run(AsyncRunLoop.java:379)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.access$300(AsyncRunLoop.java:314)
+	at org.apache.samza.task.AsyncRunLoop.runTasks(AsyncRunLoop.java:228)
+	at org.apache.samza.task.AsyncRunLoop.run(AsyncRunLoop.java:157)
+	at org.apache.samza.container.SamzaContainer.run(SamzaContainer.scala:728)
+	at org.apache.samza.runtime.LocalContainerRunner.run(LocalContainerRunner.java:102)
+	at org.apache.samza.runtime.LocalContainerRunner.main(LocalContainerRunner.java:147)
+2018-04-08 14:07:56.345 [main] TaskStorageManager [ERROR] Exception storing offset for store wikipedia-stats. Skipping.
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:98)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer.getOffsetsBefore(SimpleConsumer.scala:149)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin.org$apache$samza$system$kafka$KafkaSystemAdmin$$getOffsets(KafkaSystemAdmin.scala:390)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin$$anonfun$getNewestOffset$2.apply(KafkaSystemAdmin.scala:300)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin$$anonfun$getNewestOffset$2.apply(KafkaSystemAdmin.scala:284)
+	at org.apache.samza.util.ExponentialSleepStrategy.run(ExponentialSleepStrategy.scala:83)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin.getNewestOffset(KafkaSystemAdmin.scala:283)
+	at org.apache.samza.storage.TaskStorageManager$$anonfun$flushChangelogOffsetFiles$4.apply(TaskStorageManager.scala:346)
+	at org.apache.samza.storage.TaskStorageManager$$anonfun$flushChangelogOffsetFiles$4.apply(TaskStorageManager.scala:336)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.MapLike$FilteredKeys$$anonfun$foreach$1.apply(MapLike.scala:231)
+	at scala.collection.MapLike$FilteredKeys$$anonfun$foreach$1.apply(MapLike.scala:231)
+	at scala.collection.MapLike$MappedValues$$anonfun$foreach$3.apply(MapLike.scala:245)
+	at scala.collection.MapLike$MappedValues$$anonfun$foreach$3.apply(MapLike.scala:245)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.immutable.Map$Map1.foreach(Map.scala:116)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at scala.collection.MapLike$MappedValues.foreach(MapLike.scala:245)
+	at scala.collection.MapLike$FilteredKeys.foreach(MapLike.scala:231)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at org.apache.samza.storage.TaskStorageManager.flushChangelogOffsetFiles(TaskStorageManager.scala:336)
+	at org.apache.samza.storage.TaskStorageManager.flush(TaskStorageManager.scala:311)
+	at org.apache.samza.container.TaskInstance.commit(TaskInstance.scala:200)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker$5.run(AsyncRunLoop.java:494)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.commit(AsyncRunLoop.java:513)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.run(AsyncRunLoop.java:379)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.access$300(AsyncRunLoop.java:314)
+	at org.apache.samza.task.AsyncRunLoop.runTasks(AsyncRunLoop.java:228)
+	at org.apache.samza.task.AsyncRunLoop.run(AsyncRunLoop.java:157)
+	at org.apache.samza.container.SamzaContainer.run(SamzaContainer.scala:728)
+	at org.apache.samza.runtime.LocalContainerRunner.run(LocalContainerRunner.java:102)
+	at org.apache.samza.runtime.LocalContainerRunner.main(LocalContainerRunner.java:147)
+2018-04-08 14:07:56.600 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] GetOffset [INFO] Validating offset 21446 for topic and partition [wikipedia-edits,0]
+2018-04-08 14:07:56.601 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] DefaultFetchSimpleConsumer [INFO] Reconnect due to error:
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:85)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply$mcV$sp(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer.fetch(SimpleConsumer.scala:130)
+	at org.apache.samza.system.kafka.DefaultFetchSimpleConsumer.fetch(DefaultFetchSimpleConsumer.scala:48)
+	at org.apache.samza.system.kafka.DefaultFetchSimpleConsumer.defaultFetch(DefaultFetchSimpleConsumer.scala:41)
+	at org.apache.samza.system.kafka.GetOffset.isValidOffset(GetOffset.scala:60)
+	at org.apache.samza.system.kafka.BrokerProxy.addTopicPartition(BrokerProxy.scala:100)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anonfun$refreshBrokers$2.refresh$1(KafkaSystemConsumer.scala:211)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anonfun$refreshBrokers$2.apply(KafkaSystemConsumer.scala:224)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anonfun$refreshBrokers$2.apply(KafkaSystemConsumer.scala:190)
+	at org.apache.samza.util.ExponentialSleepStrategy.run(ExponentialSleepStrategy.scala:83)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer.refreshBrokers(KafkaSystemConsumer.scala:189)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anon$1.abdicate(KafkaSystemConsumer.scala:291)
+	at org.apache.samza.system.kafka.BrokerProxy.abdicate(BrokerProxy.scala:208)
+	at org.apache.samza.system.kafka.BrokerProxy$$anonfun$abdicateAll$1.apply(BrokerProxy.scala:219)
+	at org.apache.samza.system.kafka.BrokerProxy$$anonfun$abdicateAll$1.apply(BrokerProxy.scala:219)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1336)
+	at scala.collection.MapLike$DefaultKeySet.foreach(MapLike.scala:174)
+	at org.apache.samza.system.kafka.BrokerProxy.abdicateAll(BrokerProxy.scala:219)
+	at org.apache.samza.system.kafka.BrokerProxy$$anon$1$$anonfun$run$2.apply(BrokerProxy.scala:161)
+	at org.apache.samza.system.kafka.BrokerProxy$$anon$1$$anonfun$run$2.apply(BrokerProxy.scala:158)
+	at org.apache.samza.util.ExponentialSleepStrategy.run(ExponentialSleepStrategy.scala:82)
+	at org.apache.samza.system.kafka.BrokerProxy$$anon$1.run(BrokerProxy.scala:134)
+	at java.lang.Thread.run(Thread.java:748)
+2018-04-08 14:07:56.603 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] KafkaSystemConsumer [WARN] While refreshing brokers for [wikipedia-edits,0]: java.nio.channels.ClosedChannelException. Retrying.
+2018-04-08 14:07:57.408 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] GetOffset [INFO] Validating offset 21446 for topic and partition [wikipedia-edits,0]
+2018-04-08 14:07:57.408 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] DefaultFetchSimpleConsumer [INFO] Reconnect due to error:
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:85)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply$mcV$sp(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer.fetch(SimpleConsumer.scala:130)
+	at org.apache.samza.system.kafka.DefaultFetchSimpleConsumer.fetch(DefaultFetchSimpleConsumer.scala:48)
+	at org.apache.samza.system.kafka.DefaultFetchSimpleConsumer.defaultFetch(DefaultFetchSimpleConsumer.scala:41)
+	at org.apache.samza.system.kafka.GetOffset.isValidOffset(GetOffset.scala:60)
+	at org.apache.samza.system.kafka.BrokerProxy.addTopicPartition(BrokerProxy.scala:100)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anonfun$refreshBrokers$2.refresh$1(KafkaSystemConsumer.scala:211)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anonfun$refreshBrokers$2.apply(KafkaSystemConsumer.scala:224)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anonfun$refreshBrokers$2.apply(KafkaSystemConsumer.scala:190)
+	at org.apache.samza.util.ExponentialSleepStrategy.run(ExponentialSleepStrategy.scala:83)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer.refreshBrokers(KafkaSystemConsumer.scala:189)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anon$1.abdicate(KafkaSystemConsumer.scala:291)
+	at org.apache.samza.system.kafka.BrokerProxy.abdicate(BrokerProxy.scala:208)
+	at org.apache.samza.system.kafka.BrokerProxy$$anonfun$abdicateAll$1.apply(BrokerProxy.scala:219)
+	at org.apache.samza.system.kafka.BrokerProxy$$anonfun$abdicateAll$1.apply(BrokerProxy.scala:219)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1336)
+	at scala.collection.MapLike$DefaultKeySet.foreach(MapLike.scala:174)
+	at org.apache.samza.system.kafka.BrokerProxy.abdicateAll(BrokerProxy.scala:219)
+	at org.apache.samza.system.kafka.BrokerProxy$$anon$1$$anonfun$run$2.apply(BrokerProxy.scala:161)
+	at org.apache.samza.system.kafka.BrokerProxy$$anon$1$$anonfun$run$2.apply(BrokerProxy.scala:158)
+	at org.apache.samza.util.ExponentialSleepStrategy.run(ExponentialSleepStrategy.scala:82)
+	at org.apache.samza.system.kafka.BrokerProxy$$anon$1.run(BrokerProxy.scala:134)
+	at java.lang.Thread.run(Thread.java:748)
+2018-04-08 14:07:57.411 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] KafkaSystemConsumer [WARN] While refreshing brokers for [wikipedia-edits,0]: java.nio.channels.ClosedChannelException. Retrying.
+2018-04-08 14:07:59.013 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] GetOffset [INFO] Validating offset 21446 for topic and partition [wikipedia-edits,0]
+2018-04-08 14:07:59.013 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] DefaultFetchSimpleConsumer [INFO] Reconnect due to error:
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:85)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply$mcV$sp(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer.fetch(SimpleConsumer.scala:130)
+	at org.apache.samza.system.kafka.DefaultFetchSimpleConsumer.fetch(DefaultFetchSimpleConsumer.scala:48)
+	at org.apache.samza.system.kafka.DefaultFetchSimpleConsumer.defaultFetch(DefaultFetchSimpleConsumer.scala:41)
+	at org.apache.samza.system.kafka.GetOffset.isValidOffset(GetOffset.scala:60)
+	at org.apache.samza.system.kafka.BrokerProxy.addTopicPartition(BrokerProxy.scala:100)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anonfun$refreshBrokers$2.refresh$1(KafkaSystemConsumer.scala:211)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anonfun$refreshBrokers$2.apply(KafkaSystemConsumer.scala:224)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anonfun$refreshBrokers$2.apply(KafkaSystemConsumer.scala:190)
+	at org.apache.samza.util.ExponentialSleepStrategy.run(ExponentialSleepStrategy.scala:83)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer.refreshBrokers(KafkaSystemConsumer.scala:189)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anon$1.abdicate(KafkaSystemConsumer.scala:291)
+	at org.apache.samza.system.kafka.BrokerProxy.abdicate(BrokerProxy.scala:208)
+	at org.apache.samza.system.kafka.BrokerProxy$$anonfun$abdicateAll$1.apply(BrokerProxy.scala:219)
+	at org.apache.samza.system.kafka.BrokerProxy$$anonfun$abdicateAll$1.apply(BrokerProxy.scala:219)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1336)
+	at scala.collection.MapLike$DefaultKeySet.foreach(MapLike.scala:174)
+	at org.apache.samza.system.kafka.BrokerProxy.abdicateAll(BrokerProxy.scala:219)
+	at org.apache.samza.system.kafka.BrokerProxy$$anon$1$$anonfun$run$2.apply(BrokerProxy.scala:161)
+	at org.apache.samza.system.kafka.BrokerProxy$$anon$1$$anonfun$run$2.apply(BrokerProxy.scala:158)
+	at org.apache.samza.util.ExponentialSleepStrategy.run(ExponentialSleepStrategy.scala:82)
+	at org.apache.samza.system.kafka.BrokerProxy$$anon$1.run(BrokerProxy.scala:134)
+	at java.lang.Thread.run(Thread.java:748)
+2018-04-08 14:07:59.014 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] KafkaSystemConsumer [WARN] While refreshing brokers for [wikipedia-edits,0]: java.nio.channels.ClosedChannelException. Retrying.
+2018-04-08 14:08:02.218 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] VerifiableProperties [INFO] Verifying properties
+2018-04-08 14:08:02.220 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] VerifiableProperties [INFO] Property client.id is overridden to samza_consumer-wikipedia_stats-1
+2018-04-08 14:08:02.220 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] VerifiableProperties [INFO] Property metadata.broker.list is overridden to localhost:9092
+2018-04-08 14:08:02.221 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] VerifiableProperties [INFO] Property request.timeout.ms is overridden to 30000
+2018-04-08 14:08:02.222 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] ClientUtils$ [INFO] Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 2 for 1 topic(s) Set(wikipedia-edits)
+2018-04-08 14:08:02.223 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] SyncProducer [INFO] Connected to localhost:9092 for producing
+2018-04-08 14:08:02.225 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] SyncProducer [INFO] Disconnecting from localhost:9092
+2018-04-08 14:08:02.226 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] GetOffset [INFO] Validating offset 21446 for topic and partition [wikipedia-edits,0]
+2018-04-08 14:08:02.226 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] DefaultFetchSimpleConsumer [INFO] Reconnect due to error:
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:85)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply$mcV$sp(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer.fetch(SimpleConsumer.scala:130)
+	at org.apache.samza.system.kafka.DefaultFetchSimpleConsumer.fetch(DefaultFetchSimpleConsumer.scala:48)
+	at org.apache.samza.system.kafka.DefaultFetchSimpleConsumer.defaultFetch(DefaultFetchSimpleConsumer.scala:41)
+	at org.apache.samza.system.kafka.GetOffset.isValidOffset(GetOffset.scala:60)
+	at org.apache.samza.system.kafka.BrokerProxy.addTopicPartition(BrokerProxy.scala:100)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anonfun$refreshBrokers$2.refresh$1(KafkaSystemConsumer.scala:211)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anonfun$refreshBrokers$2.apply(KafkaSystemConsumer.scala:224)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anonfun$refreshBrokers$2.apply(KafkaSystemConsumer.scala:190)
+	at org.apache.samza.util.ExponentialSleepStrategy.run(ExponentialSleepStrategy.scala:83)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer.refreshBrokers(KafkaSystemConsumer.scala:189)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anon$1.abdicate(KafkaSystemConsumer.scala:291)
+	at org.apache.samza.system.kafka.BrokerProxy.abdicate(BrokerProxy.scala:208)
+	at org.apache.samza.system.kafka.BrokerProxy$$anonfun$abdicateAll$1.apply(BrokerProxy.scala:219)
+	at org.apache.samza.system.kafka.BrokerProxy$$anonfun$abdicateAll$1.apply(BrokerProxy.scala:219)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1336)
+	at scala.collection.MapLike$DefaultKeySet.foreach(MapLike.scala:174)
+	at org.apache.samza.system.kafka.BrokerProxy.abdicateAll(BrokerProxy.scala:219)
+	at org.apache.samza.system.kafka.BrokerProxy$$anon$1$$anonfun$run$2.apply(BrokerProxy.scala:161)
+	at org.apache.samza.system.kafka.BrokerProxy$$anon$1$$anonfun$run$2.apply(BrokerProxy.scala:158)
+	at org.apache.samza.util.ExponentialSleepStrategy.run(ExponentialSleepStrategy.scala:82)
+	at org.apache.samza.system.kafka.BrokerProxy$$anon$1.run(BrokerProxy.scala:134)
+	at java.lang.Thread.run(Thread.java:748)
+2018-04-08 14:08:02.228 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] KafkaSystemConsumer [WARN] While refreshing brokers for [wikipedia-edits,0]: java.nio.channels.ClosedChannelException. Retrying.
+2018-04-08 14:08:04.859 [Samza-ContainerHeartbeatMonitor-0] ContainerHeartbeatClient [ERROR] Error in heartbeat request. Retrying [1/6].
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1564)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492)
+	at org.apache.samza.container.ContainerHeartbeatClient.httpGet(ContainerHeartbeatClient.java:90)
+	at org.apache.samza.container.ContainerHeartbeatClient.requestHeartbeat(ContainerHeartbeatClient.java:71)
+	at org.apache.samza.container.ContainerHeartbeatMonitor.lambda$start$1(ContainerHeartbeatMonitor.java:53)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2018-04-08 14:08:08.633 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] VerifiableProperties [INFO] Verifying properties
+2018-04-08 14:08:08.634 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] VerifiableProperties [INFO] Property client.id is overridden to samza_consumer-wikipedia_stats-1
+2018-04-08 14:08:08.634 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] VerifiableProperties [INFO] Property metadata.broker.list is overridden to localhost:9092
+2018-04-08 14:08:08.635 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] VerifiableProperties [INFO] Property request.timeout.ms is overridden to 30000
+2018-04-08 14:08:08.636 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] ClientUtils$ [INFO] Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 3 for 1 topic(s) Set(wikipedia-edits)
+2018-04-08 14:08:08.637 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] SyncProducer [INFO] Connected to localhost:9092 for producing
+2018-04-08 14:08:08.640 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] SyncProducer [INFO] Disconnecting from localhost:9092
+2018-04-08 14:08:08.641 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] GetOffset [INFO] Validating offset 21446 for topic and partition [wikipedia-edits,0]
+2018-04-08 14:08:08.642 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] DefaultFetchSimpleConsumer [INFO] Reconnect due to error:
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:85)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply$mcV$sp(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer.fetch(SimpleConsumer.scala:130)
+	at org.apache.samza.system.kafka.DefaultFetchSimpleConsumer.fetch(DefaultFetchSimpleConsumer.scala:48)
+	at org.apache.samza.system.kafka.DefaultFetchSimpleConsumer.defaultFetch(DefaultFetchSimpleConsumer.scala:41)
+	at org.apache.samza.system.kafka.GetOffset.isValidOffset(GetOffset.scala:60)
+	at org.apache.samza.system.kafka.BrokerProxy.addTopicPartition(BrokerProxy.scala:100)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anonfun$refreshBrokers$2.refresh$1(KafkaSystemConsumer.scala:211)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anonfun$refreshBrokers$2.apply(KafkaSystemConsumer.scala:224)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anonfun$refreshBrokers$2.apply(KafkaSystemConsumer.scala:190)
+	at org.apache.samza.util.ExponentialSleepStrategy.run(ExponentialSleepStrategy.scala:83)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer.refreshBrokers(KafkaSystemConsumer.scala:189)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anon$1.abdicate(KafkaSystemConsumer.scala:291)
+	at org.apache.samza.system.kafka.BrokerProxy.abdicate(BrokerProxy.scala:208)
+	at org.apache.samza.system.kafka.BrokerProxy$$anonfun$abdicateAll$1.apply(BrokerProxy.scala:219)
+	at org.apache.samza.system.kafka.BrokerProxy$$anonfun$abdicateAll$1.apply(BrokerProxy.scala:219)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1336)
+	at scala.collection.MapLike$DefaultKeySet.foreach(MapLike.scala:174)
+	at org.apache.samza.system.kafka.BrokerProxy.abdicateAll(BrokerProxy.scala:219)
+	at org.apache.samza.system.kafka.BrokerProxy$$anon$1$$anonfun$run$2.apply(BrokerProxy.scala:161)
+	at org.apache.samza.system.kafka.BrokerProxy$$anon$1$$anonfun$run$2.apply(BrokerProxy.scala:158)
+	at org.apache.samza.util.ExponentialSleepStrategy.run(ExponentialSleepStrategy.scala:82)
+	at org.apache.samza.system.kafka.BrokerProxy$$anon$1.run(BrokerProxy.scala:134)
+	at java.lang.Thread.run(Thread.java:748)
+2018-04-08 14:08:08.645 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] KafkaSystemConsumer [WARN] While refreshing brokers for [wikipedia-edits,0]: java.nio.channels.ClosedChannelException. Retrying.
+2018-04-08 14:08:10.868 [Samza-ContainerHeartbeatMonitor-0] ContainerHeartbeatClient [ERROR] Error in heartbeat request. Retrying [2/6].
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1564)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492)
+	at org.apache.samza.container.ContainerHeartbeatClient.httpGet(ContainerHeartbeatClient.java:90)
+	at org.apache.samza.container.ContainerHeartbeatClient.requestHeartbeat(ContainerHeartbeatClient.java:71)
+	at org.apache.samza.container.ContainerHeartbeatMonitor.lambda$start$1(ContainerHeartbeatMonitor.java:53)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2018-04-08 14:08:17.894 [Samza-ContainerHeartbeatMonitor-0] ContainerHeartbeatClient [ERROR] Error in heartbeat request. Retrying [3/6].
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1564)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492)
+	at org.apache.samza.container.ContainerHeartbeatClient.httpGet(ContainerHeartbeatClient.java:90)
+	at org.apache.samza.container.ContainerHeartbeatClient.requestHeartbeat(ContainerHeartbeatClient.java:71)
+	at org.apache.samza.container.ContainerHeartbeatMonitor.lambda$start$1(ContainerHeartbeatMonitor.java:53)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2018-04-08 14:08:18.650 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] VerifiableProperties [INFO] Verifying properties
+2018-04-08 14:08:18.650 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] VerifiableProperties [INFO] Property client.id is overridden to samza_consumer-wikipedia_stats-1
+2018-04-08 14:08:18.650 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] VerifiableProperties [INFO] Property metadata.broker.list is overridden to localhost:9092
+2018-04-08 14:08:18.650 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] VerifiableProperties [INFO] Property request.timeout.ms is overridden to 30000
+2018-04-08 14:08:18.651 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] ClientUtils$ [INFO] Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 4 for 1 topic(s) Set(wikipedia-edits)
+2018-04-08 14:08:18.652 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] SyncProducer [INFO] Connected to localhost:9092 for producing
+2018-04-08 14:08:18.653 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] SyncProducer [INFO] Disconnecting from localhost:9092
+2018-04-08 14:08:18.654 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] GetOffset [INFO] Validating offset 21446 for topic and partition [wikipedia-edits,0]
+2018-04-08 14:08:18.654 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] DefaultFetchSimpleConsumer [INFO] Reconnect due to error:
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:85)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply$mcV$sp(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer.fetch(SimpleConsumer.scala:130)
+	at org.apache.samza.system.kafka.DefaultFetchSimpleConsumer.fetch(DefaultFetchSimpleConsumer.scala:48)
+	at org.apache.samza.system.kafka.DefaultFetchSimpleConsumer.defaultFetch(DefaultFetchSimpleConsumer.scala:41)
+	at org.apache.samza.system.kafka.GetOffset.isValidOffset(GetOffset.scala:60)
+	at org.apache.samza.system.kafka.BrokerProxy.addTopicPartition(BrokerProxy.scala:100)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anonfun$refreshBrokers$2.refresh$1(KafkaSystemConsumer.scala:211)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anonfun$refreshBrokers$2.apply(KafkaSystemConsumer.scala:224)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anonfun$refreshBrokers$2.apply(KafkaSystemConsumer.scala:190)
+	at org.apache.samza.util.ExponentialSleepStrategy.run(ExponentialSleepStrategy.scala:83)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer.refreshBrokers(KafkaSystemConsumer.scala:189)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anon$1.abdicate(KafkaSystemConsumer.scala:291)
+	at org.apache.samza.system.kafka.BrokerProxy.abdicate(BrokerProxy.scala:208)
+	at org.apache.samza.system.kafka.BrokerProxy$$anonfun$abdicateAll$1.apply(BrokerProxy.scala:219)
+	at org.apache.samza.system.kafka.BrokerProxy$$anonfun$abdicateAll$1.apply(BrokerProxy.scala:219)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1336)
+	at scala.collection.MapLike$DefaultKeySet.foreach(MapLike.scala:174)
+	at org.apache.samza.system.kafka.BrokerProxy.abdicateAll(BrokerProxy.scala:219)
+	at org.apache.samza.system.kafka.BrokerProxy$$anon$1$$anonfun$run$2.apply(BrokerProxy.scala:161)
+	at org.apache.samza.system.kafka.BrokerProxy$$anon$1$$anonfun$run$2.apply(BrokerProxy.scala:158)
+	at org.apache.samza.util.ExponentialSleepStrategy.run(ExponentialSleepStrategy.scala:82)
+	at org.apache.samza.system.kafka.BrokerProxy$$anon$1.run(BrokerProxy.scala:134)
+	at java.lang.Thread.run(Thread.java:748)
+2018-04-08 14:08:18.656 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] KafkaSystemConsumer [WARN] While refreshing brokers for [wikipedia-edits,0]: java.nio.channels.ClosedChannelException. Retrying.
+2018-04-08 14:08:25.960 [kafka-producer-network-thread | samza_producer-wikipedia_stats-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: samza-container-0 on System:kafka Topic:metrics Partition:0
+2018-04-08 14:08:25.961 [kafka-producer-network-thread | samza_producer-wikipedia_stats-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:25.961 [kafka-producer-network-thread | samza_producer-wikipedia_stats-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:26.380 [kafka-producer-network-thread | samza_producer-wikipedia_stats-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-stats Partition:null
+2018-04-08 14:08:26.380 [kafka-producer-network-thread | samza_producer-wikipedia_stats-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:26.381 [kafka-producer-network-thread | samza_producer-wikipedia_stats-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:26.382 [kafka-producer-network-thread | samza_producer-wikipedia_stats-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-stats Partition:null
+2018-04-08 14:08:26.382 [kafka-producer-network-thread | samza_producer-wikipedia_stats-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:26.382 [kafka-producer-network-thread | samza_producer-wikipedia_stats-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:26.382 [kafka-producer-network-thread | samza_producer-wikipedia_stats-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-stats Partition:null
+2018-04-08 14:08:26.382 [kafka-producer-network-thread | samza_producer-wikipedia_stats-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:26.383 [kafka-producer-network-thread | samza_producer-wikipedia_stats-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:26.383 [kafka-producer-network-thread | samza_producer-wikipedia_stats-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-stats Partition:null
+2018-04-08 14:08:26.385 [kafka-producer-network-thread | samza_producer-wikipedia_stats-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:26.385 [kafka-producer-network-thread | samza_producer-wikipedia_stats-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:26.903 [Samza-ContainerHeartbeatMonitor-0] ContainerHeartbeatClient [ERROR] Error in heartbeat request. Retrying [4/6].
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1564)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492)
+	at org.apache.samza.container.ContainerHeartbeatClient.httpGet(ContainerHeartbeatClient.java:90)
+	at org.apache.samza.container.ContainerHeartbeatClient.requestHeartbeat(ContainerHeartbeatClient.java:71)
+	at org.apache.samza.container.ContainerHeartbeatMonitor.lambda$start$1(ContainerHeartbeatMonitor.java:53)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2018-04-08 14:08:28.660 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] VerifiableProperties [INFO] Verifying properties
+2018-04-08 14:08:28.660 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] VerifiableProperties [INFO] Property client.id is overridden to samza_consumer-wikipedia_stats-1
+2018-04-08 14:08:28.660 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] VerifiableProperties [INFO] Property metadata.broker.list is overridden to localhost:9092
+2018-04-08 14:08:28.661 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] VerifiableProperties [INFO] Property request.timeout.ms is overridden to 30000
+2018-04-08 14:08:28.661 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] ClientUtils$ [INFO] Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 5 for 1 topic(s) Set(wikipedia-edits)
+2018-04-08 14:08:28.665 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] SyncProducer [INFO] Connected to localhost:9092 for producing
+2018-04-08 14:08:28.666 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] SyncProducer [INFO] Disconnecting from localhost:9092
+2018-04-08 14:08:28.667 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] GetOffset [INFO] Validating offset 21446 for topic and partition [wikipedia-edits,0]
+2018-04-08 14:08:28.667 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] DefaultFetchSimpleConsumer [INFO] Reconnect due to error:
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:85)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply$mcV$sp(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer.fetch(SimpleConsumer.scala:130)
+	at org.apache.samza.system.kafka.DefaultFetchSimpleConsumer.fetch(DefaultFetchSimpleConsumer.scala:48)
+	at org.apache.samza.system.kafka.DefaultFetchSimpleConsumer.defaultFetch(DefaultFetchSimpleConsumer.scala:41)
+	at org.apache.samza.system.kafka.GetOffset.isValidOffset(GetOffset.scala:60)
+	at org.apache.samza.system.kafka.BrokerProxy.addTopicPartition(BrokerProxy.scala:100)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anonfun$refreshBrokers$2.refresh$1(KafkaSystemConsumer.scala:211)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anonfun$refreshBrokers$2.apply(KafkaSystemConsumer.scala:224)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anonfun$refreshBrokers$2.apply(KafkaSystemConsumer.scala:190)
+	at org.apache.samza.util.ExponentialSleepStrategy.run(ExponentialSleepStrategy.scala:83)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer.refreshBrokers(KafkaSystemConsumer.scala:189)
+	at org.apache.samza.system.kafka.KafkaSystemConsumer$$anon$1.abdicate(KafkaSystemConsumer.scala:291)
+	at org.apache.samza.system.kafka.BrokerProxy.abdicate(BrokerProxy.scala:208)
+	at org.apache.samza.system.kafka.BrokerProxy$$anonfun$abdicateAll$1.apply(BrokerProxy.scala:219)
+	at org.apache.samza.system.kafka.BrokerProxy$$anonfun$abdicateAll$1.apply(BrokerProxy.scala:219)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1336)
+	at scala.collection.MapLike$DefaultKeySet.foreach(MapLike.scala:174)
+	at org.apache.samza.system.kafka.BrokerProxy.abdicateAll(BrokerProxy.scala:219)
+	at org.apache.samza.system.kafka.BrokerProxy$$anon$1$$anonfun$run$2.apply(BrokerProxy.scala:161)
+	at org.apache.samza.system.kafka.BrokerProxy$$anon$1$$anonfun$run$2.apply(BrokerProxy.scala:158)
+	at org.apache.samza.util.ExponentialSleepStrategy.run(ExponentialSleepStrategy.scala:82)
+	at org.apache.samza.system.kafka.BrokerProxy$$anon$1.run(BrokerProxy.scala:134)
+	at java.lang.Thread.run(Thread.java:748)
+2018-04-08 14:08:28.668 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] KafkaSystemConsumer [WARN] While refreshing brokers for [wikipedia-edits,0]: java.nio.channels.ClosedChannelException. Retrying.
+2018-04-08 14:08:30.281 [main] AsyncRunLoop [ERROR] Task Partition 0 window failed
+org.apache.samza.system.SystemProducerException: Producer was unable to recover from previous exception.
+	at org.apache.samza.system.kafka.KafkaSystemProducer.send(KafkaSystemProducer.scala:92)
+	at org.apache.samza.system.SystemProducers.send(SystemProducers.scala:87)
+	at org.apache.samza.task.TaskInstanceCollector.send(TaskInstanceCollector.scala:60)
+	at samza.examples.wikipedia.task.WikipediaStatsStreamTask.window(WikipediaStatsStreamTask.java:88)
+	at org.apache.samza.task.AsyncStreamTaskAdapter.window(AsyncStreamTaskAdapter.java:82)
+	at org.apache.samza.container.TaskInstance$$anonfun$window$1.apply$mcV$sp(TaskInstance.scala:183)
+	at org.apache.samza.container.TaskInstanceExceptionHandler.maybeHandle(TaskInstanceExceptionHandler.scala:54)
+	at org.apache.samza.container.TaskInstance.window(TaskInstance.scala:182)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker$4.run(AsyncRunLoop.java:444)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.window(AsyncRunLoop.java:478)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.run(AsyncRunLoop.java:376)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.access$300(AsyncRunLoop.java:314)
+	at org.apache.samza.task.AsyncRunLoop.runTasks(AsyncRunLoop.java:228)
+	at org.apache.samza.task.AsyncRunLoop.run(AsyncRunLoop.java:157)
+	at org.apache.samza.container.SamzaContainer.run(SamzaContainer.scala:728)
+	at org.apache.samza.runtime.LocalContainerRunner.run(LocalContainerRunner.java:102)
+	at org.apache.samza.runtime.LocalContainerRunner.main(LocalContainerRunner.java:147)
+Caused by: org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-stats Partition:null
+	at org.apache.samza.system.kafka.KafkaSystemProducer$$anon$1.onCompletion(KafkaSystemProducer.scala:115)
+	at org.apache.kafka.clients.producer.internals.RecordBatch.done(RecordBatch.java:109)
+	at org.apache.kafka.clients.producer.internals.RecordBatch.maybeExpire(RecordBatch.java:160)
+	at org.apache.kafka.clients.producer.internals.RecordAccumulator.abortExpiredBatches(RecordAccumulator.java:245)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:212)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:135)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.kafka.common.errors.TimeoutException: Expiring 4 record(s) for wikipedia-stats-0 due to 30010 ms has passed since batch creation plus linger time
+2018-04-08 14:08:30.282 [main] AsyncRunLoop [ERROR] Caught throwable and stopping run loop
+org.apache.samza.system.SystemProducerException: Producer was unable to recover from previous exception.
+	at org.apache.samza.system.kafka.KafkaSystemProducer.send(KafkaSystemProducer.scala:92)
+	at org.apache.samza.system.SystemProducers.send(SystemProducers.scala:87)
+	at org.apache.samza.task.TaskInstanceCollector.send(TaskInstanceCollector.scala:60)
+	at samza.examples.wikipedia.task.WikipediaStatsStreamTask.window(WikipediaStatsStreamTask.java:88)
+	at org.apache.samza.task.AsyncStreamTaskAdapter.window(AsyncStreamTaskAdapter.java:82)
+	at org.apache.samza.container.TaskInstance$$anonfun$window$1.apply$mcV$sp(TaskInstance.scala:183)
+	at org.apache.samza.container.TaskInstanceExceptionHandler.maybeHandle(TaskInstanceExceptionHandler.scala:54)
+	at org.apache.samza.container.TaskInstance.window(TaskInstance.scala:182)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker$4.run(AsyncRunLoop.java:444)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.window(AsyncRunLoop.java:478)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.run(AsyncRunLoop.java:376)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.access$300(AsyncRunLoop.java:314)
+	at org.apache.samza.task.AsyncRunLoop.runTasks(AsyncRunLoop.java:228)
+	at org.apache.samza.task.AsyncRunLoop.run(AsyncRunLoop.java:157)
+	at org.apache.samza.container.SamzaContainer.run(SamzaContainer.scala:728)
+	at org.apache.samza.runtime.LocalContainerRunner.run(LocalContainerRunner.java:102)
+	at org.apache.samza.runtime.LocalContainerRunner.main(LocalContainerRunner.java:147)
+Caused by: org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-stats Partition:null
+	at org.apache.samza.system.kafka.KafkaSystemProducer$$anon$1.onCompletion(KafkaSystemProducer.scala:115)
+	at org.apache.kafka.clients.producer.internals.RecordBatch.done(RecordBatch.java:109)
+	at org.apache.kafka.clients.producer.internals.RecordBatch.maybeExpire(RecordBatch.java:160)
+	at org.apache.kafka.clients.producer.internals.RecordAccumulator.abortExpiredBatches(RecordAccumulator.java:245)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:212)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:135)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.kafka.common.errors.TimeoutException: Expiring 4 record(s) for wikipedia-stats-0 due to 30010 ms has passed since batch creation plus linger time
+2018-04-08 14:08:30.294 [main] SamzaContainer [ERROR] Caught exception/error in run loop.
+org.apache.samza.SamzaException: org.apache.samza.system.SystemProducerException: Producer was unable to recover from previous exception.
+	at org.apache.samza.task.AsyncRunLoop.run(AsyncRunLoop.java:147)
+	at org.apache.samza.container.SamzaContainer.run(SamzaContainer.scala:728)
+	at org.apache.samza.runtime.LocalContainerRunner.run(LocalContainerRunner.java:102)
+	at org.apache.samza.runtime.LocalContainerRunner.main(LocalContainerRunner.java:147)
+Caused by: org.apache.samza.system.SystemProducerException: Producer was unable to recover from previous exception.
+	at org.apache.samza.system.kafka.KafkaSystemProducer.send(KafkaSystemProducer.scala:92)
+	at org.apache.samza.system.SystemProducers.send(SystemProducers.scala:87)
+	at org.apache.samza.task.TaskInstanceCollector.send(TaskInstanceCollector.scala:60)
+	at samza.examples.wikipedia.task.WikipediaStatsStreamTask.window(WikipediaStatsStreamTask.java:88)
+	at org.apache.samza.task.AsyncStreamTaskAdapter.window(AsyncStreamTaskAdapter.java:82)
+	at org.apache.samza.container.TaskInstance$$anonfun$window$1.apply$mcV$sp(TaskInstance.scala:183)
+	at org.apache.samza.container.TaskInstanceExceptionHandler.maybeHandle(TaskInstanceExceptionHandler.scala:54)
+	at org.apache.samza.container.TaskInstance.window(TaskInstance.scala:182)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker$4.run(AsyncRunLoop.java:444)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.window(AsyncRunLoop.java:478)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.run(AsyncRunLoop.java:376)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.access$300(AsyncRunLoop.java:314)
+	at org.apache.samza.task.AsyncRunLoop.runTasks(AsyncRunLoop.java:228)
+	at org.apache.samza.task.AsyncRunLoop.run(AsyncRunLoop.java:157)
+	... 3 more
+Caused by: org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-stats Partition:null
+	at org.apache.samza.system.kafka.KafkaSystemProducer$$anon$1.onCompletion(KafkaSystemProducer.scala:115)
+	at org.apache.kafka.clients.producer.internals.RecordBatch.done(RecordBatch.java:109)
+	at org.apache.kafka.clients.producer.internals.RecordBatch.maybeExpire(RecordBatch.java:160)
+	at org.apache.kafka.clients.producer.internals.RecordAccumulator.abortExpiredBatches(RecordAccumulator.java:245)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:212)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:135)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.kafka.common.errors.TimeoutException: Expiring 4 record(s) for wikipedia-stats-0 due to 30010 ms has passed since batch creation plus linger time
+2018-04-08 14:08:30.296 [main] SamzaContainer [INFO] Shutting down.
+2018-04-08 14:08:30.314 [main] SamzaContainer [INFO] Shutting down consumer multiplexer.
+2018-04-08 14:08:30.317 [main] BrokerProxy [INFO] Shutting down BrokerProxy for 192.168.0.27:9092
+2018-04-08 14:08:30.317 [main] BrokerProxy [INFO] closing simple consumer...
+2018-04-08 14:08:30.318 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] BrokerProxy [INFO] Got interrupt exception in broker proxy thread.
+2018-04-08 14:08:30.320 [main] SamzaContainer [INFO] Shutting down task instance stream tasks.
+2018-04-08 14:08:30.325 [main] SamzaContainer [INFO] Shutting down task instance stores.
+2018-04-08 14:08:30.343 [main] SimpleConsumer [INFO] Reconnect due to error:
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:85)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer.getOffsetsBefore(SimpleConsumer.scala:149)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin.org$apache$samza$system$kafka$KafkaSystemAdmin$$getOffsets(KafkaSystemAdmin.scala:390)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin$$anonfun$getNewestOffset$2.apply(KafkaSystemAdmin.scala:300)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin$$anonfun$getNewestOffset$2.apply(KafkaSystemAdmin.scala:284)
+	at org.apache.samza.util.ExponentialSleepStrategy.run(ExponentialSleepStrategy.scala:83)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin.getNewestOffset(KafkaSystemAdmin.scala:283)
+	at org.apache.samza.storage.TaskStorageManager$$anonfun$flushChangelogOffsetFiles$4.apply(TaskStorageManager.scala:346)
+	at org.apache.samza.storage.TaskStorageManager$$anonfun$flushChangelogOffsetFiles$4.apply(TaskStorageManager.scala:336)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.MapLike$FilteredKeys$$anonfun$foreach$1.apply(MapLike.scala:231)
+	at scala.collection.MapLike$FilteredKeys$$anonfun$foreach$1.apply(MapLike.scala:231)
+	at scala.collection.MapLike$MappedValues$$anonfun$foreach$3.apply(MapLike.scala:245)
+	at scala.collection.MapLike$MappedValues$$anonfun$foreach$3.apply(MapLike.scala:245)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.immutable.Map$Map1.foreach(Map.scala:116)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at scala.collection.MapLike$MappedValues.foreach(MapLike.scala:245)
+	at scala.collection.MapLike$FilteredKeys.foreach(MapLike.scala:231)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at org.apache.samza.storage.TaskStorageManager.flushChangelogOffsetFiles(TaskStorageManager.scala:336)
+	at org.apache.samza.storage.TaskStorageManager.stop(TaskStorageManager.scala:322)
+	at org.apache.samza.container.TaskInstance.shutdownStores(TaskInstance.scala:222)
+	at org.apache.samza.container.SamzaContainer$$anonfun$shutdownStores$2.apply(SamzaContainer.scala:1003)
+	at org.apache.samza.container.SamzaContainer$$anonfun$shutdownStores$2.apply(SamzaContainer.scala:1003)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1336)
+	at scala.collection.MapLike$DefaultValuesIterable.foreach(MapLike.scala:206)
+	at org.apache.samza.container.SamzaContainer.shutdownStores(SamzaContainer.scala:1003)
+	at org.apache.samza.container.SamzaContainer.run(SamzaContainer.scala:748)
+	at org.apache.samza.runtime.LocalContainerRunner.run(LocalContainerRunner.java:102)
+	at org.apache.samza.runtime.LocalContainerRunner.main(LocalContainerRunner.java:147)
+2018-04-08 14:08:30.344 [main] KafkaSystemAdmin [WARN] Exception while trying to get offset for SystemStreamPartition [kafka, wikipedia-stats-changelog, 0]: java.nio.channels.ClosedChannelException. Retrying.
+2018-04-08 14:08:30.449 [main] VerifiableProperties [INFO] Verifying properties
+2018-04-08 14:08:30.450 [main] VerifiableProperties [INFO] Property client.id is overridden to samza_admin-wikipedia_stats-1
+2018-04-08 14:08:30.450 [main] VerifiableProperties [INFO] Property metadata.broker.list is overridden to localhost:9092
+2018-04-08 14:08:30.450 [main] VerifiableProperties [INFO] Property request.timeout.ms is overridden to 30000
+2018-04-08 14:08:30.451 [main] ClientUtils$ [INFO] Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 0 for 1 topic(s) Set(wikipedia-stats-changelog)
+2018-04-08 14:08:30.451 [main] SyncProducer [INFO] Connected to localhost:9092 for producing
+2018-04-08 14:08:30.452 [main] SyncProducer [INFO] Disconnecting from localhost:9092
+2018-04-08 14:08:30.453 [main] SimpleConsumer [INFO] Reconnect due to error:
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:85)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer.getOffsetsBefore(SimpleConsumer.scala:149)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin.org$apache$samza$system$kafka$KafkaSystemAdmin$$getOffsets(KafkaSystemAdmin.scala:390)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin$$anonfun$getNewestOffset$2.apply(KafkaSystemAdmin.scala:300)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin$$anonfun$getNewestOffset$2.apply(KafkaSystemAdmin.scala:284)
+	at org.apache.samza.util.ExponentialSleepStrategy.run(ExponentialSleepStrategy.scala:83)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin.getNewestOffset(KafkaSystemAdmin.scala:283)
+	at org.apache.samza.storage.TaskStorageManager$$anonfun$flushChangelogOffsetFiles$4.apply(TaskStorageManager.scala:346)
+	at org.apache.samza.storage.TaskStorageManager$$anonfun$flushChangelogOffsetFiles$4.apply(TaskStorageManager.scala:336)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.MapLike$FilteredKeys$$anonfun$foreach$1.apply(MapLike.scala:231)
+	at scala.collection.MapLike$FilteredKeys$$anonfun$foreach$1.apply(MapLike.scala:231)
+	at scala.collection.MapLike$MappedValues$$anonfun$foreach$3.apply(MapLike.scala:245)
+	at scala.collection.MapLike$MappedValues$$anonfun$foreach$3.apply(MapLike.scala:245)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.immutable.Map$Map1.foreach(Map.scala:116)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at scala.collection.MapLike$MappedValues.foreach(MapLike.scala:245)
+	at scala.collection.MapLike$FilteredKeys.foreach(MapLike.scala:231)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at org.apache.samza.storage.TaskStorageManager.flushChangelogOffsetFiles(TaskStorageManager.scala:336)
+	at org.apache.samza.storage.TaskStorageManager.stop(TaskStorageManager.scala:322)
+	at org.apache.samza.container.TaskInstance.shutdownStores(TaskInstance.scala:222)
+	at org.apache.samza.container.SamzaContainer$$anonfun$shutdownStores$2.apply(SamzaContainer.scala:1003)
+	at org.apache.samza.container.SamzaContainer$$anonfun$shutdownStores$2.apply(SamzaContainer.scala:1003)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1336)
+	at scala.collection.MapLike$DefaultValuesIterable.foreach(MapLike.scala:206)
+	at org.apache.samza.container.SamzaContainer.shutdownStores(SamzaContainer.scala:1003)
+	at org.apache.samza.container.SamzaContainer.run(SamzaContainer.scala:748)
+	at org.apache.samza.runtime.LocalContainerRunner.run(LocalContainerRunner.java:102)
+	at org.apache.samza.runtime.LocalContainerRunner.main(LocalContainerRunner.java:147)
+2018-04-08 14:08:30.454 [main] KafkaSystemAdmin [WARN] Exception while trying to get offset for SystemStreamPartition [kafka, wikipedia-stats-changelog, 0]: java.nio.channels.ClosedChannelException. Retrying.
+2018-04-08 14:08:30.658 [main] VerifiableProperties [INFO] Verifying properties
+2018-04-08 14:08:30.658 [main] VerifiableProperties [INFO] Property client.id is overridden to samza_admin-wikipedia_stats-1
+2018-04-08 14:08:30.659 [main] VerifiableProperties [INFO] Property metadata.broker.list is overridden to localhost:9092
+2018-04-08 14:08:30.659 [main] VerifiableProperties [INFO] Property request.timeout.ms is overridden to 30000
+2018-04-08 14:08:30.659 [main] ClientUtils$ [INFO] Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 0 for 1 topic(s) Set(wikipedia-stats-changelog)
+2018-04-08 14:08:30.660 [main] SyncProducer [INFO] Connected to localhost:9092 for producing
+2018-04-08 14:08:30.661 [main] SyncProducer [INFO] Disconnecting from localhost:9092
+2018-04-08 14:08:30.662 [main] SimpleConsumer [INFO] Reconnect due to error:
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:85)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer.getOffsetsBefore(SimpleConsumer.scala:149)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin.org$apache$samza$system$kafka$KafkaSystemAdmin$$getOffsets(KafkaSystemAdmin.scala:390)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin$$anonfun$getNewestOffset$2.apply(KafkaSystemAdmin.scala:300)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin$$anonfun$getNewestOffset$2.apply(KafkaSystemAdmin.scala:284)
+	at org.apache.samza.util.ExponentialSleepStrategy.run(ExponentialSleepStrategy.scala:83)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin.getNewestOffset(KafkaSystemAdmin.scala:283)
+	at org.apache.samza.storage.TaskStorageManager$$anonfun$flushChangelogOffsetFiles$4.apply(TaskStorageManager.scala:346)
+	at org.apache.samza.storage.TaskStorageManager$$anonfun$flushChangelogOffsetFiles$4.apply(TaskStorageManager.scala:336)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.MapLike$FilteredKeys$$anonfun$foreach$1.apply(MapLike.scala:231)
+	at scala.collection.MapLike$FilteredKeys$$anonfun$foreach$1.apply(MapLike.scala:231)
+	at scala.collection.MapLike$MappedValues$$anonfun$foreach$3.apply(MapLike.scala:245)
+	at scala.collection.MapLike$MappedValues$$anonfun$foreach$3.apply(MapLike.scala:245)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.immutable.Map$Map1.foreach(Map.scala:116)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at scala.collection.MapLike$MappedValues.foreach(MapLike.scala:245)
+	at scala.collection.MapLike$FilteredKeys.foreach(MapLike.scala:231)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at org.apache.samza.storage.TaskStorageManager.flushChangelogOffsetFiles(TaskStorageManager.scala:336)
+	at org.apache.samza.storage.TaskStorageManager.stop(TaskStorageManager.scala:322)
+	at org.apache.samza.container.TaskInstance.shutdownStores(TaskInstance.scala:222)
+	at org.apache.samza.container.SamzaContainer$$anonfun$shutdownStores$2.apply(SamzaContainer.scala:1003)
+	at org.apache.samza.container.SamzaContainer$$anonfun$shutdownStores$2.apply(SamzaContainer.scala:1003)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1336)
+	at scala.collection.MapLike$DefaultValuesIterable.foreach(MapLike.scala:206)
+	at org.apache.samza.container.SamzaContainer.shutdownStores(SamzaContainer.scala:1003)
+	at org.apache.samza.container.SamzaContainer.run(SamzaContainer.scala:748)
+	at org.apache.samza.runtime.LocalContainerRunner.run(LocalContainerRunner.java:102)
+	at org.apache.samza.runtime.LocalContainerRunner.main(LocalContainerRunner.java:147)
+2018-04-08 14:08:30.663 [main] KafkaSystemAdmin [WARN] Exception while trying to get offset for SystemStreamPartition [kafka, wikipedia-stats-changelog, 0]: java.nio.channels.ClosedChannelException. Retrying.
+2018-04-08 14:08:31.069 [main] VerifiableProperties [INFO] Verifying properties
+2018-04-08 14:08:31.069 [main] VerifiableProperties [INFO] Property client.id is overridden to samza_admin-wikipedia_stats-1
+2018-04-08 14:08:31.069 [main] VerifiableProperties [INFO] Property metadata.broker.list is overridden to localhost:9092
+2018-04-08 14:08:31.069 [main] VerifiableProperties [INFO] Property request.timeout.ms is overridden to 30000
+2018-04-08 14:08:31.070 [main] ClientUtils$ [INFO] Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 0 for 1 topic(s) Set(wikipedia-stats-changelog)
+2018-04-08 14:08:31.070 [main] SyncProducer [INFO] Connected to localhost:9092 for producing
+2018-04-08 14:08:31.072 [main] SyncProducer [INFO] Disconnecting from localhost:9092
+2018-04-08 14:08:31.073 [main] SimpleConsumer [INFO] Reconnect due to error:
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:85)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer.getOffsetsBefore(SimpleConsumer.scala:149)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin.org$apache$samza$system$kafka$KafkaSystemAdmin$$getOffsets(KafkaSystemAdmin.scala:390)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin$$anonfun$getNewestOffset$2.apply(KafkaSystemAdmin.scala:300)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin$$anonfun$getNewestOffset$2.apply(KafkaSystemAdmin.scala:284)
+	at org.apache.samza.util.ExponentialSleepStrategy.run(ExponentialSleepStrategy.scala:83)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin.getNewestOffset(KafkaSystemAdmin.scala:283)
+	at org.apache.samza.storage.TaskStorageManager$$anonfun$flushChangelogOffsetFiles$4.apply(TaskStorageManager.scala:346)
+	at org.apache.samza.storage.TaskStorageManager$$anonfun$flushChangelogOffsetFiles$4.apply(TaskStorageManager.scala:336)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.MapLike$FilteredKeys$$anonfun$foreach$1.apply(MapLike.scala:231)
+	at scala.collection.MapLike$FilteredKeys$$anonfun$foreach$1.apply(MapLike.scala:231)
+	at scala.collection.MapLike$MappedValues$$anonfun$foreach$3.apply(MapLike.scala:245)
+	at scala.collection.MapLike$MappedValues$$anonfun$foreach$3.apply(MapLike.scala:245)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.immutable.Map$Map1.foreach(Map.scala:116)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at scala.collection.MapLike$MappedValues.foreach(MapLike.scala:245)
+	at scala.collection.MapLike$FilteredKeys.foreach(MapLike.scala:231)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at org.apache.samza.storage.TaskStorageManager.flushChangelogOffsetFiles(TaskStorageManager.scala:336)
+	at org.apache.samza.storage.TaskStorageManager.stop(TaskStorageManager.scala:322)
+	at org.apache.samza.container.TaskInstance.shutdownStores(TaskInstance.scala:222)
+	at org.apache.samza.container.SamzaContainer$$anonfun$shutdownStores$2.apply(SamzaContainer.scala:1003)
+	at org.apache.samza.container.SamzaContainer$$anonfun$shutdownStores$2.apply(SamzaContainer.scala:1003)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1336)
+	at scala.collection.MapLike$DefaultValuesIterable.foreach(MapLike.scala:206)
+	at org.apache.samza.container.SamzaContainer.shutdownStores(SamzaContainer.scala:1003)
+	at org.apache.samza.container.SamzaContainer.run(SamzaContainer.scala:748)
+	at org.apache.samza.runtime.LocalContainerRunner.run(LocalContainerRunner.java:102)
+	at org.apache.samza.runtime.LocalContainerRunner.main(LocalContainerRunner.java:147)
+2018-04-08 14:08:31.090 [main] KafkaSystemAdmin [WARN] Exception while trying to get offset for SystemStreamPartition [kafka, wikipedia-stats-changelog, 0]
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:98)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer.getOffsetsBefore(SimpleConsumer.scala:149)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin.org$apache$samza$system$kafka$KafkaSystemAdmin$$getOffsets(KafkaSystemAdmin.scala:390)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin$$anonfun$getNewestOffset$2.apply(KafkaSystemAdmin.scala:300)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin$$anonfun$getNewestOffset$2.apply(KafkaSystemAdmin.scala:284)
+	at org.apache.samza.util.ExponentialSleepStrategy.run(ExponentialSleepStrategy.scala:83)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin.getNewestOffset(KafkaSystemAdmin.scala:283)
+	at org.apache.samza.storage.TaskStorageManager$$anonfun$flushChangelogOffsetFiles$4.apply(TaskStorageManager.scala:346)
+	at org.apache.samza.storage.TaskStorageManager$$anonfun$flushChangelogOffsetFiles$4.apply(TaskStorageManager.scala:336)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.MapLike$FilteredKeys$$anonfun$foreach$1.apply(MapLike.scala:231)
+	at scala.collection.MapLike$FilteredKeys$$anonfun$foreach$1.apply(MapLike.scala:231)
+	at scala.collection.MapLike$MappedValues$$anonfun$foreach$3.apply(MapLike.scala:245)
+	at scala.collection.MapLike$MappedValues$$anonfun$foreach$3.apply(MapLike.scala:245)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.immutable.Map$Map1.foreach(Map.scala:116)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at scala.collection.MapLike$MappedValues.foreach(MapLike.scala:245)
+	at scala.collection.MapLike$FilteredKeys.foreach(MapLike.scala:231)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at org.apache.samza.storage.TaskStorageManager.flushChangelogOffsetFiles(TaskStorageManager.scala:336)
+	at org.apache.samza.storage.TaskStorageManager.stop(TaskStorageManager.scala:322)
+	at org.apache.samza.container.TaskInstance.shutdownStores(TaskInstance.scala:222)
+	at org.apache.samza.container.SamzaContainer$$anonfun$shutdownStores$2.apply(SamzaContainer.scala:1003)
+	at org.apache.samza.container.SamzaContainer$$anonfun$shutdownStores$2.apply(SamzaContainer.scala:1003)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1336)
+	at scala.collection.MapLike$DefaultValuesIterable.foreach(MapLike.scala:206)
+	at org.apache.samza.container.SamzaContainer.shutdownStores(SamzaContainer.scala:1003)
+	at org.apache.samza.container.SamzaContainer.run(SamzaContainer.scala:748)
+	at org.apache.samza.runtime.LocalContainerRunner.run(LocalContainerRunner.java:102)
+	at org.apache.samza.runtime.LocalContainerRunner.main(LocalContainerRunner.java:147)
+2018-04-08 14:08:31.091 [main] TaskStorageManager [ERROR] Exception storing offset for store wikipedia-stats. Skipping.
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:98)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer.getOffsetsBefore(SimpleConsumer.scala:149)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin.org$apache$samza$system$kafka$KafkaSystemAdmin$$getOffsets(KafkaSystemAdmin.scala:390)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin$$anonfun$getNewestOffset$2.apply(KafkaSystemAdmin.scala:300)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin$$anonfun$getNewestOffset$2.apply(KafkaSystemAdmin.scala:284)
+	at org.apache.samza.util.ExponentialSleepStrategy.run(ExponentialSleepStrategy.scala:83)
+	at org.apache.samza.system.kafka.KafkaSystemAdmin.getNewestOffset(KafkaSystemAdmin.scala:283)
+	at org.apache.samza.storage.TaskStorageManager$$anonfun$flushChangelogOffsetFiles$4.apply(TaskStorageManager.scala:346)
+	at org.apache.samza.storage.TaskStorageManager$$anonfun$flushChangelogOffsetFiles$4.apply(TaskStorageManager.scala:336)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.MapLike$FilteredKeys$$anonfun$foreach$1.apply(MapLike.scala:231)
+	at scala.collection.MapLike$FilteredKeys$$anonfun$foreach$1.apply(MapLike.scala:231)
+	at scala.collection.MapLike$MappedValues$$anonfun$foreach$3.apply(MapLike.scala:245)
+	at scala.collection.MapLike$MappedValues$$anonfun$foreach$3.apply(MapLike.scala:245)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.immutable.Map$Map1.foreach(Map.scala:116)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at scala.collection.MapLike$MappedValues.foreach(MapLike.scala:245)
+	at scala.collection.MapLike$FilteredKeys.foreach(MapLike.scala:231)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at org.apache.samza.storage.TaskStorageManager.flushChangelogOffsetFiles(TaskStorageManager.scala:336)
+	at org.apache.samza.storage.TaskStorageManager.stop(TaskStorageManager.scala:322)
+	at org.apache.samza.container.TaskInstance.shutdownStores(TaskInstance.scala:222)
+	at org.apache.samza.container.SamzaContainer$$anonfun$shutdownStores$2.apply(SamzaContainer.scala:1003)
+	at org.apache.samza.container.SamzaContainer$$anonfun$shutdownStores$2.apply(SamzaContainer.scala:1003)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1336)
+	at scala.collection.MapLike$DefaultValuesIterable.foreach(MapLike.scala:206)
+	at org.apache.samza.container.SamzaContainer.shutdownStores(SamzaContainer.scala:1003)
+	at org.apache.samza.container.SamzaContainer.run(SamzaContainer.scala:748)
+	at org.apache.samza.runtime.LocalContainerRunner.run(LocalContainerRunner.java:102)
+	at org.apache.samza.runtime.LocalContainerRunner.main(LocalContainerRunner.java:147)
+2018-04-08 14:08:31.093 [main] SamzaContainer [INFO] Shutting down host statistics monitor.
+2018-04-08 14:08:31.095 [main] SamzaContainer [INFO] Shutting down producer multiplexer.
+2018-04-08 14:08:31.099 [main] KafkaSystemProducer [INFO] Stopping producer for system: kafka
+2018-04-08 14:08:31.099 [main] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2018-04-08 14:08:31.101 [main] KafkaSystemProducer [ERROR] Observed an earlier send() error while closing producer
+org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-stats Partition:null
+	at org.apache.samza.system.kafka.KafkaSystemProducer$$anon$1.onCompletion(KafkaSystemProducer.scala:115)
+	at org.apache.kafka.clients.producer.internals.RecordBatch.done(RecordBatch.java:109)
+	at org.apache.kafka.clients.producer.internals.RecordBatch.maybeExpire(RecordBatch.java:160)
+	at org.apache.kafka.clients.producer.internals.RecordAccumulator.abortExpiredBatches(RecordAccumulator.java:245)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:212)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:135)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.kafka.common.errors.TimeoutException: Expiring 4 record(s) for wikipedia-stats-0 due to 30010 ms has passed since batch creation plus linger time
+2018-04-08 14:08:31.103 [main] SamzaContainer [INFO] Shutting down offset manager.
+2018-04-08 14:08:31.106 [main] SamzaContainer [INFO] Shutting down metrics reporters.
+2018-04-08 14:08:31.112 [main] MetricsSnapshotReporter [INFO] Stopping producer.
+2018-04-08 14:08:31.112 [main] KafkaSystemProducer [INFO] Stopping producer for system: kafka
+2018-04-08 14:08:31.112 [main] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2018-04-08 14:08:31.112 [main] KafkaSystemProducer [ERROR] Observed an earlier send() error while closing producer
+org.apache.samza.system.SystemProducerException: Failed to send message for Source: samza-container-0 on System:kafka Topic:metrics Partition:0
+	at org.apache.samza.system.kafka.KafkaSystemProducer$$anon$1.onCompletion(KafkaSystemProducer.scala:115)
+	at org.apache.kafka.clients.producer.internals.RecordBatch.done(RecordBatch.java:109)
+	at org.apache.kafka.clients.producer.internals.RecordBatch.maybeExpire(RecordBatch.java:160)
+	at org.apache.kafka.clients.producer.internals.RecordAccumulator.abortExpiredBatches(RecordAccumulator.java:245)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:212)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:135)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.kafka.common.errors.TimeoutException: Expiring 1 record(s) for metrics-0 due to 30004 ms has passed since batch creation plus linger time
+2018-04-08 14:08:31.114 [main] MetricsSnapshotReporter [INFO] Stopping reporter timer.
+2018-04-08 14:08:31.116 [main] SamzaContainer [INFO] Shutting down JVM metrics.
+2018-04-08 14:08:31.117 [main] SamzaContainer [INFO] Shutdown complete.
+2018-04-08 14:08:31.118 [main] LocalContainerRunner [INFO] Container Failed
+2018-04-08 14:08:31.118 [main] ContainerHeartbeatMonitor [INFO] Stopping ContainerHeartbeatMonitor
+2018-04-08 14:08:31.118 [main] LocalContainerRunner [ERROR] Container stopped with Exception. Exiting process now.
+org.apache.samza.SamzaException: org.apache.samza.system.SystemProducerException: Producer was unable to recover from previous exception.
+	at org.apache.samza.task.AsyncRunLoop.run(AsyncRunLoop.java:147)
+	at org.apache.samza.container.SamzaContainer.run(SamzaContainer.scala:728)
+	at org.apache.samza.runtime.LocalContainerRunner.run(LocalContainerRunner.java:102)
+	at org.apache.samza.runtime.LocalContainerRunner.main(LocalContainerRunner.java:147)
+Caused by: org.apache.samza.system.SystemProducerException: Producer was unable to recover from previous exception.
+	at org.apache.samza.system.kafka.KafkaSystemProducer.send(KafkaSystemProducer.scala:92)
+	at org.apache.samza.system.SystemProducers.send(SystemProducers.scala:87)
+	at org.apache.samza.task.TaskInstanceCollector.send(TaskInstanceCollector.scala:60)
+	at samza.examples.wikipedia.task.WikipediaStatsStreamTask.window(WikipediaStatsStreamTask.java:88)
+	at org.apache.samza.task.AsyncStreamTaskAdapter.window(AsyncStreamTaskAdapter.java:82)
+	at org.apache.samza.container.TaskInstance$$anonfun$window$1.apply$mcV$sp(TaskInstance.scala:183)
+	at org.apache.samza.container.TaskInstanceExceptionHandler.maybeHandle(TaskInstanceExceptionHandler.scala:54)
+	at org.apache.samza.container.TaskInstance.window(TaskInstance.scala:182)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker$4.run(AsyncRunLoop.java:444)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.window(AsyncRunLoop.java:478)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.run(AsyncRunLoop.java:376)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.access$300(AsyncRunLoop.java:314)
+	at org.apache.samza.task.AsyncRunLoop.runTasks(AsyncRunLoop.java:228)
+	at org.apache.samza.task.AsyncRunLoop.run(AsyncRunLoop.java:157)
+	... 3 more
+Caused by: org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-stats Partition:null
+	at org.apache.samza.system.kafka.KafkaSystemProducer$$anon$1.onCompletion(KafkaSystemProducer.scala:115)
+	at org.apache.kafka.clients.producer.internals.RecordBatch.done(RecordBatch.java:109)
+	at org.apache.kafka.clients.producer.internals.RecordBatch.maybeExpire(RecordBatch.java:160)
+	at org.apache.kafka.clients.producer.internals.RecordAccumulator.abortExpiredBatches(RecordAccumulator.java:245)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:212)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:135)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.kafka.common.errors.TimeoutException: Expiring 4 record(s) for wikipedia-stats-0 due to 30010 ms has passed since batch creation plus linger time

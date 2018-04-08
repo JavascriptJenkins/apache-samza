@@ -1,0 +1,12 @@
+Java HotSpot(TM) 64-Bit Server VM (25.161-b12) for bsd-amd64 JRE (1.8.0_161-b12), built on Dec 19 2017 16:22:20 by "java_re" with gcc 4.2.1 (Based on Apple Inc. build 5658) (LLVM build 2336.11.00)
+Memory: 4k page, physical 16777216k(2114172k free)
+
+/proc/meminfo:
+
+CommandLine flags: -XX:GCLogFileSize=10241024 -XX:InitialHeapSize=268435456 -XX:MaxHeapSize=805306368 -XX:NumberOfGCLogFiles=10 -XX:+PrintGC -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -XX:+UseCompressedClassPointers -XX:+UseCompressedOops -XX:+UseGCLogFileRotation -XX:+UseParallelGC 
+2018-04-08T14:15:00.832+0600: 0.945: [GC (Allocation Failure)  65536K->7778K(251392K), 0.0048221 secs]
+2018-04-08T14:15:11.426+0600: 11.540: [GC (Allocation Failure)  73314K->7744K(251392K), 0.0055540 secs]
+2018-04-08T14:15:21.920+0600: 22.033: [GC (Metadata GC Threshold)  31720K->4997K(251392K), 0.0039858 secs]
+2018-04-08T14:15:21.924+0600: 22.037: [Full GC (Metadata GC Threshold)  4997K->4813K(146944K), 0.0161341 secs]
+2018-04-08T14:15:28.300+0600: 28.413: [GC (Allocation Failure)  70349K->8321K(146944K), 0.0029373 secs]
+2018-04-08T14:19:25.562+0600: 265.674: [GC (Allocation Failure)  73857K->14153K(144384K), 0.0070407 secs]

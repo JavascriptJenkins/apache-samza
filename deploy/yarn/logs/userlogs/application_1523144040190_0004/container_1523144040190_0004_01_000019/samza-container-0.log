@@ -1,0 +1,400 @@
+2018-04-08 14:15:00.512 [main] LocalContainerRunner [INFO] Got container ID: 0
+2018-04-08 14:15:00.515 [main] LocalContainerRunner [INFO] Got coordinator URL: http://Genreboys-MacBook-Pro.local:54700/
+2018-04-08 14:15:00.719 [main] SamzaContainer$ [INFO] Fetching configuration from: http://Genreboys-MacBook-Pro.local:54700/
+2018-04-08 14:15:06.093 [main] VerifiableProperties [INFO] Verifying properties
+2018-04-08 14:15:06.103 [main] VerifiableProperties [INFO] Property auto.offset.reset is overridden to largest
+2018-04-08 14:15:06.104 [main] VerifiableProperties [INFO] Property client.id is overridden to samza_admin-wikipedia_stats-1
+2018-04-08 14:15:06.104 [main] VerifiableProperties [INFO] Property group.id is overridden to undefined-samza-consumer-group-d704324a-e96d-4d2d-b567-530f97b7769e
+2018-04-08 14:15:06.104 [main] VerifiableProperties [INFO] Property zookeeper.connect is overridden to localhost:2181/
+2018-04-08 14:15:06.121 [main] KafkaSystemFactory [INFO] Creating topic meta information for topic: wikipedia-stats-changelog with replication factor: 1
+2018-04-08 14:15:06.127 [main] TaskFactoryUtil [INFO] Got task class name: samza.examples.wikipedia.task.WikipediaStatsStreamTask
+2018-04-08 14:15:11.143 [main] SamzaContainer$ [INFO] Setting up Samza container: samza-container-0
+2018-04-08 14:15:11.144 [main] SamzaContainer$ [INFO] Samza container PID: 6055@Genreboys-MacBook-Pro.local
+2018-04-08 14:15:11.145 [main] SamzaContainer$ [INFO] Using configuration: {systems.kafka.samza.factory=org.apache.samza.system.kafka.KafkaSystemFactory, serializers.registry.string.class=org.apache.samza.serializers.StringSerdeFactory, stores.wikipedia-stats.changelog=kafka.wikipedia-stats-changelog, serializers.registry.integer.class=org.apache.samza.serializers.IntegerSerdeFactory, stores.wikipedia-stats.changelog.replication.factor=1, stores.wikipedia-stats.write.batch.size=0, systems.kafka.consumer.auto.offset.reset=largest, systems.kafka.samza.msg.serde=json, metrics.reporters=snapshot,jmx, job.coordinator.replication.factor=1, stores.wikipedia-stats.object.cache.size=0, job.name=wikipedia-stats, systems.kafka.producer.bootstrap.servers=localhost:9092, metrics.reporter.snapshot.class=org.apache.samza.metrics.reporter.MetricsSnapshotReporterFactory, systems.kafka.consumer.zookeeper.connect=localhost:2181/, stores.wikipedia-stats.msg.serde=integer, job.coordinator.system=kafka, stores.wikipedia-stats.factory=org.apache.samza.storage.kv.RocksDbKeyValueStorageEngineFactory, task.inputs=kafka.wikipedia-edits, task.window.ms=10000, job.factory.class=org.apache.samza.job.yarn.YarnJobFactory, yarn.package.path=file:///Users/genreboy/IdeaProjects/samza-hello-samza/target/hello-samza-0.14.0-dist.tar.gz, task.class=samza.examples.wikipedia.task.WikipediaStatsStreamTask, metrics.reporter.jmx.class=org.apache.samza.metrics.reporter.JmxReporterFactory, stores.wikipedia-stats.key.serde=string, serializers.registry.json.class=org.apache.samza.serializers.JsonSerdeFactory, metrics.reporter.snapshot.stream=kafka.metrics}
+2018-04-08 14:15:11.145 [main] SamzaContainer$ [INFO] Using container model: ContainerModel [processorId=0, tasks={Partition 0=TaskModel [taskName=Partition 0, systemStreamPartitions=[SystemStreamPartition [kafka, wikipedia-edits, 0]], changeLogPartition=Partition [partition=0]]}]
+2018-04-08 14:15:11.182 [main] SamzaContainer$ [INFO] Got system names: Buffer(kafka)
+2018-04-08 14:15:11.190 [main] SamzaContainer$ [INFO] Got serde streams: Set()
+2018-04-08 14:15:11.192 [main] VerifiableProperties [INFO] Verifying properties
+2018-04-08 14:15:11.193 [main] VerifiableProperties [INFO] Property auto.offset.reset is overridden to largest
+2018-04-08 14:15:11.193 [main] VerifiableProperties [INFO] Property client.id is overridden to samza_admin-wikipedia_stats-1
+2018-04-08 14:15:11.193 [main] VerifiableProperties [INFO] Property group.id is overridden to undefined-samza-consumer-group-77fa869c-a433-4b89-8072-dd958431a420
+2018-04-08 14:15:11.193 [main] VerifiableProperties [INFO] Property zookeeper.connect is overridden to localhost:2181/
+2018-04-08 14:15:11.194 [main] KafkaSystemFactory [INFO] Creating topic meta information for topic: wikipedia-stats-changelog with replication factor: 1
+2018-04-08 14:15:11.195 [main] SamzaContainer$ [INFO] Got system factories: Set(kafka)
+2018-04-08 14:15:11.237 [main] VerifiableProperties [INFO] Verifying properties
+2018-04-08 14:15:11.237 [main] VerifiableProperties [INFO] Property client.id is overridden to samza_admin-wikipedia_stats-1
+2018-04-08 14:15:11.237 [main] VerifiableProperties [INFO] Property metadata.broker.list is overridden to localhost:9092
+2018-04-08 14:15:11.237 [main] VerifiableProperties [INFO] Property request.timeout.ms is overridden to 30000
+2018-04-08 14:15:11.278 [main] ClientUtils$ [INFO] Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 0 for 1 topic(s) Set(wikipedia-edits)
+2018-04-08 14:15:11.292 [main] SyncProducer [INFO] Connected to localhost:9092 for producing
+2018-04-08 14:15:11.317 [main] SyncProducer [INFO] Disconnecting from localhost:9092
+2018-04-08 14:15:11.392 [main] SamzaContainer$ [INFO] Got input stream metadata: Map(SystemStream [system=kafka, stream=wikipedia-edits] -> SystemStreamMetadata [streamName=wikipedia-edits, partitionMetadata={Partition [partition=0]=SystemStreamPartitionMetadata [oldestOffset=0, newestOffset=21445, upcomingOffset=21446]}])
+2018-04-08 14:15:11.394 [main] VerifiableProperties [INFO] Verifying properties
+2018-04-08 14:15:11.394 [main] VerifiableProperties [INFO] Property auto.offset.reset is overridden to largest
+2018-04-08 14:15:11.394 [main] VerifiableProperties [INFO] Property client.id is overridden to samza_consumer-wikipedia_stats-1
+2018-04-08 14:15:11.394 [main] VerifiableProperties [INFO] Property group.id is overridden to undefined-samza-consumer-group-4ac4b69e-9428-45d6-921e-5cfbd616879d
+2018-04-08 14:15:11.394 [main] VerifiableProperties [INFO] Property zookeeper.connect is overridden to localhost:2181/
+2018-04-08 14:15:11.401 [main] VerifiableProperties [INFO] Verifying properties
+2018-04-08 14:15:11.401 [main] VerifiableProperties [INFO] Property auto.offset.reset is overridden to largest
+2018-04-08 14:15:11.401 [main] VerifiableProperties [INFO] Property client.id is overridden to samza_admin-wikipedia_stats-1
+2018-04-08 14:15:11.401 [main] VerifiableProperties [INFO] Property group.id is overridden to undefined-samza-consumer-group-06c3d86d-9f8d-4d8e-9d0a-f2735240a595
+2018-04-08 14:15:11.401 [main] VerifiableProperties [INFO] Property zookeeper.connect is overridden to localhost:2181/
+2018-04-08 14:15:11.402 [main] KafkaSystemFactory [INFO] Creating topic meta information for topic: wikipedia-stats-changelog with replication factor: 1
+2018-04-08 14:15:11.408 [main] SamzaContainer$ [INFO] Got system consumers: Set(kafka)
+2018-04-08 14:15:11.411 [main] KafkaSystemFactory$ [WARN] System name 'kafka' is being used as a changelog. Disabling compression since Kafka does not support compression for log compacted topics.
+2018-04-08 14:15:11.417 [main] SamzaContainer$ [INFO] Got system producers: Set(kafka)
+2018-04-08 14:15:11.433 [main] SamzaContainer$ [INFO] Got serdes from factories: Set(string, json, integer)
+2018-04-08 14:15:11.436 [main] SamzaContainer$ [INFO] Got serdes from serialized instances: Set()
+2018-04-08 14:15:11.444 [main] SamzaContainer$ [INFO] Got change log system streams: Map(wikipedia-stats -> SystemStream [system=kafka, stream=wikipedia-stats-changelog])
+2018-04-08 14:15:11.446 [main] SamzaContainer$ [INFO] Got intermediate streams: List()
+2018-04-08 14:15:11.447 [main] SamzaContainer$ [INFO] Setting up JVM metrics.
+2018-04-08 14:15:11.450 [main] SamzaContainer$ [INFO] Setting up message chooser.
+2018-04-08 14:15:11.463 [main] DefaultChooser [INFO] Building default chooser with: useBatching=false, useBootstrapping=false, usePriority=false
+2018-04-08 14:15:11.464 [main] SamzaContainer$ [INFO] Setting up metrics reporters.
+2018-04-08 14:15:11.467 [main] MetricsSnapshotReporterFactory [INFO] Creating new metrics snapshot reporter.
+2018-04-08 14:15:11.470 [main] MetricsSnapshotReporterFactory [WARN] Unable to find implementation version in jar's meta info. Defaulting to 0.0.1.
+2018-04-08 14:15:11.471 [main] MetricsSnapshotReporterFactory [INFO] Got system stream SystemStream [system=kafka, stream=metrics].
+2018-04-08 14:15:11.472 [main] MetricsSnapshotReporterFactory [INFO] Got system factory org.apache.samza.system.kafka.KafkaSystemFactory@39655d3e.
+2018-04-08 14:15:11.472 [main] KafkaSystemFactory$ [WARN] System name 'kafka' is being used as a changelog. Disabling compression since Kafka does not support compression for log compacted topics.
+2018-04-08 14:15:11.473 [main] MetricsSnapshotReporterFactory [INFO] Got producer org.apache.samza.system.kafka.KafkaSystemProducer@7dda48d9.
+2018-04-08 14:15:11.475 [main] MetricsSnapshotReporterFactory [INFO] Got serde org.apache.samza.serializers.JsonSerde@2a62b5bc.
+2018-04-08 14:15:11.476 [main] MetricsSnapshotReporterFactory [INFO] Setting polling interval to 60
+2018-04-08 14:15:16.483 [main] MetricsSnapshotReporter [INFO] got metrics snapshot reporter properties [job name: wikipedia-stats, job id: 1, containerName: samza-container-0, version: 0.0.1, samzaVersion: 0.14.0, host: Genreboys-MacBook-Pro.local, pollingInterval 60]
+2018-04-08 14:15:16.484 [main] MetricsSnapshotReporter [INFO] Registering MetricsSnapshotReporterFactory with producer.
+2018-04-08 14:15:16.492 [main] JmxReporterFactory [INFO] Creating JMX reporter with  name jmx.
+2018-04-08 14:15:16.494 [main] SamzaContainer$ [INFO] Got metrics reporters: Set(jmx, snapshot)
+2018-04-08 14:15:16.494 [main] SamzaContainer$ [INFO] Got security manager: null
+2018-04-08 14:15:16.495 [main] SamzaContainer$ [INFO] Got checkpoint manager: null
+2018-04-08 14:15:16.497 [main] SamzaContainer$ [INFO] Got checkpointListeners : Map()
+2018-04-08 14:15:16.502 [main] OffsetManager$ [INFO] No default offset for SystemStream [system=kafka, stream=wikipedia-edits] defined. Using upcoming.
+2018-04-08 14:15:16.507 [main] SamzaContainer$ [INFO] Got offset manager: org.apache.samza.checkpoint.OffsetManager@4b1d6571
+2018-04-08 14:15:16.517 [main] SamzaContainer$ [INFO] Got storage engines: Set(wikipedia-stats)
+2018-04-08 14:15:16.518 [main] SamzaContainer$ [INFO] Got single thread mode: false
+2018-04-08 14:15:16.518 [main] SamzaContainer$ [INFO] Got thread pool size: 0
+2018-04-08 14:15:16.518 [main] TaskFactoryUtil [INFO] Converting StreamTask to AsyncStreamTaskAdapter when running StreamTask with multiple threads
+2018-04-08 14:15:16.520 [main] SamzaContainer$ [INFO] Got default storage engine base directory: /private/tmp/hadoop-genreboy/nm-local-dir/usercache/genreboy/appcache/application_1523144040190_0004/container_1523144040190_0004_01_000019/state
+2018-04-08 14:15:16.526 [main] VerifiableProperties [INFO] Verifying properties
+2018-04-08 14:15:16.526 [main] VerifiableProperties [INFO] Property auto.offset.reset is overridden to largest
+2018-04-08 14:15:16.526 [main] VerifiableProperties [INFO] Property client.id is overridden to samza_consumer-wikipedia_stats-1
+2018-04-08 14:15:16.526 [main] VerifiableProperties [INFO] Property group.id is overridden to undefined-samza-consumer-group-54593c5c-147c-46ce-986f-9c06f852176d
+2018-04-08 14:15:16.526 [main] VerifiableProperties [INFO] Property zookeeper.connect is overridden to localhost:2181/
+2018-04-08 14:15:16.527 [main] VerifiableProperties [INFO] Verifying properties
+2018-04-08 14:15:16.527 [main] VerifiableProperties [INFO] Property auto.offset.reset is overridden to largest
+2018-04-08 14:15:16.527 [main] VerifiableProperties [INFO] Property client.id is overridden to samza_admin-wikipedia_stats-1
+2018-04-08 14:15:16.527 [main] VerifiableProperties [INFO] Property group.id is overridden to undefined-samza-consumer-group-f98981eb-e0f4-4d15-a614-bfc0b49fafc0
+2018-04-08 14:15:16.527 [main] VerifiableProperties [INFO] Property zookeeper.connect is overridden to localhost:2181/
+2018-04-08 14:15:16.528 [main] KafkaSystemFactory [INFO] Creating topic meta information for topic: wikipedia-stats-changelog with replication factor: 1
+2018-04-08 14:15:16.529 [main] SamzaContainer$ [INFO] Got store consumers: Map(wikipedia-stats -> org.apache.samza.system.kafka.KafkaSystemConsumer@55322aab)
+2018-04-08 14:15:16.529 [main] SamzaContainer$ [WARN] No override was provided for logged store base directory. This disables local state re-use on application restart. If you want to enable this feature, set LOGGED_STORE_BASE_DIR as an environment variable in all machines running the Samza container
+2018-04-08 14:15:16.530 [main] SamzaContainer$ [INFO] Got base directory for logged data stores: /private/tmp/hadoop-genreboy/nm-local-dir/usercache/genreboy/appcache/application_1523144040190_0004/container_1523144040190_0004_01_000019/state
+2018-04-08 14:15:16.871 [main] SamzaContainer$ [INFO] Got task stores: Map(wikipedia-stats -> org.apache.samza.storage.kv.KeyValueStorageEngine@ebaa6cb)
+2018-04-08 14:15:16.874 [main] SamzaContainer$ [INFO] Retrieved SystemStreamPartitions Set(SystemStreamPartition [kafka, wikipedia-edits, 0]) for Partition 0
+2018-04-08 14:15:16.886 [main] RunLoopFactory [INFO] Got window milliseconds: 10000.
+2018-04-08 14:15:16.886 [main] RunLoopFactory [INFO] Got commit milliseconds: 60000.
+2018-04-08 14:15:16.886 [main] RunLoopFactory [INFO] Got taskMaxConcurrency: 1.
+2018-04-08 14:15:16.887 [main] RunLoopFactory [INFO] Got asyncCommitEnabled: false.
+2018-04-08 14:15:16.887 [main] RunLoopFactory [INFO] Got callbackTimeout: -1.
+2018-04-08 14:15:16.887 [main] RunLoopFactory [INFO] Run loop in asynchronous mode.
+2018-04-08 14:15:16.898 [main] NoThrottlingDiskQuotaPolicy [INFO] Using a no throttling disk quota policy
+2018-04-08 14:15:16.900 [main] SamzaContainer$ [INFO] Disk quotas disabled because polling interval is not set (container.disk.poll.interval.ms)
+2018-04-08 14:15:16.900 [main] SamzaContainer$ [INFO] Samza container setup complete.
+2018-04-08 14:15:16.901 [main] LocalContainerRunner [INFO] Got execution environment container id: container_1523144040190_0004_01_000019
+2018-04-08 14:15:16.903 [main] ContainerHeartbeatMonitor [INFO] Starting ContainerHeartbeatMonitor
+2018-04-08 14:15:16.904 [main] SamzaContainer [INFO] Starting container.
+2018-04-08 14:15:21.907 [main] JmxServer [INFO] According to Util.getLocalHost.getHostName we are Genreboys-MacBook-Pro.local
+2018-04-08 14:15:21.979 [main] JmxServer [INFO] Started JmxServer registry port=63612 server port=63613 url=service:jmx:rmi://localhost:63613/jndi/rmi://localhost:63612/jmxrmi
+2018-04-08 14:15:21.979 [main] JmxServer [INFO] If you are tunneling, you might want to try JmxServer registry port=63612 server port=63613 url=service:jmx:rmi://Genreboys-MacBook-Pro.local:63613/jndi/rmi://Genreboys-MacBook-Pro.local:63612/jmxrmi
+2018-04-08 14:15:21.980 [main] SamzaContainer [INFO] Registering task instances with metrics.
+2018-04-08 14:15:21.981 [main] MetricsSnapshotReporter [INFO] Registering TaskName-Partition 0 with producer.
+2018-04-08 14:15:21.981 [main] SamzaContainer [INFO] Starting JVM metrics.
+2018-04-08 14:15:21.982 [main] SamzaContainer [INFO] Starting metrics reporters.
+2018-04-08 14:15:21.997 [main] MetricsSnapshotReporter [INFO] Registering samza-container-0 with producer.
+2018-04-08 14:15:21.997 [main] MetricsSnapshotReporter [INFO] Starting producer.
+2018-04-08 14:15:22.016 [main] ProducerConfig [INFO] ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	block.on.buffer.full = false
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.id = samza_producer-wikipedia_stats-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 10
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 1
+	max.request.size = 1048576
+	metadata.fetch.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	timeout.ms = 30000
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2018-04-08 14:15:22.023 [main] ProducerConfig [INFO] ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	block.on.buffer.full = false
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.id = samza_producer-wikipedia_stats-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 10
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 1
+	max.request.size = 1048576
+	metadata.fetch.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	timeout.ms = 30000
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2018-04-08 14:15:22.055 [main] AppInfoParser [INFO] Kafka version : 0.10.1.1
+2018-04-08 14:15:22.055 [main] AppInfoParser [INFO] Kafka commitId : f10ef2720b03b247
+2018-04-08 14:15:22.056 [main] MetricsSnapshotReporter [INFO] Starting reporter timer.
+2018-04-08 14:15:22.056 [main] SamzaContainer [INFO] Registering task instances with offsets.
+2018-04-08 14:15:22.058 [main] SamzaContainer [INFO] Starting offset manager.
+2018-04-08 14:15:22.064 [main] OffsetManager [INFO] Successfully loaded last processed offsets: {}
+2018-04-08 14:15:22.065 [main] OffsetManager [INFO] Successfully loaded starting offsets: Map(Partition 0 -> Map(SystemStreamPartition [kafka, wikipedia-edits, 0] -> 21446))
+2018-04-08 14:15:22.066 [main] SamzaContainer [INFO] Starting task instance stores.
+2018-04-08 14:15:22.068 [main] TaskStorageManager [INFO] Got default storage partition directory as /private/tmp/hadoop-genreboy/nm-local-dir/usercache/genreboy/appcache/application_1523144040190_0004/container_1523144040190_0004_01_000019/state/wikipedia-stats/Partition_0
+2018-04-08 14:15:22.069 [main] TaskStorageManager [INFO] Got logged storage partition directory as /private/tmp/hadoop-genreboy/nm-local-dir/usercache/genreboy/appcache/application_1523144040190_0004/container_1523144040190_0004_01_000019/state/wikipedia-stats/Partition_0
+2018-04-08 14:15:22.070 [main] TaskStorageManager [INFO] Deleting logged storage partition directory /private/tmp/hadoop-genreboy/nm-local-dir/usercache/genreboy/appcache/application_1523144040190_0004/container_1523144040190_0004_01_000019/state/wikipedia-stats/Partition_0.
+2018-04-08 14:15:22.071 [main] TaskStorageManager [INFO] Using logged storage partition directory: /private/tmp/hadoop-genreboy/nm-local-dir/usercache/genreboy/appcache/application_1523144040190_0004/container_1523144040190_0004_01_000019/state/wikipedia-stats/Partition_0 for store: wikipedia-stats.
+2018-04-08 14:15:22.072 [main] TaskStorageManager [INFO] Validating change log streams: Map(wikipedia-stats -> SystemStream [system=kafka, stream=wikipedia-stats-changelog])
+2018-04-08 14:15:22.075 [main] KafkaSystemAdmin [INFO] Validating topic wikipedia-stats-changelog.
+2018-04-08 14:15:22.076 [main] VerifiableProperties [INFO] Verifying properties
+2018-04-08 14:15:22.076 [main] VerifiableProperties [INFO] Property client.id is overridden to samza_admin-wikipedia_stats-1
+2018-04-08 14:15:22.077 [main] VerifiableProperties [INFO] Property metadata.broker.list is overridden to localhost:9092
+2018-04-08 14:15:22.077 [main] VerifiableProperties [INFO] Property request.timeout.ms is overridden to 30000
+2018-04-08 14:15:22.077 [main] ClientUtils$ [INFO] Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 0 for 1 topic(s) Set(wikipedia-stats-changelog)
+2018-04-08 14:15:22.077 [main] SyncProducer [INFO] Connected to localhost:9092 for producing
+2018-04-08 14:15:22.078 [main] SyncProducer [INFO] Disconnecting from localhost:9092
+2018-04-08 14:15:22.078 [main] KafkaSystemAdmin [INFO] Successfully validated topic wikipedia-stats-changelog.
+2018-04-08 14:15:22.081 [main] TaskStorageManager [INFO] Got change log stream metadata: Map(SystemStream [system=kafka, stream=wikipedia-stats-changelog] -> SystemStreamMetadata [streamName=wikipedia-stats-changelog, partitionMetadata={Partition [partition=0]=SystemStreamPartitionMetadata [oldestOffset=0, newestOffset=21440, upcomingOffset=21441]}])
+2018-04-08 14:15:22.082 [main] TaskStorageManager [INFO] Assigning oldest change log offsets for taskName Partition 0: Map(SystemStream [system=kafka, stream=wikipedia-stats-changelog] -> 0)
+2018-04-08 14:15:22.084 [main] TaskStorageManager [INFO] Registering change log consumer with offset 0 for SystemStreamPartition [kafka, wikipedia-stats-changelog, 0].
+2018-04-08 14:15:22.094 [main] KafkaSystemConsumer [INFO] Refreshing brokers for: Map([wikipedia-stats-changelog,0] -> 0)
+2018-04-08 14:15:22.100 [main] BrokerProxy [INFO] Creating new SimpleConsumer for host 192.168.0.27:9092 for system kafka
+2018-04-08 14:15:22.104 [main] GetOffset [INFO] Validating offset 0 for topic and partition [wikipedia-stats-changelog,0]
+2018-04-08 14:15:22.133 [main] GetOffset [INFO] Able to successfully read from offset 0 for topic and partition [wikipedia-stats-changelog,0]. Using it to instantiate consumer.
+2018-04-08 14:15:22.134 [main] BrokerProxy [INFO] Starting BrokerProxy for 192.168.0.27:9092
+2018-04-08 14:15:23.250 [main] BrokerProxy [INFO] Shutting down BrokerProxy for 192.168.0.27:9092
+2018-04-08 14:15:23.251 [main] BrokerProxy [INFO] closing simple consumer...
+2018-04-08 14:15:23.254 [SAMZA-BROKER-PROXY-BrokerProxy thread pointed at 192.168.0.27:9092 for client samza_consumer-wikipedia_stats-1] BrokerProxy [INFO] Shutting down due to interrupt.
+2018-04-08 14:15:23.255 [main] SamzaContainer [INFO] Starting host statistics monitor
+2018-04-08 14:15:23.256 [main] SamzaContainer [INFO] Registering task instances with producers.
+2018-04-08 14:15:23.266 [main] SamzaContainer [INFO] Starting producer multiplexer.
+2018-04-08 14:15:23.267 [main] ProducerConfig [INFO] ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	block.on.buffer.full = false
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.id = samza_producer-wikipedia_stats-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 10
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 1
+	max.request.size = 1048576
+	metadata.fetch.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	timeout.ms = 30000
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2018-04-08 14:15:23.268 [main] ProducerConfig [INFO] ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	block.on.buffer.full = false
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.id = samza_producer-wikipedia_stats-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 10
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 1
+	max.request.size = 1048576
+	metadata.fetch.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	timeout.ms = 30000
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2018-04-08 14:15:23.271 [main] AppInfoParser [INFO] Kafka version : 0.10.1.1
+2018-04-08 14:15:23.271 [main] AppInfoParser [INFO] Kafka commitId : f10ef2720b03b247
+2018-04-08 14:15:23.271 [main] AppInfoParser [WARN] Error registering AppInfo mbean
+javax.management.InstanceAlreadyExistsException: kafka.producer:type=app-info,id=samza_producer-wikipedia_stats-1
+	at com.sun.jmx.mbeanserver.Repository.addMBean(Repository.java:437)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerWithRepository(DefaultMBeanServerInterceptor.java:1898)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerDynamicMBean(DefaultMBeanServerInterceptor.java:966)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:900)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:324)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:522)
+	at org.apache.kafka.common.utils.AppInfoParser.registerAppInfo(AppInfoParser.java:58)
+	at org.apache.kafka.clients.producer.KafkaProducer.<init>(KafkaProducer.java:331)
+	at org.apache.kafka.clients.producer.KafkaProducer.<init>(KafkaProducer.java:163)
+	at org.apache.samza.system.kafka.KafkaSystemFactory$$anonfun$3.apply(KafkaSystemFactory.scala:90)
+	at org.apache.samza.system.kafka.KafkaSystemFactory$$anonfun$3.apply(KafkaSystemFactory.scala:90)
+	at org.apache.samza.system.kafka.KafkaSystemProducer.start(KafkaSystemProducer.scala:53)
+	at org.apache.samza.system.SystemProducers$$anonfun$start$2.apply(SystemProducers.scala:41)
+	at org.apache.samza.system.SystemProducers$$anonfun$start$2.apply(SystemProducers.scala:41)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1336)
+	at scala.collection.MapLike$DefaultValuesIterable.foreach(MapLike.scala:206)
+	at org.apache.samza.system.SystemProducers.start(SystemProducers.scala:41)
+	at org.apache.samza.container.SamzaContainer.startProducers(SamzaContainer.scala:914)
+	at org.apache.samza.container.SamzaContainer.run(SamzaContainer.scala:716)
+	at org.apache.samza.runtime.LocalContainerRunner.run(LocalContainerRunner.java:102)
+	at org.apache.samza.runtime.LocalContainerRunner.main(LocalContainerRunner.java:147)
+2018-04-08 14:15:23.274 [main] SamzaContainer [INFO] Initializing stream tasks.
+2018-04-08 14:15:23.276 [main] SamzaContainer [INFO] Registering task instances with consumers.
+2018-04-08 14:15:23.281 [main] SamzaContainer [INFO] Starting consumer multiplexer.
+2018-04-08 14:15:23.284 [main] KafkaSystemConsumer [INFO] Refreshing brokers for: Map([wikipedia-edits,0] -> 21446)
+2018-04-08 14:15:23.284 [main] VerifiableProperties [INFO] Verifying properties
+2018-04-08 14:15:23.284 [main] VerifiableProperties [INFO] Property client.id is overridden to samza_consumer-wikipedia_stats-1
+2018-04-08 14:15:23.285 [main] VerifiableProperties [INFO] Property metadata.broker.list is overridden to localhost:9092
+2018-04-08 14:15:23.285 [main] VerifiableProperties [INFO] Property request.timeout.ms is overridden to 30000
+2018-04-08 14:15:23.286 [main] ClientUtils$ [INFO] Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 0 for 1 topic(s) Set(wikipedia-edits)
+2018-04-08 14:15:23.286 [main] SyncProducer [INFO] Connected to localhost:9092 for producing
+2018-04-08 14:15:23.287 [main] SyncProducer [INFO] Disconnecting from localhost:9092
+2018-04-08 14:15:23.287 [main] BrokerProxy [INFO] Creating new SimpleConsumer for host 192.168.0.27:9092 for system kafka
+2018-04-08 14:15:23.288 [main] GetOffset [INFO] Validating offset 21446 for topic and partition [wikipedia-edits,0]
+2018-04-08 14:15:23.390 [main] GetOffset [INFO] Able to successfully read from offset 21446 for topic and partition [wikipedia-edits,0]. Using it to instantiate consumer.
+2018-04-08 14:15:23.390 [main] BrokerProxy [INFO] Starting BrokerProxy for 192.168.0.27:9092
+2018-04-08 14:15:23.408 [main] SamzaContainer [INFO] Entering run loop.
+2018-04-08 14:15:23.408 [main] LocalContainerRunner [INFO] Container Started
+2018-04-08 14:15:30.484 [main] TaskInstance [INFO] SystemStreamPartition [kafka, wikipedia-edits, 0] is catched up.

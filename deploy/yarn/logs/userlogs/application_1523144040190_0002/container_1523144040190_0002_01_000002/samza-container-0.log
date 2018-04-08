@@ -1,0 +1,971 @@
+2018-04-07 18:47:41.702 [main] LocalContainerRunner [INFO] Got container ID: 0
+2018-04-07 18:47:41.705 [main] LocalContainerRunner [INFO] Got coordinator URL: http://Genreboys-MacBook-Pro.local:54254/
+2018-04-07 18:47:41.845 [main] SamzaContainer$ [INFO] Fetching configuration from: http://Genreboys-MacBook-Pro.local:54254/
+2018-04-07 18:47:47.225 [main] VerifiableProperties [INFO] Verifying properties
+2018-04-07 18:47:47.232 [main] VerifiableProperties [INFO] Property client.id is overridden to samza_admin-wikipedia_feed-1
+2018-04-07 18:47:47.233 [main] VerifiableProperties [INFO] Property group.id is overridden to undefined-samza-consumer-group-8ea07348-b366-4a57-a35b-c6b279691d6f
+2018-04-07 18:47:47.233 [main] VerifiableProperties [INFO] Property zookeeper.connect is overridden to localhost:2181/
+2018-04-07 18:47:47.245 [main] TaskFactoryUtil [INFO] Got task class name: samza.examples.wikipedia.task.WikipediaFeedStreamTask
+2018-04-07 18:47:52.261 [main] SamzaContainer$ [INFO] Setting up Samza container: samza-container-0
+2018-04-07 18:47:52.262 [main] SamzaContainer$ [INFO] Samza container PID: 4637@Genreboys-MacBook-Pro.local
+2018-04-07 18:47:52.264 [main] SamzaContainer$ [INFO] Using configuration: {systems.kafka.consumer.zookeeper.connect=localhost:2181/, systems.kafka.samza.factory=org.apache.samza.system.kafka.KafkaSystemFactory, systems.wikipedia.port=6667, job.coordinator.system=kafka, task.inputs=wikipedia.#en.wikipedia,wikipedia.#en.wiktionary,wikipedia.#en.wikinews, systems.wikipedia.host=irc.wikimedia.org, job.factory.class=org.apache.samza.job.yarn.YarnJobFactory, yarn.package.path=file:///Users/genreboy/IdeaProjects/samza-hello-samza/target/hello-samza-0.14.0-dist.tar.gz, task.class=samza.examples.wikipedia.task.WikipediaFeedStreamTask, systems.kafka.samza.msg.serde=json, job.coordinator.replication.factor=1, job.name=wikipedia-feed, serializers.registry.json.class=org.apache.samza.serializers.JsonSerdeFactory, systems.kafka.producer.bootstrap.servers=localhost:9092, systems.wikipedia.samza.factory=samza.examples.wikipedia.system.WikipediaSystemFactory}
+2018-04-07 18:47:52.265 [main] SamzaContainer$ [INFO] Using container model: ContainerModel [processorId=0, tasks={Partition 0=TaskModel [taskName=Partition 0, systemStreamPartitions=[SystemStreamPartition [wikipedia, #en.wikinews, 0], SystemStreamPartition [wikipedia, #en.wiktionary, 0], SystemStreamPartition [wikipedia, #en.wikipedia, 0]], changeLogPartition=Partition [partition=0]]}]
+2018-04-07 18:47:52.296 [main] SamzaContainer$ [INFO] Got system names: Buffer(kafka, wikipedia)
+2018-04-07 18:47:52.301 [main] SamzaContainer$ [INFO] Got serde streams: Set()
+2018-04-07 18:47:52.305 [main] VerifiableProperties [INFO] Verifying properties
+2018-04-07 18:47:52.305 [main] VerifiableProperties [INFO] Property client.id is overridden to samza_admin-wikipedia_feed-1
+2018-04-07 18:47:52.305 [main] VerifiableProperties [INFO] Property group.id is overridden to undefined-samza-consumer-group-e8b20338-7a3f-4a51-9270-29906679e149
+2018-04-07 18:47:52.305 [main] VerifiableProperties [INFO] Property zookeeper.connect is overridden to localhost:2181/
+2018-04-07 18:47:52.308 [main] SamzaContainer$ [INFO] Got system factories: Set(kafka, wikipedia)
+2018-04-07 18:47:52.322 [main] SamzaContainer$ [INFO] Got input stream metadata: Map(SystemStream [system=wikipedia, stream=#en.wikinews] -> SystemStreamMetadata [streamName=#en.wikinews, partitionMetadata={Partition [partition=0]=SystemStreamPartitionMetadata [oldestOffset=null, newestOffset=null, upcomingOffset=null]}], SystemStream [system=wikipedia, stream=#en.wikipedia] -> SystemStreamMetadata [streamName=#en.wikipedia, partitionMetadata={Partition [partition=0]=SystemStreamPartitionMetadata [oldestOffset=null, newestOffset=null, upcomingOffset=null]}], SystemStream [system=wikipedia, stream=#en.wiktionary] -> SystemStreamMetadata [streamName=#en.wiktionary, partitionMetadata={Partition [partition=0]=SystemStreamPartitionMetadata [oldestOffset=null, newestOffset=null, upcomingOffset=null]}])
+2018-04-07 18:47:52.331 [main] SamzaContainer$ [INFO] Got system consumers: Set(wikipedia)
+2018-04-07 18:47:52.339 [main] SamzaContainer$ [ERROR] Failed to create a producer for wikipedia, so skipping.
+org.apache.samza.SamzaException: You can't produce to a Wikipedia feed! How about making some edits to a Wiki, instead?
+	at samza.examples.wikipedia.system.WikipediaSystemFactory.getProducer(WikipediaSystemFactory.java:48)
+	at org.apache.samza.container.SamzaContainer$$anonfun$11.apply(SamzaContainer.scala:215)
+	at org.apache.samza.container.SamzaContainer$$anonfun$11.apply(SamzaContainer.scala:212)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.immutable.Map$Map2.foreach(Map.scala:137)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:104)
+	at org.apache.samza.container.SamzaContainer$.apply(SamzaContainer.scala:212)
+	at org.apache.samza.runtime.LocalContainerRunner.run(LocalContainerRunner.java:77)
+	at org.apache.samza.runtime.LocalContainerRunner.main(LocalContainerRunner.java:147)
+2018-04-07 18:47:52.342 [main] SamzaContainer$ [INFO] Got system producers: Set(kafka)
+2018-04-07 18:47:52.351 [main] SamzaContainer$ [INFO] Got serdes from factories: Set(json)
+2018-04-07 18:47:52.355 [main] SamzaContainer$ [INFO] Got serdes from serialized instances: Set()
+2018-04-07 18:47:52.371 [main] SamzaContainer$ [INFO] Got change log system streams: Map()
+2018-04-07 18:47:52.372 [main] SamzaContainer$ [INFO] Got intermediate streams: List()
+2018-04-07 18:47:52.376 [main] SamzaContainer$ [INFO] Setting up JVM metrics.
+2018-04-07 18:47:52.379 [main] SamzaContainer$ [INFO] Setting up message chooser.
+2018-04-07 18:47:52.404 [main] DefaultChooser [INFO] Building default chooser with: useBatching=false, useBootstrapping=false, usePriority=false
+2018-04-07 18:47:52.404 [main] SamzaContainer$ [INFO] Setting up metrics reporters.
+2018-04-07 18:47:52.406 [main] SamzaContainer$ [INFO] Got metrics reporters: Set()
+2018-04-07 18:47:52.406 [main] SamzaContainer$ [INFO] Got security manager: null
+2018-04-07 18:47:52.408 [main] SamzaContainer$ [INFO] Got checkpoint manager: null
+2018-04-07 18:47:52.409 [main] SamzaContainer$ [INFO] Got checkpointListeners : Map()
+2018-04-07 18:47:52.413 [main] OffsetManager$ [INFO] No default offset for SystemStream [system=wikipedia, stream=#en.wikinews] defined. Using upcoming.
+2018-04-07 18:47:52.416 [main] OffsetManager$ [INFO] No default offset for SystemStream [system=wikipedia, stream=#en.wikipedia] defined. Using upcoming.
+2018-04-07 18:47:52.417 [main] OffsetManager$ [INFO] No default offset for SystemStream [system=wikipedia, stream=#en.wiktionary] defined. Using upcoming.
+2018-04-07 18:47:52.419 [main] SamzaContainer$ [INFO] Got offset manager: org.apache.samza.checkpoint.OffsetManager@a37aefe
+2018-04-07 18:47:52.426 [main] SamzaContainer$ [INFO] Got storage engines: Set()
+2018-04-07 18:47:52.427 [main] SamzaContainer$ [INFO] Got single thread mode: false
+2018-04-07 18:47:52.427 [main] SamzaContainer$ [INFO] Got thread pool size: 0
+2018-04-07 18:47:52.427 [main] TaskFactoryUtil [INFO] Converting StreamTask to AsyncStreamTaskAdapter when running StreamTask with multiple threads
+2018-04-07 18:47:52.429 [main] SamzaContainer$ [INFO] Got default storage engine base directory: /private/tmp/hadoop-genreboy/nm-local-dir/usercache/genreboy/appcache/application_1523144040190_0002/container_1523144040190_0002_01_000002/state
+2018-04-07 18:47:52.436 [main] SamzaContainer$ [INFO] Got store consumers: Map()
+2018-04-07 18:47:52.437 [main] SamzaContainer$ [WARN] No override was provided for logged store base directory. This disables local state re-use on application restart. If you want to enable this feature, set LOGGED_STORE_BASE_DIR as an environment variable in all machines running the Samza container
+2018-04-07 18:47:52.437 [main] SamzaContainer$ [INFO] Got base directory for logged data stores: /private/tmp/hadoop-genreboy/nm-local-dir/usercache/genreboy/appcache/application_1523144040190_0002/container_1523144040190_0002_01_000002/state
+2018-04-07 18:47:52.438 [main] SamzaContainer$ [INFO] Got task stores: Map()
+2018-04-07 18:47:52.442 [main] SamzaContainer$ [INFO] Retrieved SystemStreamPartitions Set(SystemStreamPartition [wikipedia, #en.wikinews, 0], SystemStreamPartition [wikipedia, #en.wiktionary, 0], SystemStreamPartition [wikipedia, #en.wikipedia, 0]) for Partition 0
+2018-04-07 18:47:52.455 [main] RunLoopFactory [INFO] Got window milliseconds: -1.
+2018-04-07 18:47:52.455 [main] RunLoopFactory [INFO] Got commit milliseconds: 60000.
+2018-04-07 18:47:52.456 [main] RunLoopFactory [INFO] Got taskMaxConcurrency: 1.
+2018-04-07 18:47:52.456 [main] RunLoopFactory [INFO] Got asyncCommitEnabled: false.
+2018-04-07 18:47:52.456 [main] RunLoopFactory [INFO] Got callbackTimeout: -1.
+2018-04-07 18:47:52.456 [main] RunLoopFactory [INFO] Run loop in asynchronous mode.
+2018-04-07 18:47:52.468 [main] NoThrottlingDiskQuotaPolicy [INFO] Using a no throttling disk quota policy
+2018-04-07 18:47:52.470 [main] SamzaContainer$ [INFO] Disk quotas disabled because polling interval is not set (container.disk.poll.interval.ms)
+2018-04-07 18:47:52.471 [main] SamzaContainer$ [INFO] Samza container setup complete.
+2018-04-07 18:47:52.472 [main] LocalContainerRunner [INFO] Got execution environment container id: container_1523144040190_0002_01_000002
+2018-04-07 18:47:52.474 [main] ContainerHeartbeatMonitor [INFO] Starting ContainerHeartbeatMonitor
+2018-04-07 18:47:52.475 [main] SamzaContainer [INFO] Starting container.
+2018-04-07 18:47:57.481 [main] JmxServer [INFO] According to Util.getLocalHost.getHostName we are Genreboys-MacBook-Pro.local
+2018-04-07 18:47:57.555 [main] JmxServer [INFO] Started JmxServer registry port=54369 server port=54370 url=service:jmx:rmi://localhost:54370/jndi/rmi://localhost:54369/jmxrmi
+2018-04-07 18:47:57.556 [main] JmxServer [INFO] If you are tunneling, you might want to try JmxServer registry port=54369 server port=54370 url=service:jmx:rmi://Genreboys-MacBook-Pro.local:54370/jndi/rmi://Genreboys-MacBook-Pro.local:54369/jmxrmi
+2018-04-07 18:47:57.556 [main] SamzaContainer [INFO] Registering task instances with metrics.
+2018-04-07 18:47:57.557 [main] SamzaContainer [INFO] Starting JVM metrics.
+2018-04-07 18:47:57.558 [main] SamzaContainer [INFO] Starting metrics reporters.
+2018-04-07 18:47:57.558 [main] SamzaContainer [INFO] Registering task instances with offsets.
+2018-04-07 18:47:57.563 [main] SamzaContainer [INFO] Starting offset manager.
+2018-04-07 18:47:57.572 [main] OffsetManager [WARN] Requested offset type UPCOMING in SystemStreamPartition [wikipedia, #en.wikinews, 0], but the stream is empty. Defaulting to the upcoming offset.
+2018-04-07 18:47:57.573 [main] OffsetManager [WARN] Requested offset type UPCOMING in SystemStreamPartition [wikipedia, #en.wikipedia, 0], but the stream is empty. Defaulting to the upcoming offset.
+2018-04-07 18:47:57.573 [main] OffsetManager [WARN] Requested offset type UPCOMING in SystemStreamPartition [wikipedia, #en.wiktionary, 0], but the stream is empty. Defaulting to the upcoming offset.
+2018-04-07 18:47:57.573 [main] OffsetManager [INFO] Successfully loaded last processed offsets: {}
+2018-04-07 18:47:57.574 [main] OffsetManager [INFO] Successfully loaded starting offsets: Map(Partition 0 -> Map(SystemStreamPartition [wikipedia, #en.wikinews, 0] -> null, SystemStreamPartition [wikipedia, #en.wikipedia, 0] -> null, SystemStreamPartition [wikipedia, #en.wiktionary, 0] -> null))
+2018-04-07 18:47:57.575 [main] SamzaContainer [INFO] Starting task instance stores.
+2018-04-07 18:47:57.578 [main] TaskStorageManager [INFO] Validating change log streams: Map()
+2018-04-07 18:47:57.581 [main] TaskStorageManager [INFO] Got change log stream metadata: Map()
+2018-04-07 18:47:57.583 [main] TaskStorageManager [INFO] Assigning oldest change log offsets for taskName Partition 0: Map()
+2018-04-07 18:47:57.586 [main] SamzaContainer [INFO] Starting host statistics monitor
+2018-04-07 18:47:57.587 [main] SamzaContainer [INFO] Registering task instances with producers.
+2018-04-07 18:47:57.588 [main] SamzaContainer [INFO] Starting producer multiplexer.
+2018-04-07 18:47:57.603 [main] ProducerConfig [INFO] ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	block.on.buffer.full = false
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.id = samza_producer-wikipedia_feed-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 10
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 1
+	max.request.size = 1048576
+	metadata.fetch.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	timeout.ms = 30000
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2018-04-07 18:47:57.607 [main] ProducerConfig [INFO] ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	block.on.buffer.full = false
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.id = samza_producer-wikipedia_feed-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 10
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 1
+	max.request.size = 1048576
+	metadata.fetch.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	timeout.ms = 30000
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2018-04-07 18:47:57.632 [main] AppInfoParser [INFO] Kafka version : 0.10.1.1
+2018-04-07 18:47:57.632 [main] AppInfoParser [INFO] Kafka commitId : f10ef2720b03b247
+2018-04-07 18:47:57.632 [main] SamzaContainer [INFO] Initializing stream tasks.
+2018-04-07 18:47:57.633 [main] SamzaContainer [INFO] Registering task instances with consumers.
+2018-04-07 18:47:57.636 [main] SamzaContainer [INFO] Starting consumer multiplexer.
+2018-04-07 18:47:57.712 [main] SamzaContainer [INFO] Entering run loop.
+2018-04-07 18:47:57.712 [main] LocalContainerRunner [INFO] Container Started
+2018-04-07 18:47:57.744 [Thread-1] WikipediaFeed [INFO] AUTH> null (notice): *** Processing connection to irc.wikimedia.org
+2018-04-07 18:47:57.796 [Thread-1] WikipediaFeed [INFO] AUTH> null (notice): *** Looking up your hostname...
+2018-04-07 18:47:57.796 [Thread-1] WikipediaFeed [INFO] AUTH> null (notice): *** Checking Ident
+2018-04-07 18:47:57.863 [Thread-1] WikipediaFeed [INFO] AUTH> null (notice): *** Found your hostname
+2018-04-07 18:48:08.048 [Thread-1] WikipediaFeed [INFO] AUTH> null (notice): *** No Ident response
+2018-04-07 18:48:08.050 [Thread-1] WikipediaFeed [INFO] samza-bot-322458635> irc.wikimedia.org (notice): *** Spoofing your IP. congrats.
+2018-04-07 18:48:08.050 [Thread-1] WikipediaFeed [INFO] Connected
+2018-04-07 18:48:08.050 [Thread-1] WikipediaFeed [INFO] Reply #1: samza-bot-322458635 Welcome to the Wikimedia Internet Relay Chat Network samza-bot-322458635
+2018-04-07 18:48:08.050 [Thread-1] WikipediaFeed [INFO] Reply #2: samza-bot-322458635 Your host is irc.wikimedia.org[irc.wikimedia.org/6667], running version ircd-ratbox-2.2.9
+2018-04-07 18:48:08.050 [Thread-1] WikipediaFeed [INFO] Reply #3: samza-bot-322458635 This server was created Tue Apr 12 2016 at 11:53:48 UTC
+2018-04-07 18:48:08.051 [Thread-1] WikipediaFeed [INFO] Reply #4: samza-bot-322458635 irc.wikimedia.org ircd-ratbox-2.2.9 oiwszcerkfydnxbauglZCD biklmnopstveI bkloveI
+2018-04-07 18:48:08.051 [Thread-1] WikipediaFeed [INFO] Reply #5: samza-bot-322458635 CHANTYPES=&# EXCEPTS INVEX CHANMODES=eIb,k,l,imnpst CHANLIMIT=&#:20000 PREFIX=(ov)@+ MAXLIST=beI:100 NETWORK=Wikimedia MODES=4 STATUSMSG=@+ KNOCK CALLERID=g are supported by this server
+2018-04-07 18:48:08.051 [Thread-1] WikipediaFeed [INFO] Reply #5: samza-bot-322458635 SAFELIST ELIST=U CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=50 CHANNELLEN=50 TOPICLEN=300 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=80 are supported by this server
+2018-04-07 18:48:08.051 [Thread-1] WikipediaFeed [INFO] Reply #5: samza-bot-322458635 TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: are supported by this server
+2018-04-07 18:48:08.051 [Thread-1] WikipediaFeed [INFO] Reply #251: samza-bot-322458635 There are 275 users and 10 invisible on 1 servers
+2018-04-07 18:48:08.051 [Thread-1] WikipediaFeed [INFO] Reply #252: samza-bot-322458635 1 IRC Operators online
+2018-04-07 18:48:08.051 [Thread-1] WikipediaFeed [INFO] Reply #253: samza-bot-322458635 1 unknown connection(s)
+2018-04-07 18:48:08.051 [Thread-1] WikipediaFeed [INFO] Reply #254: samza-bot-322458635 778 channels formed
+2018-04-07 18:48:08.051 [Thread-1] WikipediaFeed [INFO] Reply #255: samza-bot-322458635 I have 285 clients and 0 servers
+2018-04-07 18:48:08.051 [Thread-1] WikipediaFeed [INFO] Reply #265: samza-bot-322458635 285 399 Current local users 285, max 399
+2018-04-07 18:48:08.051 [Thread-1] WikipediaFeed [INFO] Reply #266: samza-bot-322458635 285 399 Current global users 285, max 399
+2018-04-07 18:48:08.051 [Thread-1] WikipediaFeed [INFO] Reply #250: samza-bot-322458635 Highest connection count: 399 (399 clients) (362274 connections received)
+2018-04-07 18:48:08.052 [Thread-1] WikipediaFeed [INFO] Reply #375: samza-bot-322458635 - irc.wikimedia.org Message of the Day - 
+2018-04-07 18:48:08.052 [Thread-1] WikipediaFeed [INFO] Reply #372: samza-bot-322458635 - *******************************************************
+2018-04-07 18:48:08.052 [Thread-1] WikipediaFeed [INFO] Reply #372: samza-bot-322458635 - This is the Wikimedia RC->IRC gateway
+2018-04-07 18:48:08.052 [Thread-1] WikipediaFeed [INFO] Reply #372: samza-bot-322458635 -  
+2018-04-07 18:48:08.052 [Thread-1] WikipediaFeed [INFO] Reply #372: samza-bot-322458635 - https://wikitech.wikimedia.org/wiki/Irc.wikimedia.org
+2018-04-07 18:48:08.052 [Thread-1] WikipediaFeed [INFO] Reply #372: samza-bot-322458635 - *******************************************************
+2018-04-07 18:48:08.052 [Thread-1] WikipediaFeed [INFO] Reply #372: samza-bot-322458635 - Sending messages to channels is not allowed.
+2018-04-07 18:48:08.052 [Thread-1] WikipediaFeed [INFO] Reply #372: samza-bot-322458635 -  
+2018-04-07 18:48:08.052 [Thread-1] WikipediaFeed [INFO] Reply #372: samza-bot-322458635 - A channel exists for all Wikimedia wikis which have been
+2018-04-07 18:48:08.052 [Thread-1] WikipediaFeed [INFO] Reply #372: samza-bot-322458635 - changed since the last time the server was restarted. In
+2018-04-07 18:48:08.052 [Thread-1] WikipediaFeed [INFO] Reply #372: samza-bot-322458635 - general, the name is just the domain name with the .org
+2018-04-07 18:48:08.053 [Thread-1] WikipediaFeed [INFO] Reply #372: samza-bot-322458635 - left off. For example, the changes on the English Wikipedia
+2018-04-07 18:48:08.053 [Thread-1] WikipediaFeed [INFO] Reply #372: samza-bot-322458635 - are available at #en.wikipedia
+2018-04-07 18:48:08.053 [Thread-1] WikipediaFeed [INFO] Reply #372: samza-bot-322458635 -  
+2018-04-07 18:48:08.053 [Thread-1] WikipediaFeed [INFO] Reply #372: samza-bot-322458635 - If you want to talk, please join one of the many
+2018-04-07 18:48:08.053 [Thread-1] WikipediaFeed [INFO] Reply #372: samza-bot-322458635 - Wikimedia-related channels on irc.freenode.net.
+2018-04-07 18:48:08.053 [Thread-1] WikipediaFeed [INFO] Reply #372: samza-bot-322458635 -  
+2018-04-07 18:48:08.053 [Thread-1] WikipediaFeed [INFO] Reply #372: samza-bot-322458635 - Alternatively, you can use Wikimedia's EventStreams service,
+2018-04-07 18:48:08.053 [Thread-1] WikipediaFeed [INFO] Reply #372: samza-bot-322458635 - which streams recent changes as JSON using the SSE protocol.
+2018-04-07 18:48:08.053 [Thread-1] WikipediaFeed [INFO] Reply #372: samza-bot-322458635 - See https://wikitech.wikimedia.org/wiki/EventStreams for details.
+2018-04-07 18:48:08.053 [Thread-1] WikipediaFeed [INFO] Reply #376: samza-bot-322458635 End of /MOTD command.
+2018-04-07 18:48:08.053 [Thread-1] WikipediaFeed [INFO] #en.wikinews> samza-bot-322458635 joins
+2018-04-07 18:48:08.053 [Thread-1] WikipediaFeed [INFO] Reply #353: samza-bot-322458635 = #en.wikinews samza-bot-322458635 samza-bot-71136086 Wikiwix95 samza-bot-335872399 LiWa3_2 RileyBot Wikipedia-IA-external-links-monitor op-15900 TC-RC-Bot snatch @rc-pmtpa
+2018-04-07 18:48:08.053 [Thread-1] WikipediaFeed [INFO] Reply #366: samza-bot-322458635 #en.wikinews End of /NAMES list.
+2018-04-07 18:48:08.054 [Thread-1] WikipediaFeed [INFO] #en.wiktionary> samza-bot-322458635 joins
+2018-04-07 18:48:08.054 [Thread-1] WikipediaFeed [INFO] Reply #353: samza-bot-322458635 = #en.wiktionary samza-bot-322458635 samza-bot-71136086 botjagwar-iwbn Wikiwix95 samza-bot-335872399 LiWa3_2 RileyBot op-15900 WB473268930 KafkaConnectBot_6OgwFq snatch TC-RC-Bot @rc-pmtpa
+2018-04-07 18:48:08.054 [Thread-1] WikipediaFeed [INFO] Reply #366: samza-bot-322458635 #en.wiktionary End of /NAMES list.
+2018-04-07 18:48:08.054 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> samza-bot-322458635 joins
+2018-04-07 18:48:08.054 [Thread-1] WikipediaFeed [INFO] Reply #353: samza-bot-322458635 = #en.wikipedia samza-bot-322458635 samza-bot-71136086 yoda__ academic_record7870 COIBot siliconvalley academic_record9456 bitri academic_record8489 wikipedia-live-monitor-1523140793700 wikipedia-live-monitor-1523140787932 politikedits euroedit bundesedit2 imply-2609a898-d741-4719-914b-9d891900844a node-wikimon legcoedits CVNBot1 tweedekameredits wikichanges-83c6d90b-7dc9-41f4-9278-8e6b84ce0680 yourIrcNickHere wikichanges-Patr parliamentedits huggle1354
+2018-04-07 18:48:08.054 [Thread-1] WikipediaFeed [INFO] Reply #353: samza-bot-322458635 = #en.wikipedia cmuedits VouliEdits SoMuchForSubtlety1 congressoedits ClueBot_NG PubNub RedSARA_edits businessedits-wikibot op-00578 creeperEdits wikichanges-083c2b41-32f2-416e-a6db-0f027bfe5c1b EstadoEdita6 MrFishBot bbc-edits databricks2016040501 UnBlockBot staticsky internet-dashboard FHSedits FinlandEdit lcsb2 planaltoedits Wikiwix85 wikchange-13370_501 EyeInTheSkyBot samza-bot-335872399 LDSedits flink-bot-4ee273ed-51ab-4314-887a-060e3e387035
+2018-04-07 18:48:08.101 [Thread-1] WikipediaFeed [INFO] Reply #353: samza-bot-322458635 = #en.wikipedia toolslabs-anon wpstubs-bot LiWa3_2 uga_edits lc_edits EstadoEdita5 a86da7ae1eb657475ff652b9c9aa149c4 RileyBot brwikiedits observant-Abra ae3ae0ac8d6fb1570810de6f9149c3022 hat_collector observant-Muk OverheidsEdits psbot HunGovEdits EstadoEdita4 a239b97d536ec2f7668a972742fec55ed Wikipedia-IA-external-links-monitor flink-bot-180 flink-bot-451 flink-bot-550 flink-bot-382 flink-bot-644 flink-bot-621 yahoo_agent9241 Wikien-1523538951
+2018-04-07 18:48:08.101 [Thread-1] WikipediaFeed [INFO] Reply #353: samza-bot-322458635 = #en.wikipedia Wikien2032237675 yahoo_agent10808 yahoo_agent17313 Wikien-343278956 EstadoEdita3 bankedits2 op-15900 luledits parleditsnz1 ww-input EstadoEdita2 a05c633827d5462ca3d1fde89860886ef EstadoEdita1 EstadoEdita WB473268930 nodeuser wikistream huggle1442 BuzzillaBot62 KafkaConnectBot_6OgwFq ItaGovEdits nodeuser11 EchtzeitStudios BetacommandBot2 HWY_bot af96e3fa818a4e9d68ffb014effd35ce2 EarwigBot rodarmor anon1234 yourIrcNickHere2
+2018-04-07 18:48:08.102 [Thread-1] WikipediaFeed [INFO] Reply #353: samza-bot-322458635 = #en.wikipedia yourIrcNickHere1231231 snatch w1k1strem529249210853 mps_edits RxyBotLT TC-RC-Bot altmetribot_ wikimon______________________ imply congresseditors RCMonBot STikiQueuer @rc-pmtpa
+2018-04-07 18:48:08.102 [Thread-1] WikipediaFeed [INFO] Reply #366: samza-bot-322458635 #en.wikipedia End of /NAMES list.
+2018-04-07 18:48:09.073 [main] TaskInstance [INFO] offsets in wikipedia is not comparable. Set all SystemStreamPartitions to catched-up
+2018-04-07 18:48:12.089 [main] TaskInstance [INFO] offsets in wikipedia is not comparable. Set all SystemStreamPartitions to catched-up
+2018-04-07 18:49:53.657 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> huggle1246 joins
+2018-04-07 18:50:01.062 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> huggle1054 joins
+2018-04-07 18:50:01.238 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> huggle1913 joins
+2018-04-07 18:50:30.820 [Thread-1] WikipediaFeed [INFO] Quit: academic_record8489
+2018-04-07 18:50:42.322 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> academic_record1604 joins
+2018-04-07 18:54:59.968 [Thread-1] WikipediaFeed [INFO] Quit: yoda__
+2018-04-07 19:00:02.460 [Thread-1] WikipediaFeed [INFO] Quit: wikipedia-live-monitor-1523140793700
+2018-04-07 19:00:03.777 [Thread-1] WikipediaFeed [INFO] Quit: huggle1246
+2018-04-07 19:00:14.329 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> wikipedia-live-monitor-1523145603234 joins
+2018-04-07 19:00:16.095 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> flink-bot-e70c1dd6-bb55-4355-ab0e-1c7ced72822e joins
+2018-04-07 19:00:17.360 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> flink-bot-e70c1dd6-bb55-4355-ab0e-1c7ced72822e parts
+2018-04-07 19:02:53.031 [Thread-1] WikipediaFeed [INFO] Quit: wikipedia-live-monitor-1523140787932
+2018-04-07 19:04:53.973 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> yoda__ joins
+2018-04-07 19:10:10.151 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> wikiedits joins
+2018-04-07 19:10:11.544 [Thread-1] WikipediaFeed [INFO] Quit: wikiedits
+2018-04-07 19:13:38.539 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> wikipedia-live-monitor-1523146415492 joins
+2018-04-07 19:16:04.099 [Thread-1] WikipediaFeed [INFO] Quit: yoda__
+2018-04-07 19:22:52.625 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> yoda__ joins
+2018-04-07 19:25:07.828 [Thread-1] WikipediaFeed [INFO] Quit: bundesedit2
+2018-04-07 19:25:07.881 [Thread-1] WikipediaFeed [INFO] Quit: politikedits
+2018-04-07 19:25:07.882 [Thread-1] WikipediaFeed [INFO] Quit: euroedit
+2018-04-07 19:26:10.892 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> bundesedit2 joins
+2018-04-07 19:26:11.195 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> politikedits joins
+2018-04-07 19:26:11.305 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> euroedit joins
+2018-04-07 19:30:00.112 [Thread-1] WikipediaFeed [INFO] Quit: academic_record9456
+2018-04-07 19:30:01.558 [Thread-1] WikipediaFeed [INFO] Quit: botjagwar-iwbn
+2018-04-07 19:30:07.897 [Thread-1] WikipediaFeed [INFO] #en.wiktionary> botjagwar-88nq joins
+2018-04-07 19:30:11.153 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> academic_record885 joins
+2018-04-07 19:30:20.438 [Thread-1] WikipediaFeed [INFO] Quit: COIBot
+2018-04-07 19:30:24.042 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> COIBot joins
+2018-04-07 19:37:11.174 [Thread-1] WikipediaFeed [INFO] Quit: yoda__
+2018-04-07 19:39:58.826 [Thread-1] WikipediaFeed [INFO] Quit: academic_record7870
+2018-04-07 19:40:10.276 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> academic_record4489 joins
+2018-04-07 19:43:06.695 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> yoda__ joins
+2018-04-07 19:49:43.088 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> wikiedits joins
+2018-04-07 19:49:44.339 [Thread-1] WikipediaFeed [INFO] Quit: wikiedits
+2018-04-07 19:50:30.792 [Thread-1] WikipediaFeed [INFO] Quit: academic_record1604
+2018-04-07 19:50:42.301 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> academic_record3076 joins
+2018-04-07 19:50:51.400 [Thread-1] WikipediaFeed [INFO] Quit: wikipedia-live-monitor-1523146415492
+2018-04-07 19:52:05.031 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> huggle3630312 joins
+2018-04-07 19:54:15.826 [Thread-1] WikipediaFeed [INFO] Quit: yoda__
+2018-04-07 20:00:02.054 [Thread-1] WikipediaFeed [INFO] Quit: imply-2609a898-d741-4719-914b-9d891900844a
+2018-04-07 20:00:02.270 [Thread-1] WikipediaFeed [INFO] Quit: wikchange-13370_501
+2018-04-07 20:00:32.892 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> imply-159ee0ff-b224-4dc4-8705-8dda9a47bf46 joins
+2018-04-07 20:01:37.745 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> wikchange-13370_731 joins
+2018-04-07 20:04:11.786 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> yoda__ joins
+2018-04-07 20:11:58.343 [main] TaskInstance [INFO] offsets in wikipedia is not comparable. Set all SystemStreamPartitions to catched-up
+2018-04-07 20:13:57.526 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> wikipedia-live-monitor-1523150026452 joins
+2018-04-07 20:17:52.074 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> wikiedits joins
+2018-04-07 20:17:53.453 [Thread-1] WikipediaFeed [INFO] Quit: wikiedits
+2018-04-07 20:18:14.215 [Thread-1] WikipediaFeed [INFO] Quit: yoda__
+2018-04-07 20:20:21.531 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> huggle590 joins
+2018-04-07 20:22:58.811 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> yoda__ joins
+2018-04-07 20:27:08.811 [Thread-1] WikipediaFeed [INFO] Quit: huggle590
+2018-04-07 20:30:00.094 [Thread-1] WikipediaFeed [INFO] Quit: academic_record885
+2018-04-07 20:30:01.587 [Thread-1] WikipediaFeed [INFO] Quit: botjagwar-88nq
+2018-04-07 20:30:04.743 [Thread-1] WikipediaFeed [INFO] #en.wiktionary> botjagwar-wj4z joins
+2018-04-07 20:30:11.320 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> academic_record5051 joins
+2018-04-07 20:31:34.066 [Thread-1] WikipediaFeed [INFO] Quit: COIBot
+2018-04-07 20:31:38.129 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> COIBot joins
+2018-04-07 20:34:31.452 [Thread-1] WikipediaFeed [INFO] Quit: yoda__
+2018-04-07 20:35:56.266 [Thread-1] WikipediaFeed [INFO] Quit: huggle1354
+2018-04-07 20:39:58.821 [Thread-1] WikipediaFeed [INFO] Quit: academic_record4489
+2018-04-07 20:40:10.282 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> academic_record8217 joins
+2018-04-07 20:41:59.032 [Thread-1] WikipediaFeed [INFO] Quit: creeperEdits
+2018-04-07 20:43:12.302 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> yoda__ joins
+2018-04-07 20:49:13.930 [Thread-1] WikipediaFeed [INFO] Quit: wikipedia-live-monitor-1523150026452
+2018-04-07 20:50:30.805 [Thread-1] WikipediaFeed [INFO] Quit: academic_record3076
+2018-04-07 20:50:39.835 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> creeperEdits joins
+2018-04-07 20:50:42.311 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> academic_record6698 joins
+2018-04-07 20:54:48.492 [Thread-1] WikipediaFeed [INFO] Quit: yoda__
+2018-04-07 21:04:26.057 [Thread-1] WikipediaFeed [INFO] Quit: FinlandEdit
+2018-04-07 21:04:29.544 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> yoda__ joins
+2018-04-07 21:10:50.742 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> wikipedia-live-monitor-1523153439664 joins
+2018-04-07 21:15:53.402 [Thread-1] WikipediaFeed [INFO] Quit: wikipedia-live-monitor-1523145603234
+2018-04-07 21:16:06.301 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> wikipedia-live-monitor-1523153754197 joins
+2018-04-07 21:16:21.967 [Thread-1] WikipediaFeed [INFO] Quit: wikipedia-live-monitor-1523153439664
+2018-04-07 21:16:38.155 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> wikipedia-live-monitor-1523153787104 joins
+2018-04-07 21:17:43.749 [Thread-1] WikipediaFeed [INFO] Quit: yoda__
+2018-04-07 21:18:54.487 [Thread-1] WikipediaFeed [INFO] Quit: planaltoedits
+2018-04-07 21:19:40.248 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> planaltoedits joins
+2018-04-07 21:23:00.937 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> yoda__ joins
+2018-04-07 21:25:08.832 [Thread-1] WikipediaFeed [INFO] Quit: bundesedit2
+2018-04-07 21:25:08.884 [Thread-1] WikipediaFeed [INFO] Quit: politikedits
+2018-04-07 21:25:08.884 [Thread-1] WikipediaFeed [INFO] Quit: euroedit
+2018-04-07 21:26:11.788 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> politikedits joins
+2018-04-07 21:26:11.986 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> euroedit joins
+2018-04-07 21:26:13.045 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> bundesedit2 joins
+2018-04-07 21:28:47.228 [Thread-1] WikipediaFeed [INFO] Quit: creeperEdits
+2018-04-07 21:30:00.170 [Thread-1] WikipediaFeed [INFO] Quit: academic_record5051
+2018-04-07 21:30:01.636 [Thread-1] WikipediaFeed [INFO] Quit: botjagwar-wj4z
+2018-04-07 21:30:04.734 [Thread-1] WikipediaFeed [INFO] #en.wiktionary> botjagwar-17yb joins
+2018-04-07 21:30:15.278 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> academic_record4817 joins
+2018-04-07 21:32:47.797 [Thread-1] WikipediaFeed [INFO] Quit: huggle1913
+2018-04-07 21:33:07.333 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> FinlandEdit joins
+2018-04-07 21:33:14.348 [Thread-1] WikipediaFeed [INFO] Quit: yoda__
+2018-04-07 21:35:02.015 [Thread-1] WikipediaFeed [INFO] Quit: COIBot
+2018-04-07 21:35:06.142 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> COIBot joins
+2018-04-07 21:35:53.101 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> Wikipedia-Edits-SSE-1523154939978 joins
+2018-04-07 21:37:44.225 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> creeperEdits joins
+2018-04-07 21:39:58.793 [Thread-1] WikipediaFeed [INFO] Quit: academic_record8217
+2018-04-07 21:40:04.077 [Thread-1] WikipediaFeed [INFO] Quit: FHSedits
+2018-04-07 21:40:10.317 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> academic_record4431 joins
+2018-04-07 21:40:14.831 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> FHSedits7 joins
+2018-04-07 21:42:48.924 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> yoda__ joins
+2018-04-07 21:43:16.243 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> huggle2755 joins
+2018-04-07 21:43:24.276 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> huggle2523 joins
+2018-04-07 21:50:30.833 [Thread-1] WikipediaFeed [INFO] Quit: academic_record6698
+2018-04-07 21:50:42.305 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> academic_record2942 joins
+2018-04-07 21:53:07.125 [Thread-1] WikipediaFeed [INFO] Quit: yoda__
+2018-04-07 21:53:29.083 [Thread-1] WikipediaFeed [INFO] Quit: wikipedia-live-monitor-1523153787104
+2018-04-07 21:55:44.116 [Thread-1] WikipediaFeed [INFO] Quit: huggle2755
+2018-04-07 21:58:29.037 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> flink-bot-0befdba5-4d63-4aa8-bf39-994b1edd0b7d joins
+2018-04-07 21:58:29.575 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> flink-bot-0befdba5-4d63-4aa8-bf39-994b1edd0b7d parts
+2018-04-08 14:07:53.937 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> flink-bot-c4dbfa18-d268-4a66-8759-beae5850563a joins
+2018-04-08 14:07:53.955 [Thread-1] WikipediaFeed [INFO] #en.wikipedia> flink-bot-c4dbfa18-d268-4a66-8759-beae5850563a parts
+2018-04-08 14:08:04.866 [Samza-ContainerHeartbeatMonitor-0] ContainerHeartbeatClient [ERROR] Error in heartbeat request. Retrying [1/6].
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1564)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492)
+	at org.apache.samza.container.ContainerHeartbeatClient.httpGet(ContainerHeartbeatClient.java:90)
+	at org.apache.samza.container.ContainerHeartbeatClient.requestHeartbeat(ContainerHeartbeatClient.java:71)
+	at org.apache.samza.container.ContainerHeartbeatMonitor.lambda$start$1(ContainerHeartbeatMonitor.java:53)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2018-04-08 14:08:10.883 [Samza-ContainerHeartbeatMonitor-0] ContainerHeartbeatClient [ERROR] Error in heartbeat request. Retrying [2/6].
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1564)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492)
+	at org.apache.samza.container.ContainerHeartbeatClient.httpGet(ContainerHeartbeatClient.java:90)
+	at org.apache.samza.container.ContainerHeartbeatClient.requestHeartbeat(ContainerHeartbeatClient.java:71)
+	at org.apache.samza.container.ContainerHeartbeatMonitor.lambda$start$1(ContainerHeartbeatMonitor.java:53)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2018-04-08 14:08:17.891 [Samza-ContainerHeartbeatMonitor-0] ContainerHeartbeatClient [ERROR] Error in heartbeat request. Retrying [3/6].
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1564)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492)
+	at org.apache.samza.container.ContainerHeartbeatClient.httpGet(ContainerHeartbeatClient.java:90)
+	at org.apache.samza.container.ContainerHeartbeatClient.requestHeartbeat(ContainerHeartbeatClient.java:71)
+	at org.apache.samza.container.ContainerHeartbeatMonitor.lambda$start$1(ContainerHeartbeatMonitor.java:53)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2018-04-08 14:08:23.774 [Thread-1] WikipediaFeed [INFO] Disconnected
+2018-04-08 14:08:26.896 [Samza-ContainerHeartbeatMonitor-0] ContainerHeartbeatClient [ERROR] Error in heartbeat request. Retrying [4/6].
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1564)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492)
+	at org.apache.samza.container.ContainerHeartbeatClient.httpGet(ContainerHeartbeatClient.java:90)
+	at org.apache.samza.container.ContainerHeartbeatClient.requestHeartbeat(ContainerHeartbeatClient.java:71)
+	at org.apache.samza.container.ContainerHeartbeatMonitor.lambda$start$1(ContainerHeartbeatMonitor.java:53)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2018-04-08 14:08:32.111 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.112 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.112 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.115 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.115 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.116 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.116 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.116 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.116 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.117 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.117 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.117 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.117 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.118 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.118 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.118 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.118 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.118 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.119 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.119 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.119 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.120 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.120 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.120 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.120 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.120 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.120 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.121 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.121 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.121 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.121 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.121 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.121 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.122 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.122 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.122 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.123 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.123 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.123 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.123 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.124 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.124 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.124 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.125 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.125 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.125 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.125 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.125 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.126 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.126 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.126 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.126 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.126 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.126 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.127 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.127 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.127 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.127 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.128 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.128 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.128 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.129 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.129 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.129 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.129 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.129 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.130 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.130 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.130 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.130 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.130 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.130 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.131 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.131 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.131 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.132 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.132 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.132 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.133 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.133 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.133 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.133 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.133 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.133 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.134 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.134 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.134 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.134 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.134 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.135 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.135 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.135 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.135 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.135 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.135 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.136 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.136 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.136 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.136 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.137 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.137 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.137 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.138 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.138 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.138 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.138 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.139 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.139 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.139 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.140 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.140 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.140 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.140 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.141 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.141 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.141 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.141 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.141 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.141 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.142 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.142 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.142 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.142 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.142 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.142 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.143 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.143 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.143 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.143 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.143 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.144 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.144 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.144 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.144 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.144 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.144 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.145 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.145 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.145 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.145 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.145 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.146 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.146 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.146 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.146 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.147 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.147 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.147 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.148 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.148 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.148 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.148 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.148 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.149 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.149 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.149 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.149 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.149 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.149 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.150 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.150 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.150 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.150 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.150 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.151 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.151 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.151 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.151 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.151 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.152 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.152 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.152 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.152 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.152 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.152 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.153 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.153 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.153 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.153 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.154 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.154 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.154 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.154 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.155 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.155 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.155 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.156 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.156 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.156 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.156 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.157 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.157 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.157 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.157 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.157 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.158 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.158 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.158 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.158 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.159 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.159 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.159 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.159 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.159 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.159 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.160 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.160 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.160 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.160 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.160 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.161 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.161 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.161 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.161 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.161 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.161 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.162 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.162 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.162 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.162 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.163 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.163 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.163 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.164 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.164 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.164 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.164 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.164 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.165 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.165 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.165 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.165 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.165 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.165 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.166 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.166 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.166 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.166 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.167 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.167 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.167 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.168 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.168 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.168 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.168 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.168 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.169 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.169 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.169 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.169 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.169 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.169 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.170 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.170 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.170 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.171 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.171 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.171 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.171 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.171 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.172 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.172 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.172 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.172 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.173 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.173 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.173 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.174 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.174 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.174 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.174 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.174 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.175 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.175 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.175 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.175 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.175 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.176 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.176 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.176 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.176 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.176 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.176 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.177 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.177 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.177 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.177 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.177 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.178 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.178 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.178 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.178 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.178 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.178 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.179 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.179 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.179 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.180 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.180 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.180 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.181 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.181 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.181 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.181 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaSystemProducer [ERROR] org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+2018-04-08 14:08:32.182 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 0 ms.
+2018-04-08 14:08:32.182 [kafka-producer-network-thread | samza_producer-wikipedia_feed-1] KafkaProducer [INFO] Proceeding to force close the producer since pending requests could not be completed within timeout 0 ms.
+2018-04-08 14:08:32.183 [main] AsyncRunLoop [ERROR] Task Partition 0 commit failed
+org.apache.samza.system.SystemProducerException: Flush failed. One or more batches of messages were not sent!
+	at org.apache.samza.system.kafka.KafkaSystemProducer$$anonfun$flush$1.apply$mcV$sp(KafkaSystemProducer.scala:158)
+	at org.apache.samza.system.kafka.KafkaSystemProducer$$anonfun$flush$1.apply(KafkaSystemProducer.scala:135)
+	at org.apache.samza.system.kafka.KafkaSystemProducer$$anonfun$flush$1.apply(KafkaSystemProducer.scala:135)
+	at org.apache.samza.util.TimerUtils$class.updateTimer(TimerUtils.scala:37)
+	at org.apache.samza.system.kafka.KafkaSystemProducer.updateTimer(KafkaSystemProducer.scala:40)
+	at org.apache.samza.system.kafka.KafkaSystemProducer.flush(KafkaSystemProducer.scala:135)
+	at org.apache.samza.system.SystemProducers$$anonfun$flush$2.apply(SystemProducers.scala:64)
+	at org.apache.samza.system.SystemProducers$$anonfun$flush$2.apply(SystemProducers.scala:64)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1336)
+	at scala.collection.MapLike$DefaultValuesIterable.foreach(MapLike.scala:206)
+	at org.apache.samza.system.SystemProducers.flush(SystemProducers.scala:64)
+	at org.apache.samza.task.TaskInstanceCollector.flush(TaskInstanceCollector.scala:69)
+	at org.apache.samza.container.TaskInstance.commit(TaskInstance.scala:195)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker$5.run(AsyncRunLoop.java:494)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.commit(AsyncRunLoop.java:513)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.run(AsyncRunLoop.java:379)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.access$300(AsyncRunLoop.java:314)
+	at org.apache.samza.task.AsyncRunLoop.runTasks(AsyncRunLoop.java:228)
+	at org.apache.samza.task.AsyncRunLoop.run(AsyncRunLoop.java:157)
+	at org.apache.samza.container.SamzaContainer.run(SamzaContainer.scala:728)
+	at org.apache.samza.runtime.LocalContainerRunner.run(LocalContainerRunner.java:102)
+	at org.apache.samza.runtime.LocalContainerRunner.main(LocalContainerRunner.java:147)
+Caused by: org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+	at org.apache.samza.system.kafka.KafkaSystemProducer$$anon$1.onCompletion(KafkaSystemProducer.scala:115)
+	at org.apache.kafka.clients.producer.internals.RecordBatch.done(RecordBatch.java:109)
+	at org.apache.kafka.clients.producer.internals.RecordBatch.maybeExpire(RecordBatch.java:160)
+	at org.apache.kafka.clients.producer.internals.RecordAccumulator.abortExpiredBatches(RecordAccumulator.java:245)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:212)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:135)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.kafka.common.errors.TimeoutException: Expiring 59 record(s) for wikipedia-raw-0 due to 35424 ms has passed since last append
+2018-04-08 14:08:32.194 [main] AsyncRunLoop [ERROR] Caught throwable and stopping run loop
+org.apache.samza.system.SystemProducerException: Flush failed. One or more batches of messages were not sent!
+	at org.apache.samza.system.kafka.KafkaSystemProducer$$anonfun$flush$1.apply$mcV$sp(KafkaSystemProducer.scala:158)
+	at org.apache.samza.system.kafka.KafkaSystemProducer$$anonfun$flush$1.apply(KafkaSystemProducer.scala:135)
+	at org.apache.samza.system.kafka.KafkaSystemProducer$$anonfun$flush$1.apply(KafkaSystemProducer.scala:135)
+	at org.apache.samza.util.TimerUtils$class.updateTimer(TimerUtils.scala:37)
+	at org.apache.samza.system.kafka.KafkaSystemProducer.updateTimer(KafkaSystemProducer.scala:40)
+	at org.apache.samza.system.kafka.KafkaSystemProducer.flush(KafkaSystemProducer.scala:135)
+	at org.apache.samza.system.SystemProducers$$anonfun$flush$2.apply(SystemProducers.scala:64)
+	at org.apache.samza.system.SystemProducers$$anonfun$flush$2.apply(SystemProducers.scala:64)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1336)
+	at scala.collection.MapLike$DefaultValuesIterable.foreach(MapLike.scala:206)
+	at org.apache.samza.system.SystemProducers.flush(SystemProducers.scala:64)
+	at org.apache.samza.task.TaskInstanceCollector.flush(TaskInstanceCollector.scala:69)
+	at org.apache.samza.container.TaskInstance.commit(TaskInstance.scala:195)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker$5.run(AsyncRunLoop.java:494)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.commit(AsyncRunLoop.java:513)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.run(AsyncRunLoop.java:379)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.access$300(AsyncRunLoop.java:314)
+	at org.apache.samza.task.AsyncRunLoop.runTasks(AsyncRunLoop.java:228)
+	at org.apache.samza.task.AsyncRunLoop.run(AsyncRunLoop.java:157)
+	at org.apache.samza.container.SamzaContainer.run(SamzaContainer.scala:728)
+	at org.apache.samza.runtime.LocalContainerRunner.run(LocalContainerRunner.java:102)
+	at org.apache.samza.runtime.LocalContainerRunner.main(LocalContainerRunner.java:147)
+Caused by: org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+	at org.apache.samza.system.kafka.KafkaSystemProducer$$anon$1.onCompletion(KafkaSystemProducer.scala:115)
+	at org.apache.kafka.clients.producer.internals.RecordBatch.done(RecordBatch.java:109)
+	at org.apache.kafka.clients.producer.internals.RecordBatch.maybeExpire(RecordBatch.java:160)
+	at org.apache.kafka.clients.producer.internals.RecordAccumulator.abortExpiredBatches(RecordAccumulator.java:245)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:212)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:135)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.kafka.common.errors.TimeoutException: Expiring 59 record(s) for wikipedia-raw-0 due to 35424 ms has passed since last append
+2018-04-08 14:08:32.204 [main] SamzaContainer [ERROR] Caught exception/error in run loop.
+org.apache.samza.SamzaException: org.apache.samza.system.SystemProducerException: Flush failed. One or more batches of messages were not sent!
+	at org.apache.samza.task.AsyncRunLoop.run(AsyncRunLoop.java:147)
+	at org.apache.samza.container.SamzaContainer.run(SamzaContainer.scala:728)
+	at org.apache.samza.runtime.LocalContainerRunner.run(LocalContainerRunner.java:102)
+	at org.apache.samza.runtime.LocalContainerRunner.main(LocalContainerRunner.java:147)
+Caused by: org.apache.samza.system.SystemProducerException: Flush failed. One or more batches of messages were not sent!
+	at org.apache.samza.system.kafka.KafkaSystemProducer$$anonfun$flush$1.apply$mcV$sp(KafkaSystemProducer.scala:158)
+	at org.apache.samza.system.kafka.KafkaSystemProducer$$anonfun$flush$1.apply(KafkaSystemProducer.scala:135)
+	at org.apache.samza.system.kafka.KafkaSystemProducer$$anonfun$flush$1.apply(KafkaSystemProducer.scala:135)
+	at org.apache.samza.util.TimerUtils$class.updateTimer(TimerUtils.scala:37)
+	at org.apache.samza.system.kafka.KafkaSystemProducer.updateTimer(KafkaSystemProducer.scala:40)
+	at org.apache.samza.system.kafka.KafkaSystemProducer.flush(KafkaSystemProducer.scala:135)
+	at org.apache.samza.system.SystemProducers$$anonfun$flush$2.apply(SystemProducers.scala:64)
+	at org.apache.samza.system.SystemProducers$$anonfun$flush$2.apply(SystemProducers.scala:64)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1336)
+	at scala.collection.MapLike$DefaultValuesIterable.foreach(MapLike.scala:206)
+	at org.apache.samza.system.SystemProducers.flush(SystemProducers.scala:64)
+	at org.apache.samza.task.TaskInstanceCollector.flush(TaskInstanceCollector.scala:69)
+	at org.apache.samza.container.TaskInstance.commit(TaskInstance.scala:195)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker$5.run(AsyncRunLoop.java:494)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.commit(AsyncRunLoop.java:513)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.run(AsyncRunLoop.java:379)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.access$300(AsyncRunLoop.java:314)
+	at org.apache.samza.task.AsyncRunLoop.runTasks(AsyncRunLoop.java:228)
+	at org.apache.samza.task.AsyncRunLoop.run(AsyncRunLoop.java:157)
+	... 3 more
+Caused by: org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+	at org.apache.samza.system.kafka.KafkaSystemProducer$$anon$1.onCompletion(KafkaSystemProducer.scala:115)
+	at org.apache.kafka.clients.producer.internals.RecordBatch.done(RecordBatch.java:109)
+	at org.apache.kafka.clients.producer.internals.RecordBatch.maybeExpire(RecordBatch.java:160)
+	at org.apache.kafka.clients.producer.internals.RecordAccumulator.abortExpiredBatches(RecordAccumulator.java:245)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:212)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:135)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.kafka.common.errors.TimeoutException: Expiring 59 record(s) for wikipedia-raw-0 due to 35424 ms has passed since last append
+2018-04-08 14:08:32.208 [main] SamzaContainer [INFO] Shutting down.
+2018-04-08 14:08:32.227 [main] SamzaContainer [INFO] Shutting down consumer multiplexer.
+2018-04-08 14:08:32.237 [main] SamzaContainer [INFO] Shutting down task instance stream tasks.
+2018-04-08 14:08:32.242 [main] SamzaContainer [INFO] Shutting down task instance stores.
+2018-04-08 14:08:32.252 [main] SamzaContainer [INFO] Shutting down host statistics monitor.
+2018-04-08 14:08:32.254 [main] SamzaContainer [INFO] Shutting down producer multiplexer.
+2018-04-08 14:08:32.259 [main] KafkaSystemProducer [INFO] Stopping producer for system: kafka
+2018-04-08 14:08:32.260 [main] KafkaProducer [INFO] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2018-04-08 14:08:32.264 [main] KafkaSystemProducer [ERROR] Observed an earlier send() error while closing producer
+org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+	at org.apache.samza.system.kafka.KafkaSystemProducer$$anon$1.onCompletion(KafkaSystemProducer.scala:115)
+	at org.apache.kafka.clients.producer.internals.RecordBatch.done(RecordBatch.java:109)
+	at org.apache.kafka.clients.producer.internals.RecordBatch.maybeExpire(RecordBatch.java:160)
+	at org.apache.kafka.clients.producer.internals.RecordAccumulator.abortExpiredBatches(RecordAccumulator.java:245)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:212)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:135)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.kafka.common.errors.TimeoutException: Expiring 59 record(s) for wikipedia-raw-0 due to 35424 ms has passed since last append
+2018-04-08 14:08:32.266 [main] SamzaContainer [INFO] Shutting down offset manager.
+2018-04-08 14:08:32.270 [main] SamzaContainer [INFO] Shutting down metrics reporters.
+2018-04-08 14:08:32.273 [main] SamzaContainer [INFO] Shutting down JVM metrics.
+2018-04-08 14:08:32.275 [main] SamzaContainer [INFO] Shutdown complete.
+2018-04-08 14:08:32.275 [main] LocalContainerRunner [INFO] Container Failed
+2018-04-08 14:08:32.276 [main] ContainerHeartbeatMonitor [INFO] Stopping ContainerHeartbeatMonitor
+2018-04-08 14:08:32.276 [main] LocalContainerRunner [ERROR] Container stopped with Exception. Exiting process now.
+org.apache.samza.SamzaException: org.apache.samza.system.SystemProducerException: Flush failed. One or more batches of messages were not sent!
+	at org.apache.samza.task.AsyncRunLoop.run(AsyncRunLoop.java:147)
+	at org.apache.samza.container.SamzaContainer.run(SamzaContainer.scala:728)
+	at org.apache.samza.runtime.LocalContainerRunner.run(LocalContainerRunner.java:102)
+	at org.apache.samza.runtime.LocalContainerRunner.main(LocalContainerRunner.java:147)
+Caused by: org.apache.samza.system.SystemProducerException: Flush failed. One or more batches of messages were not sent!
+	at org.apache.samza.system.kafka.KafkaSystemProducer$$anonfun$flush$1.apply$mcV$sp(KafkaSystemProducer.scala:158)
+	at org.apache.samza.system.kafka.KafkaSystemProducer$$anonfun$flush$1.apply(KafkaSystemProducer.scala:135)
+	at org.apache.samza.system.kafka.KafkaSystemProducer$$anonfun$flush$1.apply(KafkaSystemProducer.scala:135)
+	at org.apache.samza.util.TimerUtils$class.updateTimer(TimerUtils.scala:37)
+	at org.apache.samza.system.kafka.KafkaSystemProducer.updateTimer(KafkaSystemProducer.scala:40)
+	at org.apache.samza.system.kafka.KafkaSystemProducer.flush(KafkaSystemProducer.scala:135)
+	at org.apache.samza.system.SystemProducers$$anonfun$flush$2.apply(SystemProducers.scala:64)
+	at org.apache.samza.system.SystemProducers$$anonfun$flush$2.apply(SystemProducers.scala:64)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1336)
+	at scala.collection.MapLike$DefaultValuesIterable.foreach(MapLike.scala:206)
+	at org.apache.samza.system.SystemProducers.flush(SystemProducers.scala:64)
+	at org.apache.samza.task.TaskInstanceCollector.flush(TaskInstanceCollector.scala:69)
+	at org.apache.samza.container.TaskInstance.commit(TaskInstance.scala:195)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker$5.run(AsyncRunLoop.java:494)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.commit(AsyncRunLoop.java:513)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.run(AsyncRunLoop.java:379)
+	at org.apache.samza.task.AsyncRunLoop$AsyncTaskWorker.access$300(AsyncRunLoop.java:314)
+	at org.apache.samza.task.AsyncRunLoop.runTasks(AsyncRunLoop.java:228)
+	at org.apache.samza.task.AsyncRunLoop.run(AsyncRunLoop.java:157)
+	... 3 more
+Caused by: org.apache.samza.system.SystemProducerException: Failed to send message for Source: TaskName-Partition 0 on System:kafka Topic:wikipedia-raw Partition:null
+	at org.apache.samza.system.kafka.KafkaSystemProducer$$anon$1.onCompletion(KafkaSystemProducer.scala:115)
+	at org.apache.kafka.clients.producer.internals.RecordBatch.done(RecordBatch.java:109)
+	at org.apache.kafka.clients.producer.internals.RecordBatch.maybeExpire(RecordBatch.java:160)
+	at org.apache.kafka.clients.producer.internals.RecordAccumulator.abortExpiredBatches(RecordAccumulator.java:245)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:212)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:135)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.kafka.common.errors.TimeoutException: Expiring 59 record(s) for wikipedia-raw-0 due to 35424 ms has passed since last append
